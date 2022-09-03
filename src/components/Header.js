@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mainStyle } from "./style/GlobalStyle";
 
 export const Header = () => {
   return (
@@ -13,6 +14,18 @@ export const Header = () => {
   );
 };
 
-const Wrap = styled.div``;
-const MenuWrap = styled.ul``;
+const Wrap = styled.div`
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  background-color: salmon;
+  padding: ${mainStyle.padding};
+`;
+const MenuWrap = styled.ul`
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 const Menu = styled.li``;
