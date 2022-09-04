@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 ${reset}
 body{
     box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 a{
     text-decoration: none;

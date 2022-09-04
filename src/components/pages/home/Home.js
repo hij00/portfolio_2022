@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
+import { Line } from "./Line";
 
 export const Home = () => {
   return (
@@ -26,6 +27,9 @@ export const Home = () => {
             </text>
           </svg>
         </SText>
+
+        <Line />
+
         <SText>
           <svg
             version="1.1"
@@ -47,6 +51,9 @@ export const Home = () => {
             </text>
           </svg>
         </SText>
+
+        <Line />
+
         <SText>
           <svg
             version="1.1"
@@ -76,16 +83,17 @@ export const Home = () => {
 const Wrap = styled.section`
   height: 100vh;
   background-color: ${mainStyle.backColor};
-  padding: ${mainStyle.padding};
 `;
 
 const SvgWrap = styled.div`
   height: 100vh;
-  padding-top: 80px;
   display: flex;
   flex-direction: column;
 `;
 
 const SText = styled.div`
-  height: 30%;
+  height: 33.33333%;
+  display: flex;
+  align-items: center;
+  padding: ${mainStyle.padding};
 `;

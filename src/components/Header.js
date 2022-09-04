@@ -17,9 +17,10 @@ export const Header = () => {
 const Wrap = styled.div`
   position: fixed;
   top: 0;
-  height: 80px;
-  width: 100%;
+  right: 0;
+  width: 40%;
   background-color: salmon;
+  box-sizing: border-box;
   padding: ${mainStyle.padding};
 `;
 const MenuWrap = styled.ul`
