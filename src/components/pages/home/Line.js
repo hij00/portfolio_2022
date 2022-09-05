@@ -49,6 +49,9 @@ const Wrap = styled.div`
   border-top: 2px solid ${mainStyle.beigeSub};
   border-bottom: 2px solid ${mainStyle.beigeSub};
   display: flex;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
 `;
 
 const Text = styled.div`
@@ -56,4 +59,10 @@ const Text = styled.div`
   font-size: 22px;
   font-weight: 300;
   padding: 10px;
+  a {
+    margin-right: 20px;
+    &:hover {
+      font-weight: 700;
+    }
+  }
 `;

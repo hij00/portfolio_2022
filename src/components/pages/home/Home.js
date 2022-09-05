@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
 import { Line } from "./Line";
@@ -6,74 +7,29 @@ export const Home = () => {
   return (
     <Wrap>
       <SvgWrap>
-        <SText>
-          <svg
-            version="1.1"
-            id="Layer_1"
-            x="0px"
-            y="0px"
-            width="560.077px"
-            height="226.615px"
-            viewBox="0 0 560.077 226.615"
-            enable-background="new 0 0 560.077 226.615"
-          >
-            <text
-              transform="matrix(1 0 0 1 0 199.6914)"
-              fill="#354259"
-              font-family="Nanum Myeongjo, serif"
-              font-size="250"
-            >
-              Choi
-            </text>
-          </svg>
+        <SText className="choi">
+          Ch<Box></Box>oi
         </SText>
-
-        <Line />
-
-        <SText>
-          <svg
-            version="1.1"
-            id="Layer_1"
-            x="0px"
-            y="0px"
-            width="560.077px"
-            height="226.615px"
-            viewBox="0 0 560.077 226.615"
-            enable-background="new 0 0 560.077 226.615"
-          >
-            <text
-              transform="matrix(1 0 0 1 0 199.6914)"
-              fill="#354259"
-              font-family="Nanum Myeongjo, serif"
-              font-size="250"
-            >
-              Hee
-            </text>
-          </svg>
+        <SText className="hee">
+          <MenuWrap>
+            {/* <Title>바로가기</Title> */}
+            <Menu>
+              <Link to="#">Dyson</Link>
+            </Menu>
+            <Menu>
+              <Link to="#">Seoul Botenical House</Link>
+            </Menu>
+            <Menu>
+              <Link to="#">Movie API Site</Link>
+            </Menu>
+            <Menu>
+              <Link to="#">Shopping Cart</Link>
+            </Menu>
+          </MenuWrap>
+          Hee
         </SText>
-
-        <Line />
-
-        <SText>
-          <svg
-            version="1.1"
-            id="Layer_1"
-            x="0px"
-            y="0px"
-            width="746.23px"
-            height="280.462px"
-            viewBox="0 0 746.23 280.462"
-            enable-background="new 0 0 746.23 280.462"
-          >
-            <text
-              transform="matrix(1 0 0 1 15.4619 206.1543)"
-              fill="#354259"
-              font-family="Nanum Myeongjo, serif"
-              font-size="250"
-            >
-              Jeong
-            </text>
-          </svg>
+        <SText className="jeong">
+          Jeo<Box></Box>ng
         </SText>
       </SvgWrap>
     </Wrap>
@@ -81,6 +37,7 @@ export const Home = () => {
 };
 
 const Wrap = styled.section`
+  width: 100%;
   height: 100vh;
   background-color: ${mainStyle.backColor};
 `;
@@ -92,8 +49,50 @@ const SvgWrap = styled.div`
 `;
 
 const SText = styled.div`
+  font-family: "Nanum Myeongjo", serif;
+  box-sizing: border-box;
   height: 33.33333%;
   display: flex;
   align-items: center;
   padding: ${mainStyle.padding};
+  font-size: 300px;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  color: ${mainStyle.Navy};
+  &.choi {
+    margin-top: 0;
+    margin-left: 100px;
+  }
+  &.hee {
+    justify-content: end;
+  }
+  &.jeong {
+    justify-content: center;
+  }
+`;
+
+const MenuWrap = styled.ul`
+  margin-right: 100px;
+  text-align: right;
+`;
+
+const Menu = styled.li`
+  font-size: 18px;
+  margin: 15px 0;
+  a:hover {
+    border-bottom: 1px solid ${mainStyle.blackColor};
+  }
+`;
+
+// const Title = styled.div`
+//   font-size: 22px;
+//   font-weight: 900;
+//   padding-bottom: 10px;
+//   border-bottom: 1px solid ${mainStyle.blackColor};
+// `;
+
+const Box = styled.div`
+  width: 300px;
+  height: 200px;
+  background-color: gray;
 `;
