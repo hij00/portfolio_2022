@@ -25,24 +25,25 @@ export const Header = () => {
 
 const Wrap = styled.div`
   position: fixed;
-  top: 0;
+  top: 50px;
   right: 0;
-  width: 40%;
   box-sizing: border-box;
   padding: ${mainStyle.padding};
 `;
 const MenuWrap = styled.ul`
-  height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
 `;
 const Menu = styled.li`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   padding-bottom: 5px;
-  border-bottom: 1px solid ${mainStyle.Navy};
+  margin-bottom: 5px;
+  a:hover {
+    border-bottom: 1px solid ${mainStyle.Navy};
+  }
   a {
     color: ${mainStyle.Navy};
   }

@@ -18,7 +18,7 @@ function App() {
         <Route path="/toy_project" element={<Toy />}></Route>
         <Route path="/web_renewal" element={<Renew />}></Route>
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }
