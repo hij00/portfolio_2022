@@ -42,9 +42,12 @@ const Menu = styled.li`
   padding-bottom: 5px;
   margin-bottom: 5px;
   a:hover {
-    border-bottom: 1px solid ${mainStyle.Navy};
+    /* border-bottom: 1px solid ${mainStyle.pointColor}; */
+    background-color: ${mainStyle.pointColor};
+    color: black;
   }
   a {
-    color: ${mainStyle.Navy};
+    color: ${mainStyle.subColor};
+    padding: 3px;
   }
 `;

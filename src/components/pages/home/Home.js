@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
+import dyson from "../../../img/dyson.png";
+import movie from "../../../img/movie.png";
 
 export const Home = () => {
   return (
@@ -9,7 +12,15 @@ export const Home = () => {
         <SText className="choi">
           CH
           <Site>
-            <Box></Box>
+            <Box
+              className="cover"
+              style={{
+                background: `url(${movie}) no-repeat left/cover`,
+              }}
+            >
+              <Cover></Cover>
+            </Box>
+
             <h1>01</h1>
           </Site>
           OI
@@ -19,7 +30,8 @@ export const Home = () => {
           <Title>
             Click
             <svg
-              fill="#ECE5C7"
+              fill="#607EAA"
+              // mainStyle.pointColor
               version="1.1"
               id="Layer_1"
               x="0px"
@@ -53,15 +65,24 @@ export const Home = () => {
           JEONG
           <Site>
             <h1>02</h1>
-            <Box></Box>
+            <Box
+              className="cover"
+              style={{
+                background: `url(${dyson}) no-repeat left/cover`,
+              }}
+            >
+              <Cover></Cover>
+            </Box>
           </Site>
           <MenuWrap className="profile">
             {/* <Title>바로가기</Title> */}
             <Menu>
-              <Link to="#">Dyson</Link>
+              <Link to="#">"저는"</Link>
+              <div>→ Profile</div>
             </Menu>
             <Menu>
-              <Link to="#">Seoul Botenical House</Link>
+              <Link to="#">"개발자입니다"</Link>
+              <div>→ Technic</div>
             </Menu>
           </MenuWrap>
         </SText>
@@ -96,56 +117,82 @@ const SText = styled.div`
   font-size: 300px;
   margin-top: -20px;
   margin-bottom: -20px;
-  color: ${mainStyle.Navy};
+  color: ${mainStyle.subColor};
   &.choi {
     margin-top: 0;
-    margin-left: 50px;
+    margin-left: 200px;
     & span {
       font-family: "Nanum Myeongjo", serif;
 
       font-size: 100px;
       margin-top: 110px;
-      color: ${mainStyle.beigeSub};
+      color: ${mainStyle.pointColor};
+    }
+    & div {
+      margin-top: 30px;
     }
   }
   &.hee {
     justify-content: end;
   }
   &.jeong {
-    justify-content: center;
-    margin-left: 200px;
+    justify-content: flex-start;
+    margin-left: 00px;
+    & div {
+      margin-bottom: 20px;
+    }
   }
 `;
 
 const MenuWrap = styled.ul`
   font-family: "Nanum Myeongjo", serif;
   margin-right: 100px;
-  text-align: right;
+
+  margin-left: 30px;
+
+  &.site {
+    text-align: right;
+  }
   &.profile {
     text-align: left;
-    margin-left: 50px;
+
+    margin-right: 0;
   }
 `;
 
 const Menu = styled.li`
   font-size: 18px;
-  margin: 15px 0;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  a {
+    color: ${mainStyle.mainColor};
+  }
+
   a:hover {
-    border-bottom: 1px solid ${mainStyle.blackColor};
-    padding-bottom: 5px;
+    color: ${mainStyle.pointColor};
+  }
+  div {
+    display: none;
+    font-size: 18px;
+    color: ${mainStyle.subColor};
+  }
+  &:hover {
+    div {
+      display: block;
+    }
   }
 `;
 
 const Title = styled.div`
-  color: ${mainStyle.beige};
+  color: ${mainStyle.pointColor};
   font-size: 22px;
   font-weight: 900;
   padding-bottom: 10px;
   margin-bottom: 100px;
   svg {
-    margin-left: 10px;
+    margin: 0 0 5px 10px;
   }
-  /* border-bottom: 1px solid ${mainStyle.blackColor}; */
 `;
 
 const Site = styled.div`
@@ -153,6 +200,7 @@ const Site = styled.div`
     font-size: 18px;
     font-family: "Nanum Myeongjo", serif;
     margin-top: 10px;
+    color: ${mainStyle.pointColor};
   }
 `;
 
@@ -161,4 +209,13 @@ const Box = styled.div`
   height: 200px;
   background-color: gray;
   margin: 10px 0;
+  position: relative;
+`;
+
+const Cover = styled.div`
+  position: absolute;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  background-color: ${mainStyle.mainColor};
 `;
