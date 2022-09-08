@@ -11,16 +11,18 @@ export const Home = () => {
         <SText className="choi">
           CH
           <Site>
-            <Box
-              className="box"
-              style={{
-                background: `url(${movie}) no-repeat left/cover`,
-              }}
-            >
-              <Cover className="cover"></Cover>
-            </Box>
+            <a target="_top" href="https://wjdgus1122.github.io/dyson_project">
+              <Box
+                className="box"
+                style={{
+                  background: `url(${dyson}) no-repeat left/cover`,
+                }}
+              >
+                <Cover className="cover"></Cover>
+              </Box>
 
-            <h1>01</h1>
+              <h1>01</h1>
+            </a>
           </Site>
           OI
           <span>&copy;</span>
@@ -87,7 +89,7 @@ export const Home = () => {
             <Box
               className="box"
               style={{
-                background: `url(${dyson}) no-repeat left/cover`,
+                background: `url(${movie}) no-repeat left/cover`,
               }}
             >
               <Cover className="cover"></Cover>
