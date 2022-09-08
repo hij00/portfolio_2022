@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
@@ -13,12 +12,12 @@ export const Home = () => {
           CH
           <Site>
             <Box
-              className="cover"
+              className="box"
               style={{
                 background: `url(${movie}) no-repeat left/cover`,
               }}
             >
-              <Cover></Cover>
+              <Cover className="cover"></Cover>
             </Box>
 
             <h1>01</h1>
@@ -27,7 +26,7 @@ export const Home = () => {
           <span>&copy;</span>
         </SText>
         <SText className="hee">
-          <Title>
+          <Title className="hee">
             Click
             <svg
               fill="#607EAA"
@@ -47,16 +46,36 @@ export const Home = () => {
           <MenuWrap className="site">
             {/* <Title>바로가기</Title> */}
             <Menu>
-              <Link to="#">Dyson</Link>
+              <a
+                target="_top"
+                href="https://wjdgus1122.github.io/dyson_project"
+              >
+                Dyson
+              </a>
             </Menu>
             <Menu>
-              <Link to="#">Seoul Botenical House</Link>
+              <a
+                target="_top"
+                href="https://wjdgus1122.github.io/dyson_project"
+              >
+                Seoul Botenical House
+              </a>
             </Menu>
             <Menu>
-              <Link to="#">Movie API Site</Link>
+              <a
+                target="_top"
+                href="https://wjdgus1122.github.io/dyson_project"
+              >
+                Movie API Site
+              </a>
             </Menu>
             <Menu>
-              <Link to="#">Shopping Cart</Link>
+              <a
+                target="_top"
+                href="https://wjdgus1122.github.io/dyson_project"
+              >
+                Shopping Cart
+              </a>
             </Menu>
           </MenuWrap>
           HEE
@@ -66,16 +85,17 @@ export const Home = () => {
           <Site>
             <h1>02</h1>
             <Box
-              className="cover"
+              className="box"
               style={{
                 background: `url(${dyson}) no-repeat left/cover`,
               }}
             >
-              <Cover></Cover>
+              <Cover className="cover"></Cover>
             </Box>
           </Site>
           <MenuWrap className="profile">
             {/* <Title>바로가기</Title> */}
+            <Title>Click</Title>
             <Menu>
               <Link to="#">"저는"</Link>
               <div>→ Profile</div>
@@ -128,8 +148,8 @@ const SText = styled.div`
       margin-top: 110px;
       color: ${mainStyle.pointColor};
     }
-    & div {
-      margin-top: 30px;
+    &.box {
+      margin-top: 40px;
     }
   }
   &.hee {
@@ -138,7 +158,7 @@ const SText = styled.div`
   &.jeong {
     justify-content: flex-start;
     margin-left: 00px;
-    & div {
+    &.box {
       margin-bottom: 20px;
     }
   }
@@ -188,10 +208,12 @@ const Title = styled.div`
   color: ${mainStyle.pointColor};
   font-size: 22px;
   font-weight: 900;
-  padding-bottom: 10px;
-  margin-bottom: 100px;
-  svg {
-    margin: 0 0 5px 10px;
+  &.hee {
+    padding-bottom: 10px;
+    margin-bottom: 100px;
+    svg {
+      margin: 0 0 5px 10px;
+    }
   }
 `;
 
@@ -210,6 +232,7 @@ const Box = styled.div`
   background-color: gray;
   margin: 10px 0;
   position: relative;
+  opacity: 0.8;
 `;
 
 const Cover = styled.div`
@@ -217,5 +240,11 @@ const Cover = styled.div`
   top: 0;
   width: inherit;
   height: inherit;
-  background-color: ${mainStyle.mainColor};
+
+  backdrop-filter: grayscale(1);
+  transition: 1s;
+  /* background-color: ${mainStyle.mainColor}; */
+  &:hover {
+    backdrop-filter: grayscale(0);
+  }
 `;
