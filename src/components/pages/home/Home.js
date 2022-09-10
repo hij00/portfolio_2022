@@ -28,8 +28,15 @@ export const Home = () => {
           <span>&copy;</span>
         </SText>
         <SText className="hee">
-          <Title className="hee">
-            Click
+          <Text className="hee">
+            <ClickWrap>
+              <h3>클릭!</h3>
+              <Line />
+              <Line />
+              <Line />
+
+              <h3>스크롤</h3>
+            </ClickWrap>
             <svg
               fill="#607EAA"
               // mainStyle.pointColor
@@ -44,7 +51,7 @@ export const Home = () => {
             >
               <polygon points="585.782,3.604 577,1.897 577,5 0,5 0,6 577,6 577,8.724 585.782,7.018 594.564,5.311 " />
             </svg>
-          </Title>
+          </Text>
           <MenuWrap className="site">
             {/* <Title>바로가기</Title> */}
             <Menu>
@@ -97,7 +104,7 @@ export const Home = () => {
           </Site>
           <MenuWrap className="profile">
             {/* <Title>바로가기</Title> */}
-            <Title>Click</Title>
+            <Text>Click</Text>
             <Menu>
               <Link to="#">"저는"</Link>
               <div>→ Profile</div>
@@ -142,7 +149,9 @@ const SText = styled.div`
   color: ${mainStyle.subColor};
   &.choi {
     margin-top: 0;
-    margin-left: 200px;
+    /* margin-left: 200px; */
+    justify-content: flex-start;
+
     & span {
       font-family: "Nanum Myeongjo", serif;
 
@@ -159,7 +168,7 @@ const SText = styled.div`
   }
   &.jeong {
     justify-content: flex-start;
-    margin-left: 00px;
+    margin-left: 200px;
     &.box {
       margin-bottom: 20px;
     }
@@ -206,15 +215,52 @@ const Menu = styled.li`
   }
 `;
 
-const Title = styled.div`
+const Text = styled.div`
   color: ${mainStyle.pointColor};
-  font-size: 22px;
-  font-weight: 900;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
+  display: flex;
   &.hee {
     padding-bottom: 10px;
-    margin-bottom: 100px;
     svg {
-      margin: 0 0 5px 10px;
+      margin: 30px 0 0 10px;
+    }
+  }
+`;
+
+const ClickWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  h3 {
+    margin: 20px 0;
+  }
+`;
+
+const Line = styled.div`
+  /* height: 70px;
+  width: 1px; */
+
+  /* opacity: 0.5; */
+  width: 20px;
+  height: 20px;
+  border-bottom: 1px solid ${mainStyle.subColor};
+  border-left: 1px solid ${mainStyle.subColor};
+  transform: rotate(-45deg);
+  animation: scroll 3s 1s alternate;
+  /* animation: name duration timing-function delay iteration-count direction */
+  @keyframes scroll {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
     }
   }
 `;
