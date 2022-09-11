@@ -31,9 +31,11 @@ export const Home = () => {
           <Text className="hee">
             <ClickWrap>
               <h3>클릭!</h3>
-              <Line />
-              <Line />
-              <Line />
+              <LineWrap>
+                <Line />
+                <Line />
+                <Line />
+              </LineWrap>
 
               <h3>스크롤</h3>
             </ClickWrap>
@@ -240,28 +242,35 @@ const ClickWrap = styled.div`
   }
 `;
 
-const Line = styled.div`
-  /* height: 70px;
-  width: 1px; */
+const LineWrap = styled.div``;
 
-  /* opacity: 0.5; */
+const Line = styled.div`
   width: 20px;
   height: 20px;
   border-bottom: 1px solid ${mainStyle.subColor};
   border-left: 1px solid ${mainStyle.subColor};
   transform: rotate(-45deg);
-  animation: scroll 3s 1s alternate;
-  /* animation: name duration timing-function delay iteration-count direction */
+
+  animation: scroll 2s infinite;
   @keyframes scroll {
     0% {
       opacity: 0;
     }
     50% {
-      opacity: 0.5;
-    }
-    100% {
       opacity: 1;
     }
+    100% {
+      opacity: 0;
+    }
+  }
+  &:nth-child(1) {
+    animation-delay: 0s;
+  }
+  &:nth-child(2) {
+    animation-delay: 0.15s;
+  }
+  &:nth-child(3) {
+    animation-delay: 0.3s;
   }
 `;
 
