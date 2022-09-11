@@ -22,6 +22,6 @@ body{
 }
 a{
     text-decoration: none;
-    color: ${mainStyle.blackColor};
+    color: ${mainStyle.subColor};
 }
 `;

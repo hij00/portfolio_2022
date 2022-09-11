@@ -8,12 +8,22 @@ export const Profile = () => {
       <TextWrap>
         <Title>
           개발의 시작부터 끝까지, <br />
-          최희정 입니다.
+          <br />
+          <span>"최희정"입니다.</span>
         </Title>
+
         <Desc>
-          <Date>22.04 ~</Date>
-          <Text></Text>
+          <Text>Frontend Developer</Text>
+          <Text>22.04 ~ing</Text>
+
+          <STitle>수료과정</STitle>
+          <Text>
+            SBS아카데미컴퓨터아트학원 - UIUX 프론트엔드 개발자양성과정
+            <br />
+            (2022.04.12 ~ 2022.07.29)
+          </Text>
         </Desc>
+
         <ImgWrap>
           <img
             src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"
@@ -46,6 +56,11 @@ export const Profile = () => {
             alt="AdobeIllustrator"
           />
         </ImgWrap>
+
+        <Add>
+          <a href="#!">이력서</a>
+          <a href="#!">Git Hub</a>
+        </Add>
       </TextWrap>
     </Wrap>
   );
@@ -73,19 +88,29 @@ const TextWrap = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 50px;
-  margin-bottom: 50px;
-  line-height: 70px;
+  font-family: "Nanum Myeongjo", serif;
+  color: ${mainStyle.pointColor};
+  span {
+    font-size: 50px;
+    color: ${mainStyle.mainColor};
+  }
 `;
 
 const Desc = styled.div`
-  font-size: 22px;
-  margin-bottom: 40px;
+  font-size: 18px;
+  margin: 40px 0;
+  color: ${mainStyle.pointColor};
 `;
 
-const Date = styled.div``;
+const STitle = styled.div`
+  margin: 30px 0 10px;
+  color: #c5c6d0;
+`;
 
-const Text = styled.div``;
+const Text = styled.div`
+  margin-bottom: 10px;
+  line-height: 20px;
+`;
 
 const ImgWrap = styled.div`
   width: 100%;
@@ -94,5 +119,15 @@ const ImgWrap = styled.div`
   img {
     margin-right: 10px;
     margin-bottom: 20px;
+  }
+`;
+
+const Add = styled.div`
+  margin-top: 50px;
+  a {
+    padding: 10px 30px;
+    margin-right: 50px;
+    border-radius: 50px;
+    background-color: black;
   }
 `;
