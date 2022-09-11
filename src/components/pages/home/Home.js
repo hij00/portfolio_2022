@@ -13,7 +13,7 @@ export const Home = () => {
           <Site>
             <a target="_top" href="https://wjdgus1122.github.io/dyson_project">
               <Box
-                className="box"
+                className="choi"
                 style={{
                   background: `url(${dyson}) no-repeat left/cover`,
                 }}
@@ -96,7 +96,7 @@ export const Home = () => {
           <Site>
             <h1>02</h1>
             <Box
-              className="box"
+              className="jeong"
               style={{
                 background: `url(${movie}) no-repeat left/cover`,
               }}
@@ -108,13 +108,13 @@ export const Home = () => {
             {/* <Title>바로가기</Title> */}
             <Text>Click</Text>
             <Menu>
-              <Link to="#">"저는"</Link>
+              <Link to="/profile">"저는"</Link>
               <div>→ Profile</div>
             </Menu>
-            <Menu>
+            {/* <Menu>
               <Link to="#">"개발자입니다"</Link>
               <div>→ Technic</div>
-            </Menu>
+            </Menu> */}
           </MenuWrap>
         </SText>
       </SvgWrap>
@@ -170,7 +170,7 @@ const SText = styled.div`
   }
   &.jeong {
     justify-content: flex-start;
-    margin-left: 200px;
+    /* margin-left: 200px; */
     &.box {
       margin-bottom: 20px;
     }
@@ -285,11 +285,17 @@ const Site = styled.div`
 
 const Box = styled.div`
   width: 300px;
-  height: 200px;
+  height: 190px;
   background-color: gray;
   margin: 10px 0;
   position: relative;
   opacity: 0.8;
+  &.choi {
+    margin-top: 30px;
+  }
+  &.jeong {
+    margin-bottom: 30px;
+  }
 `;
 
 const Cover = styled.div`
