@@ -10,7 +10,7 @@ export const Home = () => {
       <SvgWrap>
         <SText className="choi">
           CH
-          <Site>
+          <ImgBox>
             <a target="_top" href="https://wjdgus1122.github.io/dyson_project">
               <Box
                 className="choi"
@@ -18,27 +18,18 @@ export const Home = () => {
                   background: `url(${dyson}) no-repeat left/cover`,
                 }}
               >
-                <Cover className="cover"></Cover>
+                <Cover />
               </Box>
 
               <h1>01</h1>
             </a>
-          </Site>
+          </ImgBox>
           OI
           <span>&copy;</span>
         </SText>
         <SText className="hee">
           <Text className="hee">
-            <ClickWrap>
-              <h3>클릭!</h3>
-              <LineWrap>
-                <Line />
-                <Line />
-                <Line />
-              </LineWrap>
-
-              <h3>스크롤</h3>
-            </ClickWrap>
+            <h3>클릭!</h3>
             <svg
               fill="#607EAA"
               // mainStyle.pointColor
@@ -93,24 +84,32 @@ export const Home = () => {
         </SText>
         <SText className="jeong">
           JEONG
-          <Site>
+          <ImgBox>
             <h1>02</h1>
             <Box
               className="jeong"
               style={{
-                background: `url(${movie}) no-repeat left/cover`,
+                background: `url(${movie}) no-repeat center/cover`,
               }}
             >
-              <Cover className="cover"></Cover>
+              <Cover />
             </Box>
-          </Site>
+          </ImgBox>
           <MenuWrap className="profile">
             {/* <Title>바로가기</Title> */}
-            <Text>Click</Text>
             <Menu>
               <Link to="/profile">"저는"</Link>
               <div>→ Profile</div>
             </Menu>
+            <ClickWrap>
+              <LineWrap>
+                <Line />
+                <Line />
+                <Line />
+              </LineWrap>
+
+              <Text>스크롤</Text>
+            </ClickWrap>
             {/* <Menu>
               <Link to="#">"개발자입니다"</Link>
               <div>→ Technic</div>
@@ -153,7 +152,6 @@ const SText = styled.div`
     margin-top: 0;
     /* margin-left: 200px; */
     justify-content: flex-start;
-
     & span {
       font-family: "Nanum Myeongjo", serif;
 
@@ -187,8 +185,10 @@ const MenuWrap = styled.ul`
     text-align: right;
   }
   &.profile {
+    width: 100%;
     text-align: left;
-
+    display: flex;
+    justify-content: space-between;
     margin-right: 0;
   }
 `;
@@ -201,7 +201,6 @@ const Menu = styled.li`
   a {
     color: ${mainStyle.mainColor};
   }
-
   a:hover {
     color: ${mainStyle.pointColor};
   }
@@ -222,11 +221,12 @@ const Text = styled.div`
   font-size: 18px;
   font-weight: 500;
   font-family: "Noto Sans KR", sans-serif;
-  display: flex;
   &.hee {
-    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 120px;
     svg {
-      margin: 30px 0 0 10px;
+      margin-left: 10px;
     }
   }
 `;
@@ -237,18 +237,22 @@ const ClickWrap = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+
   h3 {
     margin: 20px 0;
+    font-size: 22px;
   }
 `;
 
-const LineWrap = styled.div``;
+const LineWrap = styled.div`
+  margin-bottom: 20px;
+`;
 
 const Line = styled.div`
   width: 20px;
   height: 20px;
-  border-bottom: 1px solid ${mainStyle.subColor};
-  border-left: 1px solid ${mainStyle.subColor};
+  border-bottom: 1px solid ${mainStyle.pointColor};
+  border-left: 1px solid ${mainStyle.pointColor};
   transform: rotate(-45deg);
 
   animation: scroll 2s infinite;
@@ -274,7 +278,7 @@ const Line = styled.div`
   }
 `;
 
-const Site = styled.div`
+const ImgBox = styled.div`
   h1 {
     font-size: 18px;
     font-family: "Nanum Myeongjo", serif;
