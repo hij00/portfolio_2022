@@ -1,11 +1,16 @@
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
+import imgFace from "../../../img/imgFace.png";
 
 export const Section1 = () => {
   return (
     <>
       <Wrap>
-        <Box></Box>
+        <Box
+          style={{
+            background: `url(${imgFace}) no-repeat center/cover`,
+          }}
+        />
         <TextWrap>
           <Title>
             개발의 시작부터 끝까지, <br />
@@ -80,8 +85,8 @@ const Wrap = styled.div`
 `;
 
 const Box = styled.div`
-  width: 35%;
-  height: 600px;
+  width: 50%;
+  height: 500px;
   background-color: gray;
 `;
 
