@@ -1,21 +1,41 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "./style/GlobalStyle";
 
 export const Header = () => {
+  const location = useLocation();
+  const [show, setShow] = useState("#EAE3D2");
+  const [clickE, setClickE] = useState();
+
+  useEffect(() => {
+    const handleClick = () => {
+      const onClick = () => {
+        console.log(location.pathname);
+        if (location.pathname !== "/") {
+          setShow("#576F72");
+        } else {
+          setShow("#EAE3D2");
+        }
+      };
+      setClickE(onClick);
+    };
+    handleClick();
+  }, [location]);
+
   return (
     <Wrap>
-      <MenuWrap>
-        <Menu>
+      <MenuWrap clickE={clickE}>
+        <Menu show={show}>
           <Link to="/">홈</Link>
         </Menu>
-        <Menu>
+        <Menu show={show}>
           <Link to="/profile">프로필</Link>
         </Menu>
-        <Menu>
+        <Menu show={show}>
           <Link to="/toy_project">토이프로젝트</Link>
         </Menu>
-        <Menu>
+        <Menu show={show}>
           <Link to="/web_renewal">리뉴얼</Link>
         </Menu>
       </MenuWrap>
@@ -47,7 +67,7 @@ const Menu = styled.li`
     color: black;
   }
   a {
-    color: ${mainStyle.subColor};
+    color: ${(props) => props.show};
     padding: 3px;
   }
 `;

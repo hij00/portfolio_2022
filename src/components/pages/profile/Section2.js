@@ -15,7 +15,7 @@ export const Section2 = () => {
 const Wrap = styled.section`
   width: 100%;
   height: 100vh;
-  background-color: ${mainStyle.backColor};
+  background-color: ${mainStyle.backColor3};
   padding: 0 400px;
 `;
 

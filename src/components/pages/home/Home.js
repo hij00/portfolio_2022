@@ -40,7 +40,7 @@ export const Home = () => {
               width="550px"
               height="8.724px"
               viewBox="0 0 594.564 8.724"
-              enable-background="new 0 0 594.564 8.724"
+              enableBackground="new 0 0 594.564 8.724"
             >
               <polygon points="585.782,3.604 577,1.897 577,5 0,5 0,6 577,6 577,8.724 585.782,7.018 594.564,5.311 " />
             </svg>
