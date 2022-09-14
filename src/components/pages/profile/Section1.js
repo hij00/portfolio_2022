@@ -81,7 +81,7 @@ const Wrap = styled.div`
   align-items: center;
 
   padding: 0 400px;
-  background-color: ${mainStyle.backColor3};
+  background-color: ${mainStyle.backColor2};
 `;
 
 const Box = styled.div`
@@ -97,22 +97,22 @@ const TextWrap = styled.div`
 
 const Title = styled.div`
   font-family: "Nanum Myeongjo", serif;
-  color: ${mainStyle.subColor3};
+  color: ${mainStyle.subColor2};
   span {
     font-size: 50px;
-    color: ${mainStyle.pointColor3};
+    color: ${mainStyle.pointColor2};
   }
 `;
 
 const Desc = styled.div`
   font-size: 18px;
   margin: 40px 0;
-  color: ${mainStyle.subColor3};
+  color: ${mainStyle.subColor2};
 `;
 
 const STitle = styled.div`
   margin: 30px 0 10px;
-  color: ${mainStyle.pointColor3};
+  color: ${mainStyle.pointColor2};
 `;
 
 const Text = styled.div`

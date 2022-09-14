@@ -33,10 +33,7 @@ export const Header = () => {
           <Link to="/profile">프로필</Link>
         </Menu>
         <Menu show={show}>
-          <Link to="/toy_project">토이프로젝트</Link>
-        </Menu>
-        <Menu show={show}>
-          <Link to="/web_renewal">리뉴얼</Link>
+          <Link to="/project">프로젝트</Link>
         </Menu>
       </MenuWrap>
     </Wrap>
