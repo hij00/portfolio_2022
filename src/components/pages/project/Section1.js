@@ -3,14 +3,29 @@ import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
 
 export const Section1 = () => {
-  const [round, setRound] = useState("0");
+  // const [round, setRound] = useState("50px");
+  const [view, setView] = useState("80vh");
+
   const onClick = () => {
-    setRound("50px");
+    // setRound(`${round === "0" ? "50px" : "0"}`);
+    setView(`${view === "80vh" ? "20vh" : "80vh"}`);
   };
 
   return (
     <Wrap>
-      <ConWrap className="renew" onClick={onClick} round={round}>
+      <Tag onClick={onClick}>
+        Web
+        <br />
+        Site
+      </Tag>
+      <ConWrap
+        className="renew"
+        style={
+          {
+            // borderRadius: `0 ${round === "50px" ? "0" : "50px"} 0 0 `,
+          }
+        }
+      >
         <Title>
           웹리뉴얼
           <span>WebSite Renewal</span>
@@ -23,9 +38,16 @@ export const Section1 = () => {
           </Desc>
         </ImgWrap>
       </ConWrap>
-
-      <ConWrap className="toy" onClick={onClick} round={round}>
-        <Title>
+      {/* 
+      <ConWrap
+        className="toy"
+        style={
+          {
+            // borderRadius: `0 ${round === "0" ? "50px" : "0"} 0 0 `,
+          }
+        }
+      >
+        <Title onClick={onClick}>
           토이프로젝트<span>Toy Project</span>
         </Title>
         <ImgWrap>
@@ -35,7 +57,7 @@ export const Section1 = () => {
             <p>설명</p>
           </Desc>
         </ImgWrap>
-      </ConWrap>
+      </ConWrap> */}
     </Wrap>
   );
 };
@@ -45,26 +67,49 @@ const Wrap = styled.div`
   height: 100vh;
   /* padding: ${mainStyle.padding}; */
   display: flex;
+  /* flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+`;
+
+const Tag = styled.div`
+  width: 5%;
+  height: 200px;
+  background-color: ${mainStyle.backColor};
+  position: absolute;
+  left: 0;
+
+  color: ${mainStyle.subColor};
+  font-size: 22px;
+
+  /* line-height: 80px; */
+  text-align: center;
+  /* writing-mode: vertical-rl;
+  text-orientation: upright; */
+  border-radius: 20px 0 0 20px;
 `;
 
 const ConWrap = styled.div`
   /* padding: 0 200px; */
-  width: 50%;
-  height: 100vh;
+  width: 95%;
+  /* height: 50vh; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  padding: 120px 200px;
+  align-items: flex-start;
   &.renew {
     background-color: ${mainStyle.backColor};
-    /* border-radius: 10px 20px 30px 40px; */
-    border-radius: 0 ${(props) => props.round} 0 0;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
   &.toy {
     background-color: ${mainStyle.backColor2};
-    border-radius: 0 ${(props) => props.round} 0 0;
+    height: 100vh;
+    position: absolute;
+    top: 0;
   }
 `;
 
@@ -78,13 +123,18 @@ const Title = styled.div`
   }
 `;
 
-const ImgWrap = styled.div``;
+const ImgWrap = styled.div`
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+`;
 
 const Con = styled.div`
   width: 500px;
   height: 500px;
   background-color: gray;
-  margin: 80px 0 40px;
+  margin: 80px 40px 0 0;
 `;
 
 const Desc = styled.div``;
