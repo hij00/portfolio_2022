@@ -12,33 +12,33 @@ export const Section1 = () => {
   };
 
   return (
-    <Wrap>
-      <Tag onClick={onClick}>
-        Web
-        <br />
-        Site
-      </Tag>
-      <ConWrap
-        className="renew"
-        style={
-          {
-            // borderRadius: `0 ${round === "50px" ? "0" : "50px"} 0 0 `,
+    <>
+      <Wrap>
+        <MenuWrap onClick={onClick}>
+          <Menu>웹사이트</Menu>
+          <Menu>토이프로젝트</Menu>
+        </MenuWrap>
+        <ConWrap
+          className="renew"
+          style={
+            {
+              // borderRadius: `0 ${round === "50px" ? "0" : "50px"} 0 0 `,
+            }
           }
-        }
-      >
-        <Title>
-          웹리뉴얼
-          <span>WebSite Renewal</span>
-        </Title>
-        <ImgWrap>
-          <Con></Con>
-          <Desc>
-            <h3>다이슨</h3>
-            <p>설명</p>
-          </Desc>
-        </ImgWrap>
-      </ConWrap>
-      {/* 
+        >
+          <Title>
+            웹리뉴얼
+            <span>WebSite Renewal</span>
+          </Title>
+          <ImgWrap>
+            <Con></Con>
+            <Desc>
+              <h3>다이슨</h3>
+              <p>설명</p>
+            </Desc>
+          </ImgWrap>
+        </ConWrap>
+        {/* 
       <ConWrap
         className="toy"
         style={
@@ -58,52 +58,58 @@ export const Section1 = () => {
           </Desc>
         </ImgWrap>
       </ConWrap> */}
-    </Wrap>
+      </Wrap>
+    </>
   );
 };
 
-const Wrap = styled.div`
+const Wrap = styled.section`
   width: 100%;
   height: 100vh;
-  /* padding: ${mainStyle.padding}; */
+  padding: ${mainStyle.padding};
   display: flex;
   /* flex-direction: column;
   justify-content: center;
   align-items: center; */
 `;
 
-const Tag = styled.div`
-  width: 5%;
-  height: 200px;
-  background-color: ${mainStyle.backColor};
-  position: absolute;
-  left: 0;
-
-  color: ${mainStyle.subColor};
-  font-size: 22px;
-
-  /* line-height: 80px; */
-  text-align: center;
-  /* writing-mode: vertical-rl;
-  text-orientation: upright; */
-  border-radius: 20px 0 0 20px;
+const MenuWrap = styled.ul`
+  z-index: 99;
+  display: flex;
 `;
+
+const Menu = styled.li``;
+
+// const Tag = styled.div`
+//   width: 5%;
+//   height: 200px;
+//   background-color: ${mainStyle.backColor};
+//   position: absolute;
+//   left: 0;
+
+//   color: ${mainStyle.subColor};
+//   font-size: 22px;
+
+//   /* line-height: 80px; */
+//   text-align: center;
+//   /* writing-mode: vertical-rl;
+//   text-orientation: upright; */
+//   border-radius: 20px 0 0 20px;
+// `;
 
 const ConWrap = styled.div`
   /* padding: 0 200px; */
-  width: 95%;
+  width: 100%;
   /* height: 50vh; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 120px 200px;
   align-items: flex-start;
   &.renew {
     background-color: ${mainStyle.backColor};
     height: 100vh;
     position: absolute;
     top: 0;
-    right: 0;
   }
   &.toy {
     background-color: ${mainStyle.backColor2};

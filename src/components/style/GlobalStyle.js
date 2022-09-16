@@ -23,7 +23,7 @@ ${reset}
   box-sizing: border-box;
 }
 body{
-    
+  box-sizing: border-box;
     font-family: 'Noto Sans KR', sans-serif;
 }
 a{

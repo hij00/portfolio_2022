@@ -46,6 +46,7 @@ const Wrap = styled.div`
   right: 0;
   box-sizing: border-box;
   padding: ${mainStyle.padding};
+  z-index: 999;
 `;
 const MenuWrap = styled.ul`
   display: flex;
