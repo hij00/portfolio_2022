@@ -4,25 +4,31 @@ import { mainStyle } from "../../style/GlobalStyle";
 
 export const Section1 = () => {
   // const [round, setRound] = useState("50px");
-  const [view, setView] = useState("80vh");
+  // const [view, setView] = useState(`${mainStyle.backColor}`);
+  // const [vview, setVview] = useState(`${mainStyle.backColor2}`);
 
-  const onClick = () => {
-    // setRound(`${round === "0" ? "50px" : "0"}`);
-    setView(`${view === "80vh" ? "20vh" : "80vh"}`);
-  };
+  // const onClick = () => {
+  //   setView(`${mainStyle.backColor2}`);
+  // };
+
+  // const clickOn = () => {
+  //   setVview(`${mainStyle.backColor}`);
+  // };
 
   return (
     <>
       <Wrap>
-        <MenuWrap onClick={onClick}>
-          <Menu>웹사이트</Menu>
-          <Menu>토이프로젝트</Menu>
+        <MenuWrap>
+          <Menu>Site Renewal</Menu>
+          <Menu>Toy Project</Menu>
         </MenuWrap>
+
         <ConWrap
-          className="renew"
+          className="site"
+          // view={view}
           style={
             {
-              // borderRadius: `0 ${round === "50px" ? "0" : "50px"} 0 0 `,
+              // display: `${view === `${mainStyle.backColor}` ? "flex" : "none"}`,
             }
           }
         >
@@ -38,26 +44,27 @@ export const Section1 = () => {
             </Desc>
           </ImgWrap>
         </ConWrap>
-        {/* 
-      <ConWrap
-        className="toy"
-        style={
-          {
-            // borderRadius: `0 ${round === "0" ? "50px" : "0"} 0 0 `,
+
+        <ConWrap
+          className="toy"
+          // vview={vview}
+          style={
+            {
+              // display: `${view === `${mainStyle.backColor}` ? "none" : "flex"}`,
+            }
           }
-        }
-      >
-        <Title onClick={onClick}>
-          토이프로젝트<span>Toy Project</span>
-        </Title>
-        <ImgWrap>
-          <Con></Con>
-          <Desc>
-            <h3>장바구니</h3>
-            <p>설명</p>
-          </Desc>
-        </ImgWrap>
-      </ConWrap> */}
+        >
+          <Title>
+            토이프로젝트<span>Toy Project</span>
+          </Title>
+          <ImgWrap>
+            <Con></Con>
+            <Desc>
+              <h3>장바구니</h3>
+              <p>설명</p>
+            </Desc>
+          </ImgWrap>
+        </ConWrap>
       </Wrap>
     </>
   );
@@ -66,36 +73,40 @@ export const Section1 = () => {
 const Wrap = styled.section`
   width: 100%;
   height: 100vh;
-  padding: ${mainStyle.padding};
   display: flex;
-  /* flex-direction: column;
+  flex-direction: column;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
 `;
 
 const MenuWrap = styled.ul`
-  z-index: 99;
+  font-family: "Nanum Myeongjo", serif;
+
+  width: 100%;
+  height: 120px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${mainStyle.backColor};
+
+  /* position: fixed;
+  top: 0; */
+  li:nth-child(2) {
+    margin-right: 0;
+  }
 `;
 
-const Menu = styled.li``;
-
-// const Tag = styled.div`
-//   width: 5%;
-//   height: 200px;
-//   background-color: ${mainStyle.backColor};
-//   position: absolute;
-//   left: 0;
-
-//   color: ${mainStyle.subColor};
-//   font-size: 22px;
-
-//   /* line-height: 80px; */
-//   text-align: center;
-//   /* writing-mode: vertical-rl;
-//   text-orientation: upright; */
-//   border-radius: 20px 0 0 20px;
-// `;
+const Menu = styled.li`
+  font-size: 18px;
+  font-weight: 900;
+  margin-right: 80px;
+  color: ${mainStyle.subColor};
+  padding: 5px 0;
+  &:hover {
+    color: ${mainStyle.pointColor};
+    border-bottom: 1px solid ${mainStyle.pointColor};
+  }
+`;
 
 const ConWrap = styled.div`
   /* padding: 0 200px; */
@@ -103,19 +114,24 @@ const ConWrap = styled.div`
   /* height: 50vh; */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: flex-start;
-  &.renew {
-    background-color: ${mainStyle.backColor};
+  padding: ${mainStyle.padding};
+  &.site {
+    /* background-color: ${(props) => props.view}; */
     height: 100vh;
-    position: absolute;
-    top: 0;
+    /* position: absolute;
+    top: 0; */
+
+    /* display: none; */
   }
   &.toy {
-    background-color: ${mainStyle.backColor2};
+    /* background-color: ${(props) => props.vview}; */
     height: 100vh;
-    position: absolute;
-    top: 0;
+    /* position: absolute;
+    top: 0; */
+
+    display: none;
   }
 `;
 
