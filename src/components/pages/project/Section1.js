@@ -3,42 +3,58 @@ import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
 
 export const Section1 = () => {
-  // const [round, setRound] = useState("50px");
-  // const [view, setView] = useState(`${mainStyle.backColor}`);
-  // const [vview, setVview] = useState(`${mainStyle.backColor2}`);
+  const [view, setView] = useState(`${mainStyle.backColor3}`);
 
-  // const onClick = () => {
-  //   setView(`${mainStyle.backColor2}`);
-  // };
-
-  // const clickOn = () => {
-  //   setVview(`${mainStyle.backColor}`);
-  // };
+  const onClick = () => {
+    setView(
+      `${
+        view === `${mainStyle.backColor3}`
+          ? `${mainStyle.backColor2}`
+          : `${mainStyle.backColor3}`
+      }`
+    );
+  };
 
   return (
     <>
       <Wrap>
         <MenuWrap>
-          <Menu>Site Renewal</Menu>
-          <Menu>Toy Project</Menu>
+          <Menu
+            onClick={onClick}
+            style={{
+              borderBottom: `${
+                view === `${mainStyle.backColor3}` ? "1px" : "0px"
+              } solid ${mainStyle.blackColor}`,
+            }}
+          >
+            Site Renewal
+          </Menu>
+          <Menu
+            onClick={onClick}
+            style={{
+              borderBottom: `${
+                view === `${mainStyle.backColor2}` ? "1px" : "0px"
+              } solid ${mainStyle.blackColor}`,
+            }}
+          >
+            Toy Project
+          </Menu>
         </MenuWrap>
 
         <ConWrap
           className="site"
-          // view={view}
-          style={
-            {
-              // display: `${view === `${mainStyle.backColor}` ? "flex" : "none"}`,
-            }
-          }
+          view={view}
+          style={{
+            display: `${view === `${mainStyle.backColor3}` ? "flex" : "none"}`,
+          }}
         >
-          <Title>
+          <Title className="site">
             웹리뉴얼
             <span>WebSite Renewal</span>
           </Title>
           <ImgWrap>
-            <Con></Con>
-            <Desc>
+            <Img></Img>
+            <Desc className="site">
               <h3>다이슨</h3>
               <p>설명</p>
             </Desc>
@@ -47,19 +63,17 @@ export const Section1 = () => {
 
         <ConWrap
           className="toy"
-          // vview={vview}
-          style={
-            {
-              // display: `${view === `${mainStyle.backColor}` ? "none" : "flex"}`,
-            }
-          }
+          view={view}
+          style={{
+            display: `${view === `${mainStyle.backColor3}` ? "none" : "flex"}`,
+          }}
         >
-          <Title>
+          <Title className="toy">
             토이프로젝트<span>Toy Project</span>
           </Title>
           <ImgWrap>
-            <Con></Con>
-            <Desc>
+            <Img></Img>
+            <Desc className="toy">
               <h3>장바구니</h3>
               <p>설명</p>
             </Desc>
@@ -87,10 +101,10 @@ const MenuWrap = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${mainStyle.backColor};
 
-  /* position: fixed;
-  top: 0; */
+  position: fixed;
+  top: 0;
+
   li:nth-child(2) {
     margin-right: 0;
   }
@@ -100,11 +114,11 @@ const Menu = styled.li`
   font-size: 18px;
   font-weight: 900;
   margin-right: 80px;
-  color: ${mainStyle.subColor};
+  color: ${mainStyle.blackColor};
   padding: 5px 0;
   &:hover {
     color: ${mainStyle.pointColor};
-    border-bottom: 1px solid ${mainStyle.pointColor};
+    border-bottom: 2px solid ${mainStyle.pointColor2};
   }
 `;
 
@@ -114,24 +128,16 @@ const ConWrap = styled.div`
   /* height: 50vh; */
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   align-items: flex-start;
   padding: ${mainStyle.padding};
+  padding-top: 120px;
   &.site {
-    /* background-color: ${(props) => props.view}; */
+    background-color: ${(props) => props.view};
     height: 100vh;
-    /* position: absolute;
-    top: 0; */
-
-    /* display: none; */
   }
   &.toy {
-    /* background-color: ${(props) => props.vview}; */
+    background-color: ${(props) => props.view};
     height: 100vh;
-    /* position: absolute;
-    top: 0; */
-
-    display: none;
   }
 `;
 
@@ -143,6 +149,12 @@ const Title = styled.div`
     font-size: 18px;
     font-weight: 100;
   }
+  &.site {
+    color: ${mainStyle.pointColor3};
+  }
+  &.toy {
+    color: ${mainStyle.pointColor2};
+  }
 `;
 
 const ImgWrap = styled.div`
@@ -152,11 +164,21 @@ const ImgWrap = styled.div`
   align-items: center;
 `;
 
-const Con = styled.div`
+const Img = styled.div`
   width: 500px;
   height: 500px;
   background-color: gray;
   margin: 80px 40px 0 0;
 `;
 
-const Desc = styled.div``;
+const Desc = styled.div`
+  h3 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 150px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 300;
+  }
+`;
