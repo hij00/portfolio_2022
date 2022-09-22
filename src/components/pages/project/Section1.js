@@ -1,6 +1,12 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { TextSite, TextToy } from "../../../Text";
 import { mainStyle } from "../../style/GlobalStyle";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
 
 export const Section1 = () => {
   const [view, setView] = useState(`${mainStyle.backColor3}`);
@@ -45,39 +51,85 @@ export const Section1 = () => {
           className="site"
           view={view}
           style={{
-            display: `${view === `${mainStyle.backColor3}` ? "flex" : "none"}`,
+            display: `${view === `${mainStyle.backColor3}` ? "block" : "none"}`,
           }}
         >
           <Title className="site">
             웹리뉴얼
             <span>WebSite Renewal</span>
           </Title>
-          <ImgWrap>
-            <Img></Img>
-            <Desc className="site">
-              <h3>다이슨</h3>
-              <p>설명</p>
-            </Desc>
-          </ImgWrap>
+
+          <Swiper
+            modules={[Navigation]}
+            slidesPerView={1}
+            observer={true}
+            observeParents={true}
+            navigation
+          >
+            {TextSite.map((text) => (
+              <SwiperSlide key={text.id}>
+                <ImgWrap>
+                  <Img
+
+                  // style={{
+                  //   background: `url(${text.textImg}) no-repeat center/cover`,
+                  // }}
+                  ></Img>
+                  <Desc className="site">
+                    <h3>{text.title}</h3>
+
+                    <h6>기간 : {text.date}</h6>
+                    <h6>사용 프로그램 : {text.tool}</h6>
+
+                    <p>{text.desc}</p>
+                    <p>{text.end}</p>
+                  </Desc>
+                </ImgWrap>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </ConWrap>
 
         <ConWrap
           className="toy"
           view={view}
           style={{
-            display: `${view === `${mainStyle.backColor3}` ? "none" : "flex"}`,
+            display: `${view === `${mainStyle.backColor3}` ? "none" : "block"}`,
           }}
         >
           <Title className="toy">
             토이프로젝트<span>Toy Project</span>
           </Title>
-          <ImgWrap>
-            <Img></Img>
-            <Desc className="toy">
-              <h3>장바구니</h3>
-              <p>설명</p>
-            </Desc>
-          </ImgWrap>
+
+          <Swiper
+            modules={[Navigation]}
+            slidesPerView={1}
+            observer={true}
+            observeParents={true}
+            navigation
+          >
+            {TextToy.map((text) => (
+              <SwiperSlide key={text.id}>
+                <ImgWrap>
+                  <Img
+
+                  // style={{
+                  //   background: `url(${text.textImg}) no-repeat center/cover`,
+                  // }}
+                  ></Img>
+                  <Desc className="site">
+                    <h3>{text.title}</h3>
+
+                    <h6>{text.date}</h6>
+                    <h6>{text.tool}</h6>
+
+                    <p>{text.desc}</p>
+                    <p>{text.end}</p>
+                  </Desc>
+                </ImgWrap>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </ConWrap>
       </Wrap>
     </>
@@ -87,10 +139,10 @@ export const Section1 = () => {
 const Wrap = styled.section`
   width: 100%;
   height: 100vh;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 `;
 
 const MenuWrap = styled.ul`
@@ -123,14 +175,10 @@ const Menu = styled.li`
 `;
 
 const ConWrap = styled.div`
-  /* padding: 0 200px; */
   width: 100%;
-  /* height: 50vh; */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: ${mainStyle.padding};
-  padding-top: 120px;
+  padding: 0 400px;
+  padding-top: 180px;
+
   &.site {
     background-color: ${(props) => props.view};
     height: 100vh;
@@ -144,6 +192,8 @@ const ConWrap = styled.div`
 const Title = styled.div`
   font-size: 30px;
   font-weight: 900;
+  text-align: center;
+  margin-bottom: 80px;
   span {
     margin-left: 10px;
     font-size: 18px;
@@ -159,25 +209,32 @@ const Title = styled.div`
 
 const ImgWrap = styled.div`
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
+  width: 100%;
 `;
 
 const Img = styled.div`
-  width: 500px;
+  width: 60%;
   height: 500px;
   background-color: gray;
-  margin: 80px 40px 0 0;
+  margin: 0 50px 0 50px;
 `;
 
 const Desc = styled.div`
+  width: 50%;
+  margin-right: 50px;
   h3 {
     font-size: 22px;
     font-weight: 500;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
+  }
+  h6 {
+    font-size: 18px;
+    margin-bottom: 10px;
   }
   p {
+    margin-top: 10px;
     font-size: 18px;
     font-weight: 300;
   }

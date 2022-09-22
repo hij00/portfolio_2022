@@ -1,6 +1,7 @@
-const TextSite = [
+export const TextSite = [
   {
     id: 0,
+    textImg: "",
     title: "다이슨",
     date: "07.20 ~ 09.08",
     tool: "javascript, react, react-hook / AdobeXD",
@@ -9,6 +10,7 @@ const TextSite = [
   },
   {
     id: 1,
+    textImg: "",
     title: "서울식물원",
     date: "05.09 ~ 06.13",
     tool: "html5, css / AdobeXD",
@@ -18,6 +20,7 @@ const TextSite = [
   },
   {
     id: 2,
+    textImg: "",
     title: "영화 사이트 (Heving)",
     date: "09.",
     tool: "javascript, react, react-hook / AdobeXD",
@@ -27,9 +30,10 @@ const TextSite = [
   },
 ];
 
-const TextToy = [
+export const TextToy = [
   {
     id: 0,
+    textImg: "",
     title: "로그인 / 회원가입",
     date: "09.",
     tool: "javascript, react, react-hook",
@@ -39,6 +43,7 @@ const TextToy = [
   },
   {
     id: 1,
+    textImg: "",
     title: "장바구니",
     date: "09.",
     tool: "javascript, react, react-hook",
@@ -48,6 +53,7 @@ const TextToy = [
   },
   {
     id: 2,
+    textImg: "",
     title: "장바구니",
     date: "09.",
     tool: "javascript, react, react-hook",
