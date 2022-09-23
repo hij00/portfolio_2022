@@ -11,7 +11,7 @@ export const Header = () => {
   useEffect(() => {
     const handleClick = () => {
       const onClick = () => {
-        console.log(location.pathname);
+        // console.log(location.pathname);
         if (location.pathname !== "/") {
           setShow("#576F72");
         } else {

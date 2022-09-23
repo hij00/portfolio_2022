@@ -1,12 +1,14 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { TextSite, TextToy } from "../../../Text";
+import { textSite, textToy } from "../../../Text";
 import { mainStyle } from "../../style/GlobalStyle";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 export const Section1 = () => {
   const [view, setView] = useState(`${mainStyle.backColor3}`);
@@ -24,6 +26,7 @@ export const Section1 = () => {
   return (
     <>
       <Wrap>
+        {/* =================menu */}
         <MenuWrap>
           <Menu
             onClick={onClick}
@@ -47,6 +50,7 @@ export const Section1 = () => {
           </Menu>
         </MenuWrap>
 
+        {/* ======================site renewal */}
         <ConWrap
           className="site"
           view={view}
@@ -66,7 +70,7 @@ export const Section1 = () => {
             observeParents={true}
             navigation
           >
-            {TextSite.map((text) => (
+            {textSite.map((text) => (
               <SwiperSlide key={text.id}>
                 <ImgWrap>
                   <Img
@@ -79,10 +83,21 @@ export const Section1 = () => {
                     <h3>{text.title}</h3>
 
                     <h6>기간 : {text.date}</h6>
-                    <h6>사용 프로그램 : {text.tool}</h6>
+                    <h6>
+                      사용 프로그램
+                      {text.tool}
+                      {text.toolDesign}
+                      {console.log(text.tool)}
+                    </h6>
 
                     <p>{text.desc}</p>
                     <p>{text.end}</p>
+
+                    <IconWrap>
+                      <Icon>
+                        <FontAwesomeIcon icon={faLink} />
+                      </Icon>
+                    </IconWrap>
                   </Desc>
                 </ImgWrap>
               </SwiperSlide>
@@ -90,6 +105,7 @@ export const Section1 = () => {
           </Swiper>
         </ConWrap>
 
+        {/* ===================toy */}
         <ConWrap
           className="toy"
           view={view}
@@ -108,7 +124,7 @@ export const Section1 = () => {
             observeParents={true}
             navigation
           >
-            {TextToy.map((text) => (
+            {textToy.map((text) => (
               <SwiperSlide key={text.id}>
                 <ImgWrap>
                   <Img
@@ -224,6 +240,7 @@ const Img = styled.div`
 const Desc = styled.div`
   width: 50%;
   margin-right: 50px;
+  line-height: 24px;
   h3 {
     font-size: 22px;
     font-weight: 500;
@@ -238,4 +255,14 @@ const Desc = styled.div`
     font-size: 18px;
     font-weight: 300;
   }
+`;
+
+const IconWrap = styled.div`
+  width: 100%;
+`;
+
+const Icon = styled.div`
+  width: 50px;
+  height: 50px;
+  color: black;
 `;
