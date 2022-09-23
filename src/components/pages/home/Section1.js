@@ -11,7 +11,7 @@ export const Section1 = () => {
         <SvgWrap>
           <SText className="choi">
             CH
-            <ImgBox>
+            {/* <ImgBox>
               <a
                 target="_top"
                 href="https://wjdgus1122.github.io/dyson_project"
@@ -27,7 +27,7 @@ export const Section1 = () => {
 
                 <h1>01</h1>
               </a>
-            </ImgBox>
+            </ImgBox> */}
             OI
             <span>&copy;</span>
           </SText>
@@ -166,6 +166,23 @@ const SText = styled.div`
     }
     &.box {
       margin-top: 40px;
+    }
+
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+    }
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
     }
   }
   &.hee {
