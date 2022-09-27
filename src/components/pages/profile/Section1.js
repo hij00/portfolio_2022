@@ -1,8 +1,17 @@
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
 import imgFace from "../../../img/imgFace.png";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Section1 = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  });
+
   return (
     <>
       <Wrap>
@@ -11,7 +20,8 @@ export const Section1 = () => {
             background: `url(${imgFace}) no-repeat center/cover`,
           }}
         />
-        <TextWrap>
+
+        <TextWrap data-aos="fade-up">
           <Title>
             개발의 시작부터 끝까지, <br />
             <br />
@@ -75,7 +85,7 @@ export const Section1 = () => {
 
 const Wrap = styled.div`
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;

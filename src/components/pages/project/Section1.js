@@ -10,7 +10,17 @@ import "swiper/css/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export const Section1 = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  });
+
   const [view, setView] = useState(`${mainStyle.backColor3}`);
 
   const onClick = () => {
@@ -58,7 +68,7 @@ export const Section1 = () => {
             display: `${view === `${mainStyle.backColor3}` ? "block" : "none"}`,
           }}
         >
-          <Title className="site">
+          <Title className="site" data-aos="zoom-in">
             웹리뉴얼
             <span>WebSite Renewal</span>
           </Title>
@@ -113,7 +123,7 @@ export const Section1 = () => {
             display: `${view === `${mainStyle.backColor3}` ? "none" : "block"}`,
           }}
         >
-          <Title className="toy">
+          <Title className="toy" data-aos="zoom-in">
             토이프로젝트<span>Toy Project</span>
           </Title>
 

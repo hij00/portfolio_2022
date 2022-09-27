@@ -3,15 +3,22 @@ import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
 import dyson from "../../../img/dyson.png";
 import movie from "../../../img/movie.png";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Section1 = () => {
+  useEffect(() => {
+    AOS.init();
+  });
+
   return (
     <>
       <Wrap>
         <SvgWrap>
-          <SText className="choi">
+          <SText className="choi" data-aos="zoom-in">
             CH
-            {/* <ImgBox>
+            <ImgBox>
               <a
                 target="_top"
                 href="https://wjdgus1122.github.io/dyson_project"
@@ -27,11 +34,13 @@ export const Section1 = () => {
 
                 <h1>01</h1>
               </a>
-            </ImgBox> */}
+            </ImgBox>
             OI
             <span>&copy;</span>
+            <SSText className="text"></SSText>
           </SText>
-          <SText className="hee">
+
+          <SText className="hee" data-aos="zoom-in">
             <Text className="hee">
               <h3>클릭!</h3>
               <svg
@@ -86,7 +95,8 @@ export const Section1 = () => {
             </MenuWrap>
             HEE
           </SText>
-          <SText className="jeong">
+
+          <SText className="jeong" data-aos="zoom-in">
             JEONG
             <ImgBox>
               <h1>02</h1>
@@ -168,12 +178,10 @@ const SText = styled.div`
       margin-top: 40px;
     }
 
-    white-space: nowrap;
+    /* white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
-
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+    animation: typing 2s steps(6), blink 0.5s step-end infinite alternate;
     @keyframes typing {
       from {
         width: 0;
@@ -183,7 +191,10 @@ const SText = styled.div`
       50% {
         border-color: transparent;
       }
-    }
+    } */
+    // steps typing
+
+    /* display: none; */
   }
   &.hee {
     justify-content: end;
@@ -196,6 +207,8 @@ const SText = styled.div`
     }
   }
 `;
+
+const SSText = styled.h1``;
 
 const MenuWrap = styled.ul`
   font-family: "Nanum Myeongjo", serif;
