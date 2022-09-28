@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
-import dyson from "../../../img/dyson.png";
-import movie from "../../../img/movie.png";
+import dyson from "../../../img/banner/dyson.png";
+import movie from "../../../img/banner/movie.png";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
