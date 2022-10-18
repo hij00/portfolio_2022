@@ -3,10 +3,61 @@ import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
 
 export const Landing = () => {
+  // let target = document.querySelector(".text");
+
+  // function randomS() {
+  //   let stringArr = [
+  //     "안녕하세요. 신인 개발자 최희정입니다.",
+  //     "저의 포트폴리오를 보시겠어요?",
+  //   ];
+  //   let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
+  //   let selectStringArr = selectString.split("");
+
+  //   return selectStringArr;
+  // }
+
+  // function typing(stringArr) {
+  //   target.textContent += stringArr.shift();
+  //   setTimeout(() => {
+  //     typing(stringArr);
+  //   }, 80);
+  // }
+  // typing(randomS());
+
+  // console.log(typing());
+
+  function textStyle() {
+    let stringArr = [
+      "안녕하세요. 신인 개발자 최희정입니다.",
+      "저의 포트폴리오를 보시겠어요?",
+    ];
+    let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
+    let selectStringArr = selectString.split("");
+
+    return selectStringArr;
+  }
+
+  function typingReset() {
+    target.textContent = "";
+
+    typing(textStyle());
+  }
+
+  function typing(randomArr) {
+    if (randomArr.length > 0) {
+      target.textContent += randomArr.shift();
+      setTimeout(() => {
+        typing(randomArr);
+      }, 80);
+    } else {
+      setTimeout(typingReset, 3000);
+    }
+  }
+
   return (
     <Wrap>
       <TextWrap>
-        <Title>안녕</Title>
+        <Title className="text"></Title>
         <Desc>
           <Link to="/home">포트폴리오 보러가기</Link>
         </Desc>
@@ -34,7 +85,7 @@ const TextWrap = styled.div`
   text-align: center;
 `;
 
-const Title = styled.div`
+const Title = styled.p`
   margin-bottom: 50px;
   position: relative;
   display: inline-block;

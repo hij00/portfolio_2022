@@ -71,24 +71,18 @@ export const Section1 = () => {
               <Menu>
                 <a
                   target="_top"
-                  href="https://wjdgus1122.github.io/dyson_project"
+                  href="https://hij00.github.io/seoul_garden_renewal/"
                 >
                   Seoul Botenical House
                 </a>
               </Menu>
               <Menu>
-                <a
-                  target="_top"
-                  href="https://wjdgus1122.github.io/dyson_project"
-                >
-                  Movie API Site
+                <a target="_top" href="https://hij00.github.io/Heving_app/">
+                  Movie Site
                 </a>
               </Menu>
               <Menu>
-                <a
-                  target="_top"
-                  href="https://wjdgus1122.github.io/dyson_project"
-                >
+                <a target="_top" href="https://hij00.github.io/toy_cart/">
                   Shopping Cart
                 </a>
               </Menu>
