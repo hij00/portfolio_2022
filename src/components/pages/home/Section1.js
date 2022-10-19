@@ -93,15 +93,17 @@ export const Section1 = () => {
           <SText className="jeong" data-aos="zoom-in">
             JEONG
             <ImgBox>
-              <h1>02</h1>
-              <Box
-                className="jeong"
-                style={{
-                  background: `url(${movie}) no-repeat center/cover`,
-                }}
-              >
-                <Cover />
-              </Box>
+              <a target="_top" href="https://hij00.github.io/Heving_app/">
+                <h1>02</h1>
+                <Box
+                  className="jeong"
+                  style={{
+                    background: `url(${movie}) no-repeat center/cover`,
+                  }}
+                >
+                  <Cover />
+                </Box>
+              </a>
             </ImgBox>
             <MenuWrap className="profile">
               {/* <Title>바로가기</Title> */}

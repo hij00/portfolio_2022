@@ -1,7 +1,14 @@
+import re_dyson from "./img/banner/re_dyson.jpg";
+import movie from "./img/banner/movie.jpg";
+import toy_login from "./img/banner/toy_login.jpg";
+import toy_cart from "./img/banner/toy_cart.jpg";
+
+import re_seoul_garden from "./img/banner/re_seoul_garden.jpg";
+
 export const textSite = [
   {
     id: 0,
-    textImg: "",
+    textImg: `${re_dyson}`,
     title: "다이슨",
     date: "07.20 ~ 09.08",
     tool: "javascript, react, react-hook / AdobeXD",
@@ -10,7 +17,7 @@ export const textSite = [
   },
   {
     id: 1,
-    textImg: "",
+    textImg: `${re_seoul_garden}`,
     title: "서울식물원",
     date: "05.09 ~ 06.13",
     tool: "html5, css / AdobeXD",
@@ -20,7 +27,7 @@ export const textSite = [
   },
   {
     id: 2,
-    textImg: "",
+    textImg: `${movie}`,
     title: "영화 사이트 (Heving)",
     date: "09.",
     tool: "javascript, react, react-hook / AdobeXD",
@@ -33,7 +40,7 @@ export const textSite = [
 export const textToy = [
   {
     id: 0,
-    textImg: "",
+    textImg: `${toy_login}`,
     title: "로그인 / 회원가입",
     date: "09.",
     tool: "javascript, react, react-hook",
@@ -43,17 +50,7 @@ export const textToy = [
   },
   {
     id: 1,
-    textImg: "",
-    title: "장바구니",
-    date: "09.",
-    tool: "javascript, react, react-hook",
-
-    desc: "저 혼자 진행한 토이프로젝트입니다. ",
-    end: "여러 방법들을 찾던 도중 로그인 프로젝트에 썼던 기능으로 쉽게 장바구니를 구현할 수 있다는 것을 깨달았습니다.",
-  },
-  {
-    id: 2,
-    textImg: "",
+    textImg: `${toy_cart}`,
     title: "장바구니",
     date: "09.",
     tool: "javascript, react, react-hook",
