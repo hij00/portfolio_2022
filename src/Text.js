@@ -1,9 +1,9 @@
-import re_dyson from "./img/banner/re_dyson.jpg";
-import movie from "./img/banner/movie.jpg";
-import toy_login from "./img/banner/toy_login.jpg";
-import toy_cart from "./img/banner/toy_cart.jpg";
+import re_dyson from "./img/banner/re_dyson.png";
+import movie from "./img/banner/re_movie.png";
+import toy_login from "./img/banner/toy_login.png";
+import toy_cart from "./img/banner/toy_cart.png";
 
-import re_seoul_garden from "./img/banner/re_seoul_garden.jpg";
+import re_seoul_garden from "./img/banner/re_seoul.png";
 
 export const textSite = [
   {

@@ -83,12 +83,7 @@ export const Section1 = () => {
             {textSite.map((text) => (
               <SwiperSlide key={text.id}>
                 <ImgWrap>
-                  <Img
-
-                  // style={{
-                  //   background: `url(${text.textImg}) no-repeat center/cover`,
-                  // }}
-                  ></Img>
+                  <Img src={text.textImg}></Img>
                   <Desc className="site">
                     <h3>{text.title}</h3>
 
@@ -137,12 +132,7 @@ export const Section1 = () => {
             {textToy.map((text) => (
               <SwiperSlide key={text.id}>
                 <ImgWrap>
-                  <Img
-
-                  // style={{
-                  //   background: `url(${text.textImg}) no-repeat center/cover`,
-                  // }}
-                  ></Img>
+                  <Img src={text.textImg}></Img>
                   <Desc className="site">
                     <h3>{text.title}</h3>
 
@@ -240,7 +230,7 @@ const ImgWrap = styled.div`
   width: 100%;
 `;
 
-const Img = styled.div`
+const Img = styled.img`
   width: 60%;
   height: 500px;
   background-color: gray;
