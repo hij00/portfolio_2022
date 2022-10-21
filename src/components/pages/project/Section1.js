@@ -13,6 +13,7 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 export const Section1 = () => {
   useEffect(() => {
@@ -90,8 +91,26 @@ export const Section1 = () => {
                     <h6>기간 : {text.date}</h6>
                     <h6>
                       사용 프로그램
+                      <ToolWrap>
+                        <img
+                          src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"
+                          alt="Javascript"
+                        />
+                        <img
+                          src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=black"
+                          alt="Html5"
+                        />
+                        <img
+                          src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=black"
+                          alt="Css3"
+                        />
+                        <img
+                          src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=black"
+                          alt="Node.js"
+                        />
+                      </ToolWrap>
                       {text.tool}
-                      {text.toolDesign}
+                      {text.toolImg}
                       {console.log(text.tool)}
                     </h6>
 
@@ -192,8 +211,8 @@ const Menu = styled.li`
 
 const ConWrap = styled.div`
   width: 100%;
-  padding: 0 400px;
-  padding-top: 180px;
+  padding: ${mainStyle.padding};
+  padding-top: 150px;
 
   &.site {
     background-color: ${(props) => props.view};
@@ -209,7 +228,7 @@ const Title = styled.div`
   font-size: 30px;
   font-weight: 900;
   text-align: center;
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
   span {
     margin-left: 10px;
     font-size: 18px;
@@ -231,10 +250,7 @@ const ImgWrap = styled.div`
 `;
 
 const Img = styled.img`
-  width: 60%;
-  height: 500px;
-  background-color: gray;
-  margin: 0 50px 0 50px;
+  width: 50%;
 `;
 
 const Desc = styled.div`
@@ -256,6 +272,8 @@ const Desc = styled.div`
     font-weight: 300;
   }
 `;
+
+const ToolWrap = styled.div``;
 
 const IconWrap = styled.div`
   width: 100%;

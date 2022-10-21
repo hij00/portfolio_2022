@@ -4,6 +4,7 @@ import toy_login from "./img/banner/toy_login.png";
 import toy_cart from "./img/banner/toy_cart.png";
 
 import re_seoul_garden from "./img/banner/re_seoul.png";
+import styled from "styled-components";
 
 export const textSite = [
   {
@@ -12,6 +13,26 @@ export const textSite = [
     title: "다이슨",
     date: "07.20 ~ 09.08",
     tool: "javascript, react, react-hook / AdobeXD",
+    toolImg: (
+      <ImgWrap>
+        <img
+          src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"
+          alt="Javascript"
+        />
+        <img
+          src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=black"
+          alt="Html5"
+        />
+        <img
+          src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=black"
+          alt="Css3"
+        />
+        <img
+          src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=black"
+          alt="Node.js"
+        />
+      </ImgWrap>
+    ),
     desc: "기존의 다이슨 코리아 사이트를 리뉴얼하였습니다. 저를 포함한 조원 4명이 진행하였으며, 저는 '디자인과 코딩(커뮤니티 전체 페이지, 제품 페이지 기능, 제품디테일 페이지 기능, 전체 페이지 디테일 및 기능 수정)'을 담당하였습니다. ",
     end: "기간 안에 끝내는 것과 여러 인원이 작업할 시 최종 결정을 담당하는 역할이 필요하다는 것을 느꼈습니다. ",
   },
@@ -59,3 +80,7 @@ export const textToy = [
     end: "여러 방법들을 찾던 도중 로그인 프로젝트에 썼던 기능으로 쉽게 장바구니를 구현할 수 있다는 것을 깨달았습니다.",
   },
 ];
+
+const ImgWrap = styled.div`
+  width: 100%;
+`;
