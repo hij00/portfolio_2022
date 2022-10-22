@@ -13,7 +13,6 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-router-dom";
 
 export const Section1 = () => {
   useEffect(() => {
@@ -88,38 +87,20 @@ export const Section1 = () => {
                   <Desc className="site">
                     <h3>{text.title}</h3>
 
-                    <h6>기간 : {text.date}</h6>
-                    <h6>
-                      사용 프로그램
-                      <ToolWrap>
-                        <img
-                          src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"
-                          alt="Javascript"
-                        />
-                        <img
-                          src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=black"
-                          alt="Html5"
-                        />
-                        <img
-                          src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=black"
-                          alt="Css3"
-                        />
-                        <img
-                          src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=black"
-                          alt="Node.js"
-                        />
-                      </ToolWrap>
-                      {text.tool}
-                      {text.toolImg}
-                      {console.log(text.tool)}
-                    </h6>
+                    <h6>{text.date}</h6>
+                    <h6>{text.toolImg}</h6>
 
                     <p>{text.desc}</p>
                     <p>{text.end}</p>
 
                     <IconWrap>
                       <Icon>
-                        <FontAwesomeIcon icon={faLink} />
+                        <a className="page">
+                          <FontAwesomeIcon icon={faLink} />
+                        </a>
+                        <a className="git">
+                          <Git>Git Hub</Git>
+                        </a>
                       </Icon>
                     </IconWrap>
                   </Desc>
@@ -156,7 +137,7 @@ export const Section1 = () => {
                     <h3>{text.title}</h3>
 
                     <h6>{text.date}</h6>
-                    <h6>{text.tool}</h6>
+                    {text.toolImg}
 
                     <p>{text.desc}</p>
                     <p>{text.end}</p>
@@ -259,12 +240,13 @@ const Desc = styled.div`
   line-height: 24px;
   h3 {
     font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 100px;
+    font-weight: 900;
+    margin-bottom: 50px;
   }
   h6 {
     font-size: 18px;
     margin-bottom: 10px;
+    color: gray;
   }
   p {
     margin-top: 10px;
@@ -272,15 +254,28 @@ const Desc = styled.div`
     font-weight: 300;
   }
 `;
-
-const ToolWrap = styled.div``;
-
 const IconWrap = styled.div`
   width: 100%;
+  margin-top: 50px;
 `;
 
 const Icon = styled.div`
-  width: 50px;
-  height: 50px;
-  color: black;
+  display: flex;
+  .page {
+    width: 50px;
+    height: 50px;
+    color: black;
+  }
+  .git {
+  }
+`;
+
+const Git = styled.div`
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50px;
+  color: ${mainStyle.pointColor3};
+  background-color: #1d1d1d;
 `;
