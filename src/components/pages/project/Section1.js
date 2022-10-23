@@ -95,10 +95,10 @@ export const Section1 = () => {
 
                     <IconWrap>
                       <Icon>
-                        <a className="page">
+                        <a href={text.gitUrl} className="page">
                           <FontAwesomeIcon icon={faLink} />
                         </a>
-                        <a className="git">
+                        <a href={text.gitUrl} className="git">
                           <Git>Git Hub</Git>
                         </a>
                       </Icon>
