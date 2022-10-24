@@ -95,7 +95,7 @@ export const Section1 = () => {
 
                     <IconWrap>
                       <Icon>
-                        <a href={text.gitUrl} className="page">
+                        <a href={text.siteUrl} className="page">
                           <FontAwesomeIcon icon={faLink} />
                         </a>
                         <a href={text.gitUrl} className="git">
@@ -141,6 +141,17 @@ export const Section1 = () => {
 
                     <p>{text.desc}</p>
                     <p>{text.end}</p>
+
+                    <IconWrap>
+                      <Icon>
+                        <a href={text.siteUrl} className="page">
+                          <FontAwesomeIcon icon={faLink} />
+                        </a>
+                        <a href={text.gitUrl} className="git">
+                          <Git>Git Hub</Git>
+                        </a>
+                      </Icon>
+                    </IconWrap>
                   </Desc>
                 </ImgWrap>
               </SwiperSlide>
