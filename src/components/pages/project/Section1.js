@@ -272,21 +272,33 @@ const IconWrap = styled.div`
 
 const Icon = styled.div`
   display: flex;
+  justify-content: space-between;
   .page {
-    width: 50px;
+    width: 45%;
     height: 50px;
-    color: black;
+    background-color: ${mainStyle.pointColor3};
+    line-height: 50px;
+    text-align: center;
+    color: ${mainStyle.blackColor};
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 50px;
   }
   .git {
+    width: 45%;
+    height: 50px;
+    color: black;
+    background-color: ${mainStyle.pointColor3};
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50px;
   }
 `;
 
 const Git = styled.div`
-  width: 200px;
-  height: 30px;
-  line-height: 30px;
+  line-height: 50px;
   text-align: center;
-  border-radius: 50px;
-  color: ${mainStyle.pointColor3};
-  background-color: #1d1d1d;
+  color: ${mainStyle.blackColor};
+  font-size: 22px;
+  font-weight: 500;
 `;
