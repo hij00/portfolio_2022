@@ -25,39 +25,49 @@ export const Landing = () => {
   // typing(randomS());
 
   // console.log(typing());
+  // ===============
 
-  function textStyle() {
-    let stringArr = [
-      "안녕하세요. 신인 개발자 최희정입니다.",
-      "저의 포트폴리오를 보시겠어요?",
-    ];
-    let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
-    let selectStringArr = selectString.split("");
+  // function textStyle() {
+  //   let stringArr = [
+  //     "안녕하세요. 신인 개발자 최희정입니다.",
+  //     "저의 포트폴리오를 보시겠어요?",
+  //   ];
+  //   let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
+  //   let selectStringArr = selectString.split("");
 
-    return selectStringArr;
-  }
+  //   return selectStringArr;
+  // }
 
-  function typingReset() {
-    target.textContent = "";
+  // function typingReset() {
+  //   target.textContent = "";
 
-    typing(textStyle());
-  }
+  //   typing(textStyle());
+  // }
 
-  function typing(randomArr) {
-    if (randomArr.length > 0) {
-      target.textContent += randomArr.shift();
-      setTimeout(() => {
-        typing(randomArr);
-      }, 80);
-    } else {
-      setTimeout(typingReset, 3000);
-    }
-  }
+  // function typing(randomArr) {
+  //   if (randomArr.length > 0) {
+  //     target.textContent += randomArr.shift();
+  //     setTimeout(() => {
+  //       typing(randomArr);
+  //     }, 80);
+  //   } else {
+  //     setTimeout(typingReset, 3000);
+  //   }
+  // }
+
+  // let target = document.querySelector("#dynamic");
+  // console.log(target);
+  // function blink() {
+  //   target.classList.toggle("active");
+  // }
+  // setInterval(blink, 500);
 
   return (
     <Wrap>
       <TextWrap>
-        <Title className="text"></Title>
+        <Title className="text" id="dynamic">
+          신입 개발자 최희정입니다.
+        </Title>
         <Desc>
           <Link to="/home">포트폴리오 보러가기</Link>
         </Desc>
@@ -100,6 +110,9 @@ const Title = styled.p`
     width: 2px;
     height: 100%;
     background-color: ${mainStyle.blackColor};
+  }
+  &.active::after {
+    display: none;
   }
 `;
 

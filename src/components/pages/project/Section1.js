@@ -39,6 +39,7 @@ export const Section1 = () => {
         {/* =================menu */}
         <MenuWrap>
           <Menu
+            className="site"
             onClick={onClick}
             style={{
               borderBottom: `${
@@ -49,6 +50,7 @@ export const Section1 = () => {
             Site Renewal
           </Menu>
           <Menu
+            className="toy"
             onClick={onClick}
             style={{
               borderBottom: `${
@@ -95,10 +97,30 @@ export const Section1 = () => {
 
                     <IconWrap>
                       <Icon>
-                        <a href={text.siteUrl} className="page">
+                        <a
+                          href={text.siteUrl}
+                          className="page"
+                          style={{
+                            backgroundColor: `${
+                              view === `${mainStyle.backColor2}`
+                                ? `${mainStyle.pointColor2}`
+                                : `${mainStyle.pointColor3}`
+                            }`,
+                          }}
+                        >
                           <FontAwesomeIcon icon={faLink} />
                         </a>
-                        <a href={text.gitUrl} className="git">
+                        <a
+                          href={text.gitUrl}
+                          className="git"
+                          style={{
+                            backgroundColor: `${
+                              view === `${mainStyle.backColor2}`
+                                ? `${mainStyle.pointColor2}`
+                                : `${mainStyle.pointColor3}`
+                            }`,
+                          }}
+                        >
                           <Git>Git Hub</Git>
                         </a>
                       </Icon>
@@ -144,10 +166,30 @@ export const Section1 = () => {
 
                     <IconWrap>
                       <Icon>
-                        <a href={text.siteUrl} className="page">
+                        <a
+                          href={text.siteUrl}
+                          className="page"
+                          style={{
+                            backgroundColor: `${
+                              view === `${mainStyle.backColor3}`
+                                ? `${mainStyle.pointColor3}`
+                                : `${mainStyle.pointColor2}`
+                            }`,
+                          }}
+                        >
                           <FontAwesomeIcon icon={faLink} />
                         </a>
-                        <a href={text.gitUrl} className="git">
+                        <a
+                          href={text.gitUrl}
+                          className="git"
+                          style={{
+                            backgroundColor: `${
+                              view === `${mainStyle.backColor3}`
+                                ? `${mainStyle.pointColor3}`
+                                : `${mainStyle.pointColor2}`
+                            }`,
+                          }}
+                        >
                           <Git>Git Hub</Git>
                         </a>
                       </Icon>
@@ -195,10 +237,13 @@ const Menu = styled.li`
   margin-right: 80px;
   color: ${mainStyle.blackColor};
   padding: 5px 0;
-  &:hover {
-    color: ${mainStyle.pointColor};
-    border-bottom: 2px solid ${mainStyle.pointColor2};
+  &.site:hover {
+    color: ${mainStyle.pointColor3};
   }
+  &.toy:hover {
+    color: ${mainStyle.pointColor2};
+  }
+  border-bottom: 2px solid ${mainStyle.pointColor2};
 `;
 
 const ConWrap = styled.div`
@@ -276,10 +321,10 @@ const Icon = styled.div`
   .page {
     width: 45%;
     height: 50px;
-    background-color: ${mainStyle.pointColor3};
+    /* background-color: ${mainStyle.pointColor3}; */
     line-height: 50px;
     text-align: center;
-    color: ${mainStyle.blackColor};
+    color: white;
     font-size: 22px;
     font-weight: 500;
     border-radius: 50px;
@@ -287,8 +332,8 @@ const Icon = styled.div`
   .git {
     width: 45%;
     height: 50px;
-    color: black;
-    background-color: ${mainStyle.pointColor3};
+    color: white;
+    /* background-color: ${mainStyle.pointColor3}; */
     line-height: 30px;
     text-align: center;
     border-radius: 50px;
@@ -298,7 +343,6 @@ const Icon = styled.div`
 const Git = styled.div`
   line-height: 50px;
   text-align: center;
-  color: ${mainStyle.blackColor};
   font-size: 22px;
   font-weight: 500;
 `;
