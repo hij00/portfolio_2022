@@ -24,6 +24,12 @@ export const mainStyle = {
   padding: "0 120px",
 };
 
+// font-family: 'Do Hyeon', sans-serif;
+// font-family: 'IBM Plex Sans KR', sans-serif;
+// font-family: 'Noto Sans KR', sans-serif;
+// font-family: 'Sunflower', sans-serif;
+// font-family: 'Source Code Pro', monospace;
+
 export const GlobalStyle = createGlobalStyle`
 ${reset}
 *{

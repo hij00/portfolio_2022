@@ -1,73 +1,24 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
+import { useEffect, useState } from "react";
 
+const typing = "신입 개발자 최희정입니다 :)";
 export const Landing = () => {
-  // let target = document.querySelector(".text");
+  const [curText, setCurText] = useState("");
 
-  // function randomS() {
-  //   let stringArr = [
-  //     "안녕하세요. 신인 개발자 최희정입니다.",
-  //     "저의 포트폴리오를 보시겠어요?",
-  //   ];
-  //   let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
-  //   let selectStringArr = selectString.split("");
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setCurText(typing.slice(0, curText.length + 1));
+    }, 200);
 
-  //   return selectStringArr;
-  // }
-
-  // function typing(stringArr) {
-  //   target.textContent += stringArr.shift();
-  //   setTimeout(() => {
-  //     typing(stringArr);
-  //   }, 80);
-  // }
-  // typing(randomS());
-
-  // console.log(typing());
-  // ===============
-
-  // function textStyle() {
-  //   let stringArr = [
-  //     "안녕하세요. 신인 개발자 최희정입니다.",
-  //     "저의 포트폴리오를 보시겠어요?",
-  //   ];
-  //   let selectString = stringArr[Math.floor(Math.random() * stringArr.length)];
-  //   let selectStringArr = selectString.split("");
-
-  //   return selectStringArr;
-  // }
-
-  // function typingReset() {
-  //   target.textContent = "";
-
-  //   typing(textStyle());
-  // }
-
-  // function typing(randomArr) {
-  //   if (randomArr.length > 0) {
-  //     target.textContent += randomArr.shift();
-  //     setTimeout(() => {
-  //       typing(randomArr);
-  //     }, 80);
-  //   } else {
-  //     setTimeout(typingReset, 3000);
-  //   }
-  // }
-
-  // let target = document.querySelector("#dynamic");
-  // console.log(target);
-  // function blink() {
-  //   target.classList.toggle("active");
-  // }
-  // setInterval(blink, 500);
+    return () => clearTimeout(timeout);
+  }, [curText]);
 
   return (
     <Wrap>
       <TextWrap>
-        <Title className="text" id="dynamic">
-          신입 개발자 최희정입니다.
-        </Title>
+        <Title className="text">{curText}</Title>
         <Desc>
           <Link to="/home">포트폴리오 보러가기</Link>
         </Desc>
@@ -101,6 +52,9 @@ const Title = styled.p`
   display: inline-block;
   color: black;
   font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "IBM Plex Sans KR", sans-serif;
+
   &::after {
     content: "";
     display: block;
@@ -110,9 +64,12 @@ const Title = styled.p`
     width: 2px;
     height: 100%;
     background-color: ${mainStyle.blackColor};
+    animation: blink 0.7s step-end infinite;
   }
-  &.active::after {
-    display: none;
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
   }
 `;
 

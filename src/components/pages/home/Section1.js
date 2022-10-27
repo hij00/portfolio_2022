@@ -106,12 +106,7 @@ export const Section1 = () => {
               </a>
             </ImgBox>
             <MenuWrap className="profile">
-              {/* <Title>바로가기</Title> */}
-              <Menu>
-                <Link to="/profile">"저는"</Link>
-                <div>→ Profile</div>
-              </Menu>
-              <ClickWrap>
+              <ScrollWrap>
                 <LineWrap>
                   <Line />
                   <Line />
@@ -119,11 +114,7 @@ export const Section1 = () => {
                 </LineWrap>
 
                 <Text>스크롤</Text>
-              </ClickWrap>
-              {/* <Menu>
-          <Link to="#">"개발자입니다"</Link>
-          <div>→ Technic</div>
-        </Menu> */}
+              </ScrollWrap>
             </MenuWrap>
           </SText>
         </SvgWrap>
@@ -207,7 +198,9 @@ const SText = styled.div`
 const SSText = styled.h1``;
 
 const MenuWrap = styled.ul`
-  font-family: "Nanum Myeongjo", serif;
+  /* font-family: "Nanum Myeongjo", serif;
+   */
+  font-family: "Source Code Pro", monospace;
   margin-right: 100px;
 
   margin-left: 30px;
@@ -217,9 +210,8 @@ const MenuWrap = styled.ul`
   }
   &.profile {
     width: 100%;
-    text-align: left;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-right: 0;
   }
 `;
@@ -262,7 +254,7 @@ const Text = styled.div`
   }
 `;
 
-const ClickWrap = styled.div`
+const ScrollWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
