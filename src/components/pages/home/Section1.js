@@ -6,6 +6,7 @@ import movie from "../../../img/banner/movie.png";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Container } from "../../../Container";
 
 export const Section1 = () => {
   useEffect(() => {
@@ -15,109 +16,111 @@ export const Section1 = () => {
   return (
     <>
       <Wrap>
-        <SvgWrap>
-          <SText className="choi" data-aos="zoom-in">
-            CH
-            <ImgBox>
-              <a
-                target="_top"
-                href="https://wjdgus1122.github.io/dyson_project"
-              >
-                <Box
-                  className="choi"
-                  style={{
-                    background: `url(${dyson}) no-repeat left/cover`,
-                  }}
-                >
-                  <Cover />
-                </Box>
-
-                <h1>01</h1>
-              </a>
-            </ImgBox>
-            OI
-            <span>&copy;</span>
-            <SSText className="text"></SSText>
-          </SText>
-
-          <SText className="hee" data-aos="zoom-in">
-            <Text className="hee">
-              <h3>클릭!</h3>
-              <svg
-                fill="#607EAA"
-                // mainStyle.pointColor
-                version="1.1"
-                id="Layer_1"
-                x="0px"
-                y="0px"
-                width="550px"
-                height="8.724px"
-                viewBox="0 0 594.564 8.724"
-                enableBackground="new 0 0 594.564 8.724"
-              >
-                <polygon points="585.782,3.604 577,1.897 577,5 0,5 0,6 577,6 577,8.724 585.782,7.018 594.564,5.311 " />
-              </svg>
-              {/* <Bar/> */}
-            </Text>
-            <MenuWrap className="site">
-              <Menu>
+        <Container>
+          <SvgWrap>
+            <SText className="choi" data-aos="zoom-in">
+              CH
+              <ImgBox>
                 <a
                   target="_top"
                   href="https://wjdgus1122.github.io/dyson_project"
                 >
-                  Dyson
+                  <Box
+                    className="choi"
+                    style={{
+                      background: `url(${dyson}) no-repeat left/cover`,
+                    }}
+                  >
+                    <Cover />
+                  </Box>
+
+                  <h1>01</h1>
                 </a>
-              </Menu>
-              <Menu>
-                <a
-                  target="_top"
-                  href="https://hij00.github.io/seoul_garden_renewal/"
+              </ImgBox>
+              OI
+              <span>&copy;</span>
+              <SSText className="text"></SSText>
+            </SText>
+
+            <SText className="hee" data-aos="zoom-in">
+              <Text className="hee">
+                <h3>클릭!</h3>
+                <svg
+                  fill="#607EAA"
+                  // mainStyle.pointColor
+                  version="1.1"
+                  id="Layer_1"
+                  x="0px"
+                  y="0px"
+                  width="550px"
+                  height="8.724px"
+                  viewBox="0 0 594.564 8.724"
+                  enableBackground="new 0 0 594.564 8.724"
                 >
-                  Seoul Botenical House
-                </a>
-              </Menu>
-              <Menu>
+                  <polygon points="585.782,3.604 577,1.897 577,5 0,5 0,6 577,6 577,8.724 585.782,7.018 594.564,5.311 " />
+                </svg>
+                {/* <Bar/> */}
+              </Text>
+              <MenuWrap className="site">
+                <Menu>
+                  <a
+                    target="_top"
+                    href="https://wjdgus1122.github.io/dyson_project"
+                  >
+                    Dyson
+                  </a>
+                </Menu>
+                <Menu>
+                  <a
+                    target="_top"
+                    href="https://hij00.github.io/seoul_garden_renewal/"
+                  >
+                    Seoul Botenical House
+                  </a>
+                </Menu>
+                <Menu>
+                  <a target="_top" href="https://hij00.github.io/Heving_app/">
+                    Movie Site
+                  </a>
+                </Menu>
+                <Menu>
+                  <a target="_top" href="https://hij00.github.io/toy_cart/">
+                    Shopping Cart
+                  </a>
+                </Menu>
+              </MenuWrap>
+              HEE
+            </SText>
+
+            <SText className="jeong" data-aos="zoom-in">
+              JEONG
+              <ImgBox>
                 <a target="_top" href="https://hij00.github.io/Heving_app/">
-                  Movie Site
+                  <h1>02</h1>
+                  <Box
+                    className="jeong"
+                    style={{
+                      background: `url(${movie}) no-repeat center/cover`,
+                    }}
+                  >
+                    <Cover />
+                  </Box>
                 </a>
-              </Menu>
-              <Menu>
-                <a target="_top" href="https://hij00.github.io/toy_cart/">
-                  Shopping Cart
-                </a>
-              </Menu>
-            </MenuWrap>
-            HEE
-          </SText>
+              </ImgBox>
+              <MenuWrap className="profile">
+                <ScrollWrap>
+                  <LineWrap>
+                    <Line />
+                    <Line />
+                    <Line />
+                  </LineWrap>
 
-          <SText className="jeong" data-aos="zoom-in">
-            JEONG
-            <ImgBox>
-              <a target="_top" href="https://hij00.github.io/Heving_app/">
-                <h1>02</h1>
-                <Box
-                  className="jeong"
-                  style={{
-                    background: `url(${movie}) no-repeat center/cover`,
-                  }}
-                >
-                  <Cover />
-                </Box>
-              </a>
-            </ImgBox>
-            <MenuWrap className="profile">
-              <ScrollWrap>
-                <LineWrap>
-                  <Line />
-                  <Line />
-                  <Line />
-                </LineWrap>
-
-                <Text>스크롤</Text>
-              </ScrollWrap>
-            </MenuWrap>
-          </SText>
-        </SvgWrap>
+                  <Text>스크롤</Text>
+                </ScrollWrap>
+              </MenuWrap>
+            </SText>
+          </SvgWrap>
+        </Container>
       </Wrap>
     </>
   );
@@ -142,7 +145,7 @@ const SText = styled.div`
   height: 33.33333%;
   display: flex;
   align-items: center;
-  padding: ${mainStyle.padding};
+
   font-size: 300px;
   margin-top: -20px;
   margin-bottom: -20px;
