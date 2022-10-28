@@ -57,9 +57,9 @@ export const Section1 = () => {
               >
                 <polygon points="585.782,3.604 577,1.897 577,5 0,5 0,6 577,6 577,8.724 585.782,7.018 594.564,5.311 " />
               </svg>
+              {/* <Bar/> */}
             </Text>
             <MenuWrap className="site">
-              {/* <Title>바로가기</Title> */}
               <Menu>
                 <a
                   target="_top"
@@ -136,9 +136,6 @@ const SvgWrap = styled.div`
 `;
 
 const SText = styled.div`
-  /* font-family: "Nanum Myeongjo", serif; */
-  /* font-family: "Open Sans", sans-serif; */
-  /* font-family: "Lora", serif; */
   font-family: "Cormorant Garamond", serif;
   font-weight: 100;
   box-sizing: border-box;
@@ -152,7 +149,6 @@ const SText = styled.div`
   color: ${mainStyle.subColor};
   &.choi {
     margin-top: 0;
-    /* margin-left: 200px; */
     justify-content: flex-start;
     & span {
       font-family: "Nanum Myeongjo", serif;
@@ -164,31 +160,12 @@ const SText = styled.div`
     &.box {
       margin-top: 40px;
     }
-
-    /* white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    animation: typing 2s steps(6), blink 0.5s step-end infinite alternate;
-    @keyframes typing {
-      from {
-        width: 0;
-      }
-    }
-    @keyframes blink {
-      50% {
-        border-color: transparent;
-      }
-    } */
-    // steps typing
-
-    /* display: none; */
   }
   &.hee {
     justify-content: end;
   }
   &.jeong {
     justify-content: flex-start;
-    /* margin-left: 200px; */
     &.box {
       margin-bottom: 20px;
     }
@@ -198,8 +175,6 @@ const SText = styled.div`
 const SSText = styled.h1``;
 
 const MenuWrap = styled.ul`
-  /* font-family: "Nanum Myeongjo", serif;
-   */
   font-family: "Source Code Pro", monospace;
   margin-right: 100px;
 
@@ -215,6 +190,12 @@ const MenuWrap = styled.ul`
     margin-right: 0;
   }
 `;
+
+// const Bar  = styled.div`
+// width: 50%;
+// height: 1px;
+// background-color: white;
+// `
 
 const Menu = styled.li`
   font-size: 18px;

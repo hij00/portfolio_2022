@@ -2,8 +2,9 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
 export const mainStyle = {
-  // ==========blueFont
   blackColor: "#1d1d1d",
+
+  // ==========blueBackground
   backColor: "#1C3879",
   mainColor: "#F9F5EB",
   subColor: "#EAE3D2",
