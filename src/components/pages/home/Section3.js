@@ -17,56 +17,58 @@ export const Section3 = () => {
   return (
     <Wrap>
       <Container>
-        {textSite.map((a) => (
-          <ConWrap key={a.id}>
-            {console.log(typeof a)}
-            <DescWrap className="site">
-              <Desc>
-                <h6>{a.toolImg}</h6>
-                <h6>{a.date}</h6>
-              </Desc>
+        <ConWrap className="site">
+          {textSite.map((a) => (
+            <Con key={a.id} className="site">
+              <TextWrap>
+                <Text>
+                  <h6>{a.toolImg}</h6>
+                  <h6>{a.date}</h6>
+                </Text>
 
-              <p>{a.desc}</p>
-              <p>{a.end}</p>
+                <p>{a.desc}</p>
+                <p>{a.end}</p>
 
-              <IconWrap>
-                <Icon>
-                  <a href={a.siteUrl} className="page">
-                    <FontAwesomeIcon icon={faLink} />
-                  </a>
-                  <a href={a.gitUrl} className="git">
-                    <Git>Git Hub</Git>
-                  </a>
-                </Icon>
-              </IconWrap>
-            </DescWrap>
-          </ConWrap>
-        ))}
-        {textToy.map((a) => (
-          <ConWrap key={a.id}>
-            {console.log(typeof a)}
-            <DescWrap className="site">
-              <Desc>
-                <h6>{a.toolImg}</h6>
-                <h6>{a.date}</h6>
-              </Desc>
+                <IconWrap>
+                  <Icon>
+                    <a href={a.siteUrl} className="page">
+                      <FontAwesomeIcon icon={faLink} />
+                    </a>
+                    <a href={a.gitUrl} className="git">
+                      <Git>Git Hub</Git>
+                    </a>
+                  </Icon>
+                </IconWrap>
+              </TextWrap>
+            </Con>
+          ))}
+        </ConWrap>
+        <ConWrap className="toy">
+          {textToy.map((a) => (
+            <Con key={a.id} className="toy">
+              <TextWrap>
+                <Text>
+                  <h6>{a.toolImg}</h6>
+                  <h6>{a.date}</h6>
+                </Text>
 
-              <p>{a.desc}</p>
-              <p>{a.end}</p>
+                <p>{a.desc}</p>
+                <p>{a.end}</p>
 
-              <IconWrap>
-                <Icon>
-                  <a href={a.siteUrl} className="page">
-                    <FontAwesomeIcon icon={faLink} />
-                  </a>
-                  <a href={a.gitUrl} className="git">
-                    <Git>Git Hub</Git>
-                  </a>
-                </Icon>
-              </IconWrap>
-            </DescWrap>
-          </ConWrap>
-        ))}
+                <IconWrap>
+                  <Icon>
+                    <a href={a.siteUrl} className="page">
+                      <FontAwesomeIcon icon={faLink} />
+                    </a>
+                    <a href={a.gitUrl} className="git">
+                      <Git>Git Hub</Git>
+                    </a>
+                  </Icon>
+                </IconWrap>
+              </TextWrap>
+            </Con>
+          ))}
+        </ConWrap>
       </Container>
     </Wrap>
   );
@@ -76,38 +78,67 @@ const Wrap = styled.section`
   width: 100%;
   background-color: ${mainStyle.backColor};
   border-top: 1px solid white;
-  padding: 100px 0;
+  padding: 200px 0;
 `;
 
 const ConWrap = styled.div`
+  &.site {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &.toy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+`;
+
+const Con = styled.div`
   width: 60%;
   background-color: ${mainStyle.mainColor};
-  /* border: 1px solid ${mainStyle.mainColor}; */
   border-radius: 50px;
   margin-bottom: 100px;
   padding: 30px 30px;
   position: relative;
-  &::before {
-    content: ${(props) => props.title};
-    width: 200px;
-    height: 40px;
-    background-color: ${mainStyle.pointColor3};
-    position: absolute;
-    top: -35px;
-    left: -10px;
-    font-size: 30px;
-    font-weight: 900;
-    text-align: center;
-    line-height: 40px;
-    transform: rotate(-10deg);
+  &.site {
+    border: 5px solid ${mainStyle.pointColor3};
+    &::before {
+      top: -35px;
+      left: -20px;
+      transform: rotate(-10deg);
+      content: "title";
+      width: 200px;
+      height: 40px;
+      background-color: ${mainStyle.pointColor3};
+      position: absolute;
+      font-size: 30px;
+      font-weight: 900;
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+  &.toy {
+    border: 5px solid ${mainStyle.pointColor2};
+
+    &::before {
+      top: -35px;
+      right: -20px;
+      transform: rotate(10deg);
+      content: "title";
+      width: 200px;
+      height: 40px;
+      background-color: ${mainStyle.pointColor2};
+      position: absolute;
+      font-size: 30px;
+      font-weight: 900;
+      text-align: center;
+      line-height: 40px;
+    }
   }
 `;
 
-const Con = styled.div``;
-
-const TextWrap = styled.div``;
-
-const DescWrap = styled.div`
+const TextWrap = styled.div`
   margin-right: 50px;
   line-height: 24px;
   h3 {
@@ -127,7 +158,7 @@ const DescWrap = styled.div`
   }
 `;
 
-const Desc = styled.div`
+const Text = styled.div`
   display: flex;
   justify-content: space-between;
 `;
