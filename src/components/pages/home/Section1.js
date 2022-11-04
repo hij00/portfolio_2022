@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
 import dyson from "../../../img/banner/dyson.png";
@@ -129,7 +128,6 @@ export const Section1 = () => {
 const Wrap = styled.section`
   width: 100%;
   height: 100vh;
-  background-color: ${mainStyle.backColor};
 `;
 
 const SvgWrap = styled.div`

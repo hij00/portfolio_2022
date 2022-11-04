@@ -1,19 +1,14 @@
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+
 import styled from "styled-components";
 import { Container } from "../../../Container";
 import { textSite, textToy } from "../../../Text";
 import { mainStyle } from "../../style/GlobalStyle";
+import { Project } from "./Project";
 
 // const arr = { textSite };
 export const Section3 = () => {
-  // console.log(arr);
-  // const [title, setTitle] = useState();
-
-  // useEffect(() => {
-  //   setTitle(arr);
-  // }, [arr]);
   return (
     <Wrap>
       <Container>
@@ -44,9 +39,10 @@ export const Section3 = () => {
           ))}
         </ConWrap>
         <ConWrap className="toy">
-          {textToy.map((a) => (
+          {textToy.map((a, idx) => (
             <Con key={a.id} className="toy">
-              <TextWrap>
+              <Project a={a} idx={idx} />
+              {/* <TextWrap>
                 <Text>
                   <h6>{a.toolImg}</h6>
                   <h6>{a.date}</h6>
@@ -65,7 +61,7 @@ export const Section3 = () => {
                     </a>
                   </Icon>
                 </IconWrap>
-              </TextWrap>
+              </TextWrap> */}
             </Con>
           ))}
         </ConWrap>
@@ -76,7 +72,7 @@ export const Section3 = () => {
 
 const Wrap = styled.section`
   width: 100%;
-  background-color: ${mainStyle.backColor};
+
   border-top: 1px solid white;
   padding: 200px 0;
 `;
@@ -85,12 +81,10 @@ const ConWrap = styled.div`
   &.site {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
   }
   &.toy {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
   }
 `;
 
@@ -102,7 +96,7 @@ const Con = styled.div`
   padding: 30px 30px;
   position: relative;
   &.site {
-    border: 5px solid ${mainStyle.pointColor3};
+    border: 2px solid ${mainStyle.pointColor3};
     &::before {
       top: -35px;
       left: -20px;
@@ -119,7 +113,7 @@ const Con = styled.div`
     }
   }
   &.toy {
-    border: 5px solid ${mainStyle.pointColor2};
+    border: 2px solid ${mainStyle.pointColor2};
 
     &::before {
       top: -35px;

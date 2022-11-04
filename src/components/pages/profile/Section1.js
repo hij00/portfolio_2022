@@ -15,7 +15,7 @@ export const Section1 = () => {
   return (
     <>
       <Wrap>
-        <Img
+        <Box
           style={{
             background: `url(${imgFace}) no-repeat center/cover`,
           }}
@@ -86,21 +86,23 @@ export const Section1 = () => {
 const Wrap = styled.div`
   width: 100%;
   height: 100vh;
-  /* display: flex; */
-  /* justify-content: flex-start; */
-  /* align-items: center; */
-  /* padding: 0 400px; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 0 400px;
   background-color: ${mainStyle.backColor2};
 `;
 
-const Img = styled.div`
+const Box = styled.div`
   width: 50%;
   height: 500px;
-  margin-left: 100px;
+  background-color: gray;
 `;
 
 const TextWrap = styled.div`
-  /* margin-left: 200px; */
+  margin-left: 200px;
+  width: 60%;
 `;
 
 const Title = styled.div`
@@ -141,7 +143,6 @@ const ImgWrap = styled.div`
 const Add = styled.div`
   margin-top: 50px;
   a {
-    width: 50%;
     padding: 10px 30px;
     margin-right: 50px;
     border-radius: 50px;

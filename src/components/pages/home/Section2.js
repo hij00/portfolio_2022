@@ -15,71 +15,74 @@ export const Section2 = () => {
   return (
     <>
       <Wrap>
-        <InBox data-aos="fade-up">
-          <Box
-            style={{
-              background: `url(${imgFace}) no-repeat center/cover`,
-            }}
-          />
+        <InWrap data-aos="fade-up">
+          <MyProfile>
+            <Img
+              style={{
+                background: `url(${imgFace}) no-repeat center/cover`,
+              }}
+            />
 
-          <TextWrap>
-            <Title>
-              개발의 시작부터 끝까지, <br />
-              <br />
-              <span>"최희정"입니다.</span>
-            </Title>
-
-            <Desc>
-              <Text>Frontend Developer</Text>
-              <Text>22.04 ~ing</Text>
-
-              <STitle>수료과정</STitle>
-              <Text>
-                SBS아카데미컴퓨터아트학원 - UIUX 프론트엔드 개발자양성과정
+            <TextWrap>
+              <Title>
+                처음부터 천천히, 한 우물만 파는 신입 개발자
                 <br />
-                (2022.04.12 ~ 2022.07.29)
-              </Text>
-            </Desc>
+                <br />
+                <span>"최희정"입니다.</span>
+              </Title>
 
-            <ImgWrap>
-              <img
-                src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"
-                alt="Javascript"
-              />
-              <img
-                src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=black"
-                alt="Html5"
-              />
-              <img
-                src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=black"
-                alt="Css3"
-              />
-              <img
-                src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=black"
-                alt="Node.js"
-              />
-            </ImgWrap>
-            <ImgWrap>
-              <img
-                src="https://img.shields.io/badge/XD-FF61F6?style=flat-square&logo=AdobeXD&logoColor=black"
-                alt="AdobeXD"
-              />
-              <img
-                src="https://img.shields.io/badge/Photoshop-31A8FF?style=flat-square&logo=AdobePhotoshop&logoColor=black"
-                alt="AdobePhotoshop"
-              />
-              <img
-                src="https://img.shields.io/badge/Illustrator-FF9A00?style=flat-square&logo=AdobeIllustrator&logoColor=black"
-                alt="AdobeIllustrator"
-              />
-            </ImgWrap>
+              <Desc>
+                <Text>Frontend Developer</Text>
+                <Text>22.04 ~ing</Text>
 
-            <Add>
-              <a href="#!">이력서</a>
-              <a href="https://github.com/hij00">Git Hub</a>
-            </Add>
-          </TextWrap>
-        </InBox>
+                <STitle>수료과정</STitle>
+                <Text>
+                  SBS아카데미컴퓨터아트학원 - UIUX 프론트엔드 개발자양성과정
+                  <br />
+                  (2022.04.12 ~ 2022.07.29)
+                </Text>
+              </Desc>
+
+              <ImgWrap>
+                <img
+                  src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"
+                  alt="Javascript"
+                />
+                <img
+                  src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=black"
+                  alt="Html5"
+                />
+                <img
+                  src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=black"
+                  alt="Css3"
+                />
+                <img
+                  src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=black"
+                  alt="Node.js"
+                />
+              </ImgWrap>
+              <ImgWrap>
+                <img
+                  src="https://img.shields.io/badge/XD-FF61F6?style=flat-square&logo=AdobeXD&logoColor=black"
+                  alt="AdobeXD"
+                />
+                <img
+                  src="https://img.shields.io/badge/Photoshop-31A8FF?style=flat-square&logo=AdobePhotoshop&logoColor=black"
+                  alt="AdobePhotoshop"
+                />
+                <img
+                  src="https://img.shields.io/badge/Illustrator-FF9A00?style=flat-square&logo=AdobeIllustrator&logoColor=black"
+                  alt="AdobeIllustrator"
+                />
+              </ImgWrap>
+
+              <Add>
+                <a href="#!">이력서</a>
+                <a href="https://github.com/hij00">Git Hub</a>
+              </Add>
+            </TextWrap>
+          </MyProfile>
+        </InWrap>
       </Wrap>
     </>
   );
@@ -89,30 +92,35 @@ const Wrap = styled.div`
   width: 100%;
   height: 100vh;
   padding: 0 400px;
-  background-color: ${mainStyle.backColor};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
-const InBox = styled.div`
+const InWrap = styled.div`
   width: 100%;
   height: 80vh;
-  background-color: white;
+  padding: 50px 100px;
+  background-color: ${mainStyle.mainColor};
+  border-radius: 50px;
+`;
+
+const MyProfile = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: 100%;
 `;
 
-const Box = styled.div`
+const Img = styled.div`
   width: 30%;
   height: 300px;
   background-color: gray;
 `;
 
 const TextWrap = styled.div`
-  margin-left: 200px;
+  margin-left: 100px;
   width: 60%;
 `;
 
@@ -153,9 +161,16 @@ const ImgWrap = styled.div`
 
 const Add = styled.div`
   margin-top: 50px;
+  width: 100%;
+  display: flex;
+
   a {
-    padding: 10px 30px;
-    margin-right: 50px;
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    display: inline-block;
+    margin-right: 10px;
     border-radius: 50px;
     background-color: black;
   }
