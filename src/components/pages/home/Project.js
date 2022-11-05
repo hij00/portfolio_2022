@@ -5,11 +5,11 @@ import { mainStyle } from "../../style/GlobalStyle";
 
 export const Project = ({ a, idx }) => {
   const isEven = (idx + 1) % 2 === 0;
-  console.log(isEven);
+  // console.log(isEven);
 
   return (
-    <>
-      <TextWrap>
+    <Con data-aos={isEven ? "flip-right" : "flip-left"}>
+      <TextWrap className={isEven ? "blue" : "green"}>
         <Text>
           <h6>{a.toolImg}</h6>
           <h6>{a.date}</h6>
@@ -29,9 +29,60 @@ export const Project = ({ a, idx }) => {
           </Icon>
         </IconWrap>
       </TextWrap>
-    </>
+    </Con>
   );
 };
+
+const Con = styled.div`
+  .blue {
+    border: 2px solid ${mainStyle.pointColor3};
+    border-radius: 50px;
+    width: 60%;
+    background-color: ${mainStyle.mainColor};
+    margin-bottom: 100px;
+    padding: 30px 30px;
+    position: relative;
+
+    &::before {
+      top: -35px;
+      left: -20px;
+      transform: rotate(-10deg);
+      content: "title";
+      width: 200px;
+      height: 40px;
+      background-color: ${mainStyle.pointColor3};
+      position: absolute;
+      font-size: 30px;
+      font-weight: 900;
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+  .green {
+    border: 2px solid ${mainStyle.pointColor2};
+    border-radius: 50px;
+    width: 60%;
+    background-color: ${mainStyle.mainColor};
+    margin-bottom: 100px;
+    padding: 30px 30px;
+    position: relative;
+
+    &::before {
+      top: -35px;
+      right: -20px;
+      transform: rotate(10deg);
+      content: "title";
+      width: 200px;
+      height: 40px;
+      background-color: ${mainStyle.pointColor2};
+      position: absolute;
+      font-size: 30px;
+      font-weight: 900;
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+`;
 
 const TextWrap = styled.div`
   margin-right: 50px;

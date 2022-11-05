@@ -12,7 +12,7 @@ export const Section3 = () => {
   return (
     <Wrap>
       <Container>
-        <ConWrap className="site">
+        {/* <ConWrap className="site">
           {textSite.map((a) => (
             <Con key={a.id} className="site">
               <TextWrap>
@@ -37,7 +37,7 @@ export const Section3 = () => {
               </TextWrap>
             </Con>
           ))}
-        </ConWrap>
+        </ConWrap> */}
         <ConWrap className="toy">
           {textToy.map((a, idx) => (
             <Con key={a.id} className="toy">
@@ -78,59 +78,19 @@ const Wrap = styled.section`
 `;
 
 const ConWrap = styled.div`
-  &.site {
+  /* &.site {
     display: flex;
     flex-direction: column;
   }
   &.toy {
     display: flex;
     flex-direction: column;
-  }
+  } */
+  display: flex;
+  flex-direction: column;
 `;
 
-const Con = styled.div`
-  width: 60%;
-  background-color: ${mainStyle.mainColor};
-  border-radius: 50px;
-  margin-bottom: 100px;
-  padding: 30px 30px;
-  position: relative;
-  &.site {
-    border: 2px solid ${mainStyle.pointColor3};
-    &::before {
-      top: -35px;
-      left: -20px;
-      transform: rotate(-10deg);
-      content: "title";
-      width: 200px;
-      height: 40px;
-      background-color: ${mainStyle.pointColor3};
-      position: absolute;
-      font-size: 30px;
-      font-weight: 900;
-      text-align: center;
-      line-height: 40px;
-    }
-  }
-  &.toy {
-    border: 2px solid ${mainStyle.pointColor2};
-
-    &::before {
-      top: -35px;
-      right: -20px;
-      transform: rotate(10deg);
-      content: "title";
-      width: 200px;
-      height: 40px;
-      background-color: ${mainStyle.pointColor2};
-      position: absolute;
-      font-size: 30px;
-      font-weight: 900;
-      text-align: center;
-      line-height: 40px;
-    }
-  }
-`;
+const Con = styled.div``;
 
 const TextWrap = styled.div`
   margin-right: 50px;
