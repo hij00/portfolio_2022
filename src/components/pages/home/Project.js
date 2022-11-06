@@ -10,6 +10,9 @@ export const Project = ({ a, idx }) => {
   return (
     <Con data-aos={isEven ? "flip-right" : "flip-left"}>
       <TextWrap className={isEven ? "blue" : "green"}>
+        <Title className={isEven ? "blue_title" : "green_title"}>
+          {a.title}
+        </Title>
         <Text>
           <h6>{a.toolImg}</h6>
           <h6>{a.date}</h6>
@@ -37,50 +40,53 @@ const Con = styled.div`
   .blue {
     border: 2px solid ${mainStyle.pointColor3};
     border-radius: 50px;
-    width: 60%;
     background-color: ${mainStyle.mainColor};
     margin-bottom: 100px;
     padding: 30px 30px;
     position: relative;
-
+    margin-right: 30rem;
     &::before {
-      top: -35px;
-      left: -20px;
-      transform: rotate(-10deg);
-      content: "title";
-      width: 200px;
-      height: 40px;
-      background-color: ${mainStyle.pointColor3};
-      position: absolute;
-      font-size: 30px;
-      font-weight: 900;
-      text-align: center;
-      line-height: 40px;
     }
   }
   .green {
     border: 2px solid ${mainStyle.pointColor2};
     border-radius: 50px;
-    width: 60%;
     background-color: ${mainStyle.mainColor};
     margin-bottom: 100px;
     padding: 30px 30px;
     position: relative;
+    margin-left: 30rem;
+  }
+`;
 
-    &::before {
-      top: -35px;
-      right: -20px;
-      transform: rotate(10deg);
-      content: "title";
-      width: 200px;
-      height: 40px;
-      background-color: ${mainStyle.pointColor2};
-      position: absolute;
-      font-size: 30px;
-      font-weight: 900;
-      text-align: center;
-      line-height: 40px;
-    }
+const Title = styled.div`
+  &.blue_title {
+    left: -20px;
+    transform: rotate(-10deg);
+    background-color: ${mainStyle.pointColor3};
+    top: -35px;
+    width: 200px;
+    height: 40px;
+    position: absolute;
+
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 40px;
+  }
+  &.green_title {
+    right: -20px;
+    transform: rotate(10deg);
+    background-color: ${mainStyle.pointColor2};
+    top: -35px;
+    width: 200px;
+    height: 40px;
+    position: absolute;
+
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 40px;
   }
 `;
 

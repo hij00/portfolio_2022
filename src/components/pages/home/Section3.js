@@ -1,67 +1,16 @@
-import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import styled from "styled-components";
 import { Container } from "../../../Container";
-import { textSite, textToy } from "../../../Text";
-import { mainStyle } from "../../style/GlobalStyle";
+import { project } from "../../../Text";
 import { Project } from "./Project";
 
-// const arr = { textSite };
 export const Section3 = () => {
   return (
     <Wrap>
       <Container>
-        {/* <ConWrap className="site">
-          {textSite.map((a) => (
-            <Con key={a.id} className="site">
-              <TextWrap>
-                <Text>
-                  <h6>{a.toolImg}</h6>
-                  <h6>{a.date}</h6>
-                </Text>
-
-                <p>{a.desc}</p>
-                <p>{a.end}</p>
-
-                <IconWrap>
-                  <Icon>
-                    <a href={a.siteUrl} className="page">
-                      <FontAwesomeIcon icon={faLink} />
-                    </a>
-                    <a href={a.gitUrl} className="git">
-                      <Git>Git Hub</Git>
-                    </a>
-                  </Icon>
-                </IconWrap>
-              </TextWrap>
-            </Con>
-          ))}
-        </ConWrap> */}
         <ConWrap className="toy">
-          {textToy.map((a, idx) => (
+          {project.map((a, idx) => (
             <Con key={a.id} className="toy">
               <Project a={a} idx={idx} />
-              {/* <TextWrap>
-                <Text>
-                  <h6>{a.toolImg}</h6>
-                  <h6>{a.date}</h6>
-                </Text>
-
-                <p>{a.desc}</p>
-                <p>{a.end}</p>
-
-                <IconWrap>
-                  <Icon>
-                    <a href={a.siteUrl} className="page">
-                      <FontAwesomeIcon icon={faLink} />
-                    </a>
-                    <a href={a.gitUrl} className="git">
-                      <Git>Git Hub</Git>
-                    </a>
-                  </Icon>
-                </IconWrap>
-              </TextWrap> */}
             </Con>
           ))}
         </ConWrap>
@@ -78,47 +27,10 @@ const Wrap = styled.section`
 `;
 
 const ConWrap = styled.div`
-  /* &.site {
-    display: flex;
-    flex-direction: column;
-  }
-  &.toy {
-    display: flex;
-    flex-direction: column;
-  } */
   display: flex;
   flex-direction: column;
 `;
 
-const Con = styled.div``;
-
-const TextWrap = styled.div`
-  margin-right: 50px;
-  line-height: 24px;
-  h3 {
-    font-size: 22px;
-    font-weight: 900;
-    margin-bottom: 50px;
-  }
-  h6 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: gray;
-  }
-  p {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: 300;
-  }
+const Con = styled.div`
+  width: 100%;
 `;
-
-const Text = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-const IconWrap = styled.div``;
-
-const Icon = styled.div``;
-
-const Git = styled.div``;
