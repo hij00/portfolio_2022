@@ -10,7 +10,7 @@ export const Home = () => {
 
   const handleScroll = () => {
     const scr = window.pageYOffset;
-    if (scr > 1500) {
+    if (scr > 1000) {
       setChange(`${mainStyle.mainColor}`);
     } else {
       setChange(`${mainStyle.backColor}`);

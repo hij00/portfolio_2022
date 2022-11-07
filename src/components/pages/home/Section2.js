@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
 import imgFace from "../../../img/imgFace.png";
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import React, { useEffect } from "react";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 export const Section2 = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
-  });
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 1000,
+  //   });
+  // });
 
   return (
     <>

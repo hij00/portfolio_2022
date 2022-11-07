@@ -8,7 +8,7 @@ export const Project = ({ a, idx }) => {
   // console.log(isEven);
 
   return (
-    <Con data-aos={isEven ? "flip-right" : "flip-left"}>
+    <Con data-aos={isEven ? "flip-right" : "flip-left"} data-aos-duration="500">
       <TextWrap className={isEven ? "blue" : "green"}>
         <Title className={isEven ? "blue_title" : "green_title"}>
           {a.title}
@@ -23,10 +23,10 @@ export const Project = ({ a, idx }) => {
 
         <IconWrap>
           <Icon>
-            <a href={a.siteUrl} className="page">
+            <a href={a.siteUrl} className={isEven ? "blue_icon" : "green_icon"}>
               <FontAwesomeIcon icon={faLink} />
             </a>
-            <a href={a.gitUrl} className="git">
+            <a href={a.gitUrl} className={isEven ? "blue_icon" : "green_icon"}>
               <Git>Git Hub</Git>
             </a>
           </Icon>
@@ -44,9 +44,7 @@ const Con = styled.div`
     margin-bottom: 100px;
     padding: 30px 30px;
     position: relative;
-    margin-right: 30rem;
-    &::before {
-    }
+    margin-left: 30rem;
   }
   .green {
     border: 2px solid ${mainStyle.pointColor2};
@@ -55,14 +53,14 @@ const Con = styled.div`
     margin-bottom: 100px;
     padding: 30px 30px;
     position: relative;
-    margin-left: 30rem;
+    margin-right: 30rem;
   }
 `;
 
 const Title = styled.div`
   &.blue_title {
-    left: -20px;
-    transform: rotate(-10deg);
+    right: -20px;
+    transform: rotate(10deg);
     background-color: ${mainStyle.pointColor3};
     top: -35px;
     width: 200px;
@@ -75,8 +73,8 @@ const Title = styled.div`
     line-height: 40px;
   }
   &.green_title {
-    right: -20px;
-    transform: rotate(10deg);
+    left: -20px;
+    transform: rotate(-10deg);
     background-color: ${mainStyle.pointColor2};
     top: -35px;
     width: 200px;
@@ -117,6 +115,16 @@ const Text = styled.div`
 
 const IconWrap = styled.div``;
 
-const Icon = styled.div``;
+const Icon = styled.div`
+  width: 50px;
+  height: 50px;
+  background-color: aliceblue;
+  display: flex;
+  a {
+    text-align: center;
+    line-height: 50px;
+    margin-right: 50px;
+  }
+`;
 
 const Git = styled.div``;
