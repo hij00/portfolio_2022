@@ -2,6 +2,7 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
+import github from "../../../img/github.png";
 
 export const Project = ({ a, idx }) => {
   const isEven = (idx + 1) % 2 === 0;
@@ -27,7 +28,11 @@ export const Project = ({ a, idx }) => {
               <FontAwesomeIcon icon={faLink} />
             </a>
             <a href={a.gitUrl} className={isEven ? "blue_icon" : "green_icon"}>
-              <Git>Git Hub</Git>
+              <Git
+                style={{
+                  background: `url(${github}) no-repeat left/cover`,
+                }}
+              ></Git>
             </a>
           </Icon>
         </IconWrap>
@@ -118,13 +123,31 @@ const IconWrap = styled.div``;
 const Icon = styled.div`
   width: 50px;
   height: 50px;
-  background-color: aliceblue;
   display: flex;
-  a {
-    text-align: center;
-    line-height: 50px;
-    margin-right: 50px;
+  position: absolute;
+  bottom: -20px;
+  a.blue_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: ${mainStyle.pointColor3};
+    margin-right: 20px;
+    border-radius: 50px;
+  }
+  a.green_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+    background-color: ${mainStyle.pointColor2};
+    margin-right: 20px;
+    border-radius: 50px;
   }
 `;
 
-const Git = styled.div``;
+const Git = styled.div`
+  width: 25px;
+  height: 25px;
+`;
