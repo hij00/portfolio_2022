@@ -10,18 +10,20 @@ export const Project = ({ a, idx }) => {
   // console.log(isEven);
 
   return (
-    <Con data-aos={isEven ? "flip-right" : "flip-left"} data-aos-duration="500">
-      <TextWrap className={isEven ? "blue" : "green"}>
-        <Title className={isEven ? "blue_title" : "green_title"}>
-          {a.title}
-        </Title>
-        <Text>
-          <h6>{a.toolImg}</h6>
-          <h6>{a.date}</h6>
-        </Text>
-
-        <p>{a.desc}</p>
-        <p>{a.end}</p>
+    <Con
+      className={isEven ? "blue" : "green"}
+      data-aos={isEven ? "flip-right" : "flip-left"}
+      data-aos-duration="500"
+    >
+      <Text>
+        <h1 className={isEven ? "blue_text" : "green_text"}>{a.title}</h1>
+        <>{a.toolImg}</>
+        <h6 className={isEven ? "blue_text" : "green_text"}>{a.date}</h6>
+        <Desc>
+          <h3 className={isEven ? "blue_text" : "green_text"}>{a.keyword}</h3>
+          <p className={isEven ? "blue_text" : "green_text"}>{a.desc}</p>
+          <p className={isEven ? "blue_text" : "green_text"}>{a.end}</p>
+        </Desc>
 
         <Icon>
           <a href={a.siteUrl} className={isEven ? "blue_icon" : "green_icon"}>
@@ -39,79 +41,85 @@ export const Project = ({ a, idx }) => {
             </Git>
           </a>
         </Icon>
-      </TextWrap>
+      </Text>
     </Con>
   );
 };
 
 const Con = styled.div`
-  .blue {
+  &.blue {
     border: 2px solid ${mainStyle.pointColor3};
     border-radius: 50px;
     background-color: ${mainStyle.mainColor};
     margin-bottom: 100px;
-    padding: 30px 30px;
+    padding: 30px 50px;
     position: relative;
     margin-left: 30rem;
   }
-  .green {
+  &.green {
     border: 2px solid ${mainStyle.pointColor2};
     border-radius: 50px;
     background-color: ${mainStyle.mainColor};
     margin-bottom: 100px;
-    padding: 30px 30px;
+    padding: 30px 50px;
     position: relative;
     margin-right: 30rem;
   }
 `;
 
-const Title = styled.div`
-  &.blue_title {
-    /* position: absolute;
-    right: -20px; */
-    /* transform: rotate(10deg); */
-    background-color: ${mainStyle.pointColor3};
-    top: -35px;
-    width: 200px;
-    height: 40px;
-
-    font-size: 30px;
-    font-weight: 900;
-    text-align: center;
-    line-height: 40px;
-  }
-  &.green_title {
-    /* position: absolute;
-    left: -20px; */
-    /* transform: rotate(-10deg); */
-    background-color: ${mainStyle.pointColor2};
-    top: -35px;
-    width: 200px;
-    height: 40px;
-
-    font-size: 30px;
-    font-weight: 900;
-    text-align: center;
-    line-height: 40px;
-  }
-`;
-
-const TextWrap = styled.div`
-  /* margin-right: 50px; */
+const Text = styled.div`
+  line-height: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  line-height: 24px;
+  h1.green_text {
+    position: absolute;
+    left: -20px;
+    top: -35px;
+    transform: rotate(-10deg);
+    background-color: ${mainStyle.pointColor2};
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: 900;
+    color: ${mainStyle.mainColor};
+  }
+  h1.blue_text {
+    position: absolute;
+    right: -20px;
+    top: -35px;
+    transform: rotate(10deg);
+    background-color: ${mainStyle.pointColor3};
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: 900;
+    color: ${mainStyle.mainColor};
+  }
   h3 {
     font-size: 22px;
     font-weight: 900;
     margin-bottom: 50px;
+    &.green_text {
+      color: ${mainStyle.pointColor2};
+    }
+    &.blue_text {
+      color: ${mainStyle.pointColor3};
+    }
   }
   h6 {
     font-size: 18px;
     margin-bottom: 10px;
     color: gray;
+    position: absolute;
+    top: -15px;
+
+    padding: 5px;
+    background-color: ${mainStyle.mainColor};
+    &.green_text {
+      right: 50px;
+    }
+    &.blue_text {
+      left: 50px;
+    }
   }
   p {
     margin-top: 10px;
@@ -120,15 +128,13 @@ const TextWrap = styled.div`
   }
 `;
 
-const Text = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
+const Desc = styled.div``;
 
 const Icon = styled.div`
-  width: 50px;
+  width: 100%;
   height: 50px;
   display: flex;
+  justify-content: center;
   margin-top: 20px;
   a.blue_icon {
     display: flex;
@@ -148,6 +154,9 @@ const Icon = styled.div`
     background-color: ${mainStyle.pointColor2};
     margin-right: 20px;
     border-radius: 50px;
+  }
+  a:last-child {
+    margin-right: 0;
   }
 `;
 
