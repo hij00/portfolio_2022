@@ -8,14 +8,17 @@ import styled from "styled-components";
 
 const ImgWrap = styled.div`
   width: 100%;
-  height: 10px;
-  margin-bottom: 50px;
   img {
     margin-right: 10px;
   }
 `;
 
-const Text = styled.div``;
+const Text = styled.div`
+  h1 {
+    display: inline-block;
+    font-weight: 700;
+  }
+`;
 
 export const textSite = [
   {
@@ -198,7 +201,7 @@ export const project = [
     id: 0,
     textImg: `${re_dyson}`,
     title: "다이슨",
-    date: "07.20 ~ 09.08(4명)",
+    date: "07.20 ~ 09.08",
     tool: "javascript, react, react-hook / AdobeXD",
     toolImg: (
       <ImgWrap>
@@ -218,14 +221,15 @@ export const project = [
     ),
     siteUrl: "https://wjdgus1122.github.io/dyson_project",
     gitUrl: "https://github.com/wjdgus1122/dyson_project",
-    keyword: "다이슨 코리아의 기존 사이트 리뉴얼",
+    keyword: "다이슨 코리아의 사이트 리뉴얼",
     desc: (
       <Text>
-        🙋‍♀ 인원 : 4명 <br /> 👩‍💻 맡은 역할 <br /> ✔전체 페이지 디자인
+        🙋‍♀ 인원 : <h1>4</h1>명 <br /> 👩‍💻 맡은 역할 <br /> ✔전체 페이지 디자인
         <br /> ✔코딩 - 커뮤니티, 제품 페이지 기능, 제품 디테일 페이지 기능
         <br /> ✔전체 페이지 디테일 수정
         <br />
         <br /> ✅깃허브 팀 프로젝트 - 브랜치(branch)를 생성해 작업 진행
+        <br /> ✅
         <br /> 기존의 다이슨 코리아 사이트를 리뉴얼하였습니다. 깃협업으로
         프로젝트를 진행한 경험이 있습니다. 저를 포함한 조원 4명이 진행하였으며,
         저는 '디자인과 코딩(커뮤니티 전체 페이지, 제품 페이지 기능, 제품디테일
@@ -238,7 +242,7 @@ export const project = [
   {
     id: 1,
     textImg: `${re_seoul_garden}`,
-    title: "서울식물원(3명)",
+    title: "서울식물원",
     date: "05.09 ~ 06.13",
     tool: "html5, css / AdobeXD",
     toolImg: (
@@ -259,18 +263,19 @@ export const project = [
     ),
     siteUrl: "https://hij00.github.io/seoul_garden_renewal/",
     gitUrl: "https://github.com/hij00/seoul_garden_renewal",
-    keyword: "다이슨 코리아의 기존 사이트 리뉴얼",
+    keyword: "서울식물원의 사이트 리뉴얼",
     desc: (
       <Text>
-        🙋‍♀ 인원 : 4명 <br /> 👩‍💻 맡은 역할 <br /> ✔전체 페이지 디자인
-        <br /> ✔코딩 - 커뮤니티, 제품 페이지 기능, 제품 디테일 페이지 기능
-        <br /> ✔전체 페이지 디테일 수정
+        🙋‍♀ 인원 : <h1>3</h1>명 <br /> 👩‍💻 맡은 역할 <br /> ✔전체 페이지 디자인
+        <br /> ✔코딩 - 온실 안내 페이지
         <br />
-        <br /> ✅깃허브 팀 프로젝트 - 브랜치(branch)를 생성해 작업 진행 기존의
-        다이슨 코리아 사이트를 리뉴얼하였습니다. 깃협업으로 프로젝트를 진행한
-        경험이 있습니다. 저를 포함한 조원 4명이 진행하였으며, 저는 '디자인과
-        코딩(커뮤니티 전체 페이지, 제품 페이지 기능, 제품디테일 페이지 기능,
-        전체 페이지 디테일 및 기능 수정)'을 담당하였습니다.☑🙋‍♀ 🙋‍♀👩‍💻
+        <br /> ✅퍼블리싱 작업으로 제일 처음 진행한 작업물
+        <br /> ✅
+        <br /> 기존의 다이슨 코리아 사이트를 리뉴얼하였습니다. 깃협업으로
+        프로젝트를 진행한 경험이 있습니다. 저를 포함한 조원 4명이 진행하였으며,
+        저는 '디자인과 코딩(커뮤니티 전체 페이지, 제품 페이지 기능, 제품디테일
+        페이지 기능, 전체 페이지 디테일 및 기능 수정)'을 담당하였습니다.☑🙋‍♀
+        🙋‍♀👩‍💻
       </Text>
     ),
     end: "디자인의 대부분을 저 혼자 진행했기 때문에 막히는 부분이 종종 있었지만 후반 작업에서 다른 사람들에게 피드백을 구하면서 여러 의견의 중요성을 알게 되었습니다. 디자인을 할 때 코드작업은 고려를 하지 못해서 여러모로 아쉬움이 남았던 작업입니다.",
@@ -278,7 +283,7 @@ export const project = [
   {
     id: 2,
     textImg: `${movie}`,
-    title: "Heving(1명)",
+    title: "Heving",
     date: "~ 07.20",
     tool: "javascript, react, react-hook / AdobeXD",
     toolImg: (
@@ -299,18 +304,18 @@ export const project = [
     ),
     siteUrl: "https://hij00.github.io/Heving_app/",
     gitUrl: "https://github.com/hij00/Heving_app",
-    keyword: "다이슨 코리아의 기존 사이트 리뉴얼",
+    keyword: "영화의 API를 가져와서 나만의 영화 사이트 작업",
     desc: (
       <Text>
-        🙋‍♀ 인원 : 4명 <br /> 👩‍💻 맡은 역할 <br /> ✔전체 페이지 디자인
-        <br /> ✔코딩 - 커뮤니티, 제품 페이지 기능, 제품 디테일 페이지 기능
-        <br /> ✔전체 페이지 디테일 수정
+        🙋‍♀ 인원 : <h1>1</h1>명
         <br />
-        <br /> ✅깃허브 팀 프로젝트 - 브랜치(branch)를 생성해 작업 진행 기존의
-        다이슨 코리아 사이트를 리뉴얼하였습니다. 깃협업으로 프로젝트를 진행한
-        경험이 있습니다. 저를 포함한 조원 4명이 진행하였으며, 저는 '디자인과
-        코딩(커뮤니티 전체 페이지, 제품 페이지 기능, 제품디테일 페이지 기능,
-        전체 페이지 디테일 및 기능 수정)'을 담당하였습니다.☑🙋‍♀ 🙋‍♀👩‍💻
+        <br /> ✅TMDB 사이트에서 API를 가져와서 작업
+        <br /> ✅
+        <br /> 기존의 다이슨 코리아 사이트를 리뉴얼하였습니다. 깃협업으로
+        프로젝트를 진행한 경험이 있습니다. 저를 포함한 조원 4명이 진행하였으며,
+        저는 '디자인과 코딩(커뮤니티 전체 페이지, 제품 페이지 기능, 제품디테일
+        페이지 기능, 전체 페이지 디테일 및 기능 수정)'을 담당하였습니다.☑🙋‍♀
+        🙋‍♀👩‍💻
       </Text>
     ),
     end: "다른 곳에서 API를 끌어와 코드에 적용시키는 방법과 리액트의 여러 기능들을 배울 수 있었던 프로젝트였습니다. 오류를 해결하는 것에 뿌듯함을 크게 느꼈습니다.",
@@ -318,7 +323,7 @@ export const project = [
   {
     id: 3,
     textImg: `${toy_login}`,
-    title: "로그인 / 회원가입(1명)",
+    title: "로그인 / 회원가입",
     date: "09.",
     tool: "javascript, react, react-hook",
     toolImg: (
@@ -339,18 +344,18 @@ export const project = [
     ),
     siteUrl: "",
     gitUrl: "https://github.com/hij00/signIn_signUp",
-    keyword: "다이슨 코리아의 기존 사이트 리뉴얼",
+    keyword: "React Hook을 사용해 간편한 작업",
     desc: (
       <Text>
-        🙋‍♀ 인원 : 4명 <br /> 👩‍💻 맡은 역할 <br /> ✔전체 페이지 디자인
-        <br /> ✔코딩 - 커뮤니티, 제품 페이지 기능, 제품 디테일 페이지 기능
-        <br /> ✔전체 페이지 디테일 수정
+        🙋‍♀ 인원 : <h1>1</h1>명
         <br />
-        <br /> ✅깃허브 팀 프로젝트 - 브랜치(branch)를 생성해 작업 진행 기존의
-        다이슨 코리아 사이트를 리뉴얼하였습니다. 깃협업으로 프로젝트를 진행한
-        경험이 있습니다. 저를 포함한 조원 4명이 진행하였으며, 저는 '디자인과
-        코딩(커뮤니티 전체 페이지, 제품 페이지 기능, 제품디테일 페이지 기능,
-        전체 페이지 디테일 및 기능 수정)'을 담당하였습니다.☑🙋‍♀ 🙋‍♀👩‍💻
+        <br /> ✅React Hook을 사용해 인풋(input)을 간편하게 작업
+        <br /> ✅인터렉티브한 디자인 작업
+        <br /> 기존의 다이슨 코리아 사이트를 리뉴얼하였습니다. 깃협업으로
+        프로젝트를 진행한 경험이 있습니다. 저를 포함한 조원 4명이 진행하였으며,
+        저는 '디자인과 코딩(커뮤니티 전체 페이지, 제품 페이지 기능, 제품디테일
+        페이지 기능, 전체 페이지 디테일 및 기능 수정)'을 담당하였습니다.☑🙋‍♀
+        🙋‍♀👩‍💻
       </Text>
     ),
     end: "간편한 코드로도 쉽게 로그인과 회원가입 기능을 할 수 있다는 것과 인터렉티브한 움직임을 의도한 대로 넣는 방법을 알게 되었습니다.",
@@ -379,12 +384,10 @@ export const project = [
     ),
     siteUrl: "https://hij00.github.io/toy_cart/",
     gitUrl: "https://github.com/hij00/toy_cart",
-    keyword: "다이슨 코리아의 기존 사이트 리뉴얼",
+    keyword: "React Liverary 중 하나인 Redux를 사용",
     desc: (
       <Text>
-        🙋‍♀ 인원 : 4명 <br /> 👩‍💻 맡은 역할 <br /> ✔전체 페이지 디자인
-        <br /> ✔코딩 - 커뮤니티, 제품 페이지 기능, 제품 디테일 페이지 기능
-        <br /> ✔전체 페이지 디테일 수정
+        🙋‍♀ 인원 : <h1>1</h1>명
         <br />
         <br /> ✅깃허브 팀 프로젝트 - 브랜치(branch)를 생성해 작업 진행 기존의
         다이슨 코리아 사이트를 리뉴얼하였습니다. 깃협업으로 프로젝트를 진행한
