@@ -79,7 +79,7 @@ const Text = styled.div`
     top: -35px;
     transform: rotate(-10deg);
     background-color: ${mainStyle.pointColor2};
-    padding: 10px 20px;
+    padding: 15px 30px;
     font-size: 30px;
     font-weight: 900;
     color: ${mainStyle.mainColor};
@@ -90,7 +90,7 @@ const Text = styled.div`
     top: -35px;
     transform: rotate(10deg);
     background-color: ${mainStyle.pointColor3};
-    padding: 10px 20px;
+    padding: 15px 30px;
     font-size: 30px;
     font-weight: 900;
     color: ${mainStyle.mainColor};
@@ -98,7 +98,7 @@ const Text = styled.div`
   h3 {
     font-size: 22px;
     font-weight: 900;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     &.green_text {
       color: ${mainStyle.pointColor2};
     }
@@ -151,6 +151,7 @@ const Icon = styled.div`
     background-color: ${mainStyle.pointColor3};
     margin-right: 20px;
     border-radius: 50px;
+    transition: 0.5s;
   }
   a.green_icon {
     display: flex;
@@ -161,9 +162,13 @@ const Icon = styled.div`
     background-color: ${mainStyle.pointColor2};
     margin-right: 20px;
     border-radius: 50px;
+    transition: 0.5s;
   }
   a:last-child {
     margin-right: 0;
+  }
+  a:hover {
+    background-color: black;
   }
 `;
 

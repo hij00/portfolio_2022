@@ -173,5 +173,9 @@ const Add = styled.div`
     margin-right: 10px;
     border-radius: 50px;
     background-color: black;
+    transition: 0.5s;
+    &:hover {
+      background-color: ${mainStyle.backColor};
+    }
   }
 `;
