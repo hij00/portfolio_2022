@@ -21,8 +21,6 @@ export const Section3 = () => {
 
 const Wrap = styled.section`
   width: 100%;
-
-  border-top: 1px solid white;
   padding: 200px 0;
 `;
 

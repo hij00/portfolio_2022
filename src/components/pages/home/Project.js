@@ -72,11 +72,10 @@ const Text = styled.div`
   line-height: 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   h1.green_text {
     position: absolute;
     left: -20px;
-    top: -35px;
+    top: -45px;
     transform: rotate(-10deg);
     background-color: ${mainStyle.pointColor2};
     padding: 15px 30px;
@@ -87,7 +86,7 @@ const Text = styled.div`
   h1.blue_text {
     position: absolute;
     right: -20px;
-    top: -35px;
+    top: -45px;
     transform: rotate(10deg);
     background-color: ${mainStyle.pointColor3};
     padding: 15px 30px;
