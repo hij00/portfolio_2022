@@ -16,7 +16,7 @@ export const Section2 = () => {
     <>
       <Wrap>
         <InWrap data-aos="fade-up">
-          <MyProfile>
+          {/* <MyProfile>
             <Img
               style={{
                 background: `url(${imgFace}) no-repeat center/cover`,
@@ -81,7 +81,32 @@ export const Section2 = () => {
                 <a href="https://github.com/hij00">Git Hub</a>
               </Add>
             </TextWrap>
-          </MyProfile>
+          </MyProfile> */}
+          <Title>JavaScript Loding</Title>
+          <Profile>
+            <Img
+              style={{
+                background: `url(${imgFace}) no-repeat center/cover`,
+              }}
+            />
+            <SiteUrl>
+              <a href="#!">Git Hub</a>
+              <a href="#!">e-mail</a>
+            </SiteUrl>
+          </Profile>
+          <TextWrap>
+            <Text>
+              처음부터 천천히, 한 우물만 파는 신입 개발자
+              <br />
+              <br />
+              <span>"최희정"입니다.</span>
+            </Text>
+            <Desc>
+              저는 Frontend를 깊이 있게 다져나가고자 하는주니어 개발자입니다.
+              Backend에도 관심을 가지는 등, 분야를 가리지 않고 적극적으로 개발에
+              대한 관심사를 넓혀나가고 있습니다.
+            </Desc>
+          </TextWrap>
         </InWrap>
       </Wrap>
     </>
@@ -100,31 +125,42 @@ const Wrap = styled.div`
 
 const InWrap = styled.div`
   width: 100%;
-  height: 80vh;
+  /* height: 80vh; */
   padding: 50px 100px;
   background-color: ${mainStyle.mainColor};
   border-radius: 50px;
 `;
 
-const MyProfile = styled.div`
+const Title = styled.div`
+  font-size: 50px;
+  font-weight: 700;
+  color: ${mainStyle.pointColor3};
+`;
+
+const Profile = styled.div`
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
+  justify-content: space-between;
+  padding: 0 200px;
 `;
 
 const Img = styled.div`
   width: 30%;
-  height: 300px;
-  background-color: gray;
+  height: 200px;
 `;
 
-const TextWrap = styled.div`
-  margin-left: 100px;
-  width: 60%;
+const SiteUrl = styled.div`
+  a {
+    display: block;
+    background-color: ${mainStyle.blackColor};
+    padding: 10px 50px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+  }
 `;
 
-const Title = styled.div`
+const TextWrap = styled.div``;
+
+const Text = styled.div`
   font-family: "Nanum Myeongjo", serif;
   color: ${mainStyle.subColor2};
   span {
@@ -133,49 +169,78 @@ const Title = styled.div`
   }
 `;
 
-const Desc = styled.div`
-  font-size: 18px;
-  margin: 40px 0;
-  color: ${mainStyle.subColor2};
-`;
+const Desc = styled.div``;
 
-const STitle = styled.div`
-  margin: 30px 0 10px;
-  color: ${mainStyle.pointColor2};
-`;
+// const MyProfile = styled.div`
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+//   width: 100%;
+// `;
 
-const Text = styled.div`
-  margin-bottom: 10px;
-  line-height: 20px;
-`;
+// const Img = styled.div`
+//   width: 30%;
+//   height: 300px;
+//   background-color: gray;
+// `;
 
-const ImgWrap = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  img {
-    margin-right: 10px;
-    margin-bottom: 20px;
-  }
-`;
+// const TextWrap = styled.div`
+//   margin-left: 100px;
+//   width: 60%;
+// `;
 
-const Add = styled.div`
-  margin-top: 50px;
-  width: 100%;
-  display: flex;
+// const Title = styled.div`
+//   font-family: "Nanum Myeongjo", serif;
+//   color: ${mainStyle.subColor2};
+//   span {
+//     font-size: 50px;
+//     color: ${mainStyle.pointColor2};
+//   }
+// `;
 
-  a {
-    width: 50%;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    display: inline-block;
-    margin-right: 10px;
-    border-radius: 50px;
-    background-color: black;
-    transition: 0.5s;
-    &:hover {
-      background-color: ${mainStyle.backColor};
-    }
-  }
-`;
+// const Desc = styled.div`
+//   font-size: 18px;
+//   margin: 40px 0;
+//   color: ${mainStyle.subColor2};
+// `;
+
+// const STitle = styled.div`
+//   margin: 30px 0 10px;
+//   color: ${mainStyle.pointColor2};
+// `;
+
+// const Text = styled.div`
+//   margin-bottom: 10px;
+//   line-height: 20px;
+// `;
+
+// const ImgWrap = styled.div`
+//   width: 100%;
+//   display: flex;
+//   justify-content: flex-start;
+//   img {
+//     margin-right: 10px;
+//     margin-bottom: 20px;
+//   }
+// `;
+
+// const Add = styled.div`
+//   margin-top: 50px;
+//   width: 100%;
+//   display: flex;
+
+//   a {
+//     width: 50%;
+//     height: 40px;
+//     text-align: center;
+//     line-height: 40px;
+//     display: inline-block;
+//     margin-right: 10px;
+//     border-radius: 50px;
+//     background-color: black;
+//     transition: 0.5s;
+//     &:hover {
+//       background-color: ${mainStyle.backColor};
+//     }
+//   }
+// `;

@@ -2,8 +2,6 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
-// import github from "../../../img/github.png";
-import github from "../../../img/github.svg";
 
 export const Project = ({ a, idx }) => {
   const isEven = (idx + 1) % 2 === 0;
@@ -17,7 +15,7 @@ export const Project = ({ a, idx }) => {
     >
       <Text>
         <h1 className={isEven ? "blue_text" : "green_text"}>{a.title}</h1>
-        <Img>
+        <IconWrap>
           <>{a.toolImg}</>
           <Icon>
             <a href={a.siteUrl} className={isEven ? "blue_icon" : "green_icon"}>
@@ -35,7 +33,7 @@ export const Project = ({ a, idx }) => {
               </Git>
             </a>
           </Icon>
-        </Img>
+        </IconWrap>
         <h6 className={isEven ? "blue_text" : "green_text"}>{a.date}</h6>
         <Desc>
           <h3 className={isEven ? "blue_text" : "green_text"}>{a.keyword}</h3>
@@ -128,7 +126,7 @@ const Text = styled.div`
   }
 `;
 
-const Img = styled.div`
+const IconWrap = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
