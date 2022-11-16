@@ -1,87 +1,21 @@
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
 import imgFace from "../../../img/imgFace.png";
-// import React, { useEffect } from "react";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Section2 = () => {
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 1000,
-  //   });
-  // });
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  });
 
   return (
     <>
       <Wrap>
         <InWrap data-aos="fade-up">
-          {/* <MyProfile>
-            <Img
-              style={{
-                background: `url(${imgFace}) no-repeat center/cover`,
-              }}
-            />
-
-            <TextWrap>
-              <Title>
-                처음부터 천천히, 한 우물만 파는 신입 개발자
-                <br />
-                <br />
-                <span>"최희정"입니다.</span>
-              </Title>
-
-              <Desc>
-                <Text>Frontend Developer</Text>
-                <Text>22.04 ~ing</Text>
-
-                <STitle>수료과정</STitle>
-                <Text>
-                  SBS아카데미컴퓨터아트학원 - UIUX 프론트엔드 개발자양성과정
-                  <br />
-                  (2022.04.12 ~ 2022.07.29)
-                </Text>
-              </Desc>
-
-              <ImgWrap>
-                <img
-                  src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"
-                  alt="Javascript"
-                />
-                <img
-                  src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=black"
-                  alt="Html5"
-                />
-                <img
-                  src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=black"
-                  alt="Css3"
-                />
-                <img
-                  src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=black"
-                  alt="Node.js"
-                />
-              </ImgWrap>
-              <ImgWrap>
-                <img
-                  src="https://img.shields.io/badge/XD-FF61F6?style=flat-square&logo=AdobeXD&logoColor=black"
-                  alt="AdobeXD"
-                />
-                <img
-                  src="https://img.shields.io/badge/Photoshop-31A8FF?style=flat-square&logo=AdobePhotoshop&logoColor=black"
-                  alt="AdobePhotoshop"
-                />
-                <img
-                  src="https://img.shields.io/badge/Illustrator-FF9A00?style=flat-square&logo=AdobeIllustrator&logoColor=black"
-                  alt="AdobeIllustrator"
-                />
-              </ImgWrap>
-
-              <Add>
-                <a href="#!">이력서</a>
-                <a href="https://github.com/hij00">Git Hub</a>
-              </Add>
-            </TextWrap>
-          </MyProfile> */}
           <Title>JavaScript Loding</Title>
           <Profile>
             <Img
@@ -97,15 +31,13 @@ export const Section2 = () => {
           <TextWrap>
             <Text>
               처음부터 천천히, 한 우물만 파는 신입 개발자
+              <span>"최희정"</span>입니다.
               <br />
-              <br />
-              <span>"최희정"입니다.</span>
+              저는 <span>Frontend</span>를 깊이 있게 다져나가고자 하는 주니어
+              개발자입니다. Backend에도 관심을 가지는 등, 분야를 가리지 않고
+              적극적으로 개발에 대한 관심사를 넓혀나가고 있습니다.
             </Text>
-            <Desc>
-              저는 Frontend를 깊이 있게 다져나가고자 하는주니어 개발자입니다.
-              Backend에도 관심을 가지는 등, 분야를 가리지 않고 적극적으로 개발에
-              대한 관심사를 넓혀나가고 있습니다.
-            </Desc>
+            <Desc></Desc>
           </TextWrap>
         </InWrap>
       </Wrap>
@@ -135,6 +67,7 @@ const Title = styled.div`
   font-size: 50px;
   font-weight: 700;
   color: ${mainStyle.pointColor3};
+  margin-bottom: 50px;
 `;
 
 const Profile = styled.div`
@@ -161,11 +94,17 @@ const SiteUrl = styled.div`
 const TextWrap = styled.div``;
 
 const Text = styled.div`
-  font-family: "Nanum Myeongjo", serif;
-  color: ${mainStyle.subColor2};
+  /* font-family: "Nanum Myeongjo", serif; */
+  /* font-family: "Do Hyeon", sans-serif; */
+  /* font-family: "IBM Plex Sans KR", sans-serif; */
+  /* font-family: "Noto Sans KR", sans-serif; */
+  /* font-family: "Sunflower", sans-serif; */
+  font-family: "Source Code Pro", monospace;
+  color: ${mainStyle.blackColor};
+  font-weight: 900;
   span {
-    font-size: 50px;
-    color: ${mainStyle.pointColor2};
+    font-size: 30px;
+    color: ${mainStyle.backColor};
   }
 `;
 
