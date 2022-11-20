@@ -18,7 +18,7 @@ export const Section2 = () => {
         <InWrap data-aos="fade-up">
           <Title>
             JavaScript Html Css React
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265.219 58.43">
+            {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265.219 58.43">
               <defs>
                 <clipPath className="path_1">
                   <path
@@ -181,7 +181,7 @@ export const Section2 = () => {
                 d="M254.002,4.869c0,0-3.167,37.006,1.833,37.005
 		c0,0,4.183,1.458,9.383-2.604"
               />
-            </svg>
+            </svg> */}
           </Title>
           <Profile>
             <Img
@@ -236,7 +236,7 @@ const Title = styled.div`
   font-weight: 700;
   color: ${mainStyle.pointColor3};
   margin-bottom: 50px;
-  svg {
+  /* svg {
     fill: none;
     width: 300px;
     stroke-width: 11px;
@@ -251,7 +251,7 @@ const Title = styled.div`
     100% {
       stroke-dashoffset: 0;
     }
-  }
+  } */
 `;
 
 const Profile = styled.div`
@@ -269,7 +269,7 @@ const SiteUrl = styled.div`
   a {
     display: block;
     background-color: ${mainStyle.blackColor};
-    padding: 10px 50px;
+    padding: 10px 100px;
     margin-bottom: 10px;
     border-radius: 50px;
   }
