@@ -31,4 +31,5 @@ export const Home = () => {
 const Wrap = styled.div`
   background-color: ${(props) => props.change};
   transition: 0.7s;
+  position: fixed;
 `;

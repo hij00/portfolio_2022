@@ -14,7 +14,7 @@ export const Project = ({ a, idx }) => {
       data-aos-duration="500"
     >
       <Text>
-        <h1 className={isEven ? "blue_text" : "green_text"}>{a.title}</h1>
+        <Title className={isEven ? "blue_text" : "green_text"}>{a.title}</Title>
         <IconWrap>
           <>{a.toolImg}</>
           <Icon>
@@ -37,7 +37,7 @@ export const Project = ({ a, idx }) => {
         <h6 className={isEven ? "blue_text" : "green_text"}>{a.date}</h6>
         <Desc>
           <h3 className={isEven ? "blue_text" : "green_text"}>{a.keyword}</h3>
-          <p className={isEven ? "blue_text" : "green_text"}>{a.desc}</p>
+          <div className={isEven ? "blue_text" : "green_text"}>{a.desc}</div>
           <p className={isEven ? "blue_text" : "green_text"}>{a.end}</p>
         </Desc>
       </Text>
@@ -70,28 +70,7 @@ const Text = styled.div`
   line-height: 24px;
   display: flex;
   flex-direction: column;
-  h1.green_text {
-    position: absolute;
-    left: -20px;
-    top: -45px;
-    transform: rotate(-10deg);
-    background-color: ${mainStyle.pointColor2};
-    padding: 15px 30px;
-    font-size: 30px;
-    font-weight: 900;
-    color: ${mainStyle.mainColor};
-  }
-  h1.blue_text {
-    position: absolute;
-    right: -20px;
-    top: -45px;
-    transform: rotate(10deg);
-    background-color: ${mainStyle.pointColor3};
-    padding: 15px 30px;
-    font-size: 30px;
-    font-weight: 900;
-    color: ${mainStyle.mainColor};
-  }
+
   h3 {
     font-size: 22px;
     font-weight: 900;
@@ -123,6 +102,31 @@ const Text = styled.div`
     margin-top: 10px;
     font-size: 18px;
     font-weight: 300;
+  }
+`;
+
+const Title = styled.div`
+  &.green_text {
+    position: absolute;
+    left: -20px;
+    top: -45px;
+    transform: rotate(-10deg);
+    background-color: ${mainStyle.pointColor2};
+    padding: 15px 30px;
+    font-size: 30px;
+    font-weight: 900;
+    color: ${mainStyle.mainColor};
+  }
+  &.blue_text {
+    position: absolute;
+    right: -20px;
+    top: -45px;
+    transform: rotate(10deg);
+    background-color: ${mainStyle.pointColor3};
+    padding: 15px 30px;
+    font-size: 30px;
+    font-weight: 900;
+    color: ${mainStyle.mainColor};
   }
 `;
 

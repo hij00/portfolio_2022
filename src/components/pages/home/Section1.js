@@ -1,25 +1,63 @@
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
-import dyson from "../../../img/banner/dyson.png";
-import movie from "../../../img/banner/movie.png";
-import React, { useEffect } from "react";
+// import dyson from "../../../img/banner/dyson.png";
+// import movie from "../../../img/banner/movie.png";
+import React, { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Container } from "../../../Container";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Section1 = () => {
   useEffect(() => {
     AOS.init();
   });
 
+  const wrapRef = useRef(null);
+  const textChoi = useRef(null);
+  const textHee = useRef(null);
+  const textJeong = useRef(null);
+
+  useEffect(() => {
+    const startScroll = {
+      scrollTrigger: {
+        trigger: wrapRef.current,
+        start: "top top",
+        toggleAction: "play play play play",
+        scrub: 1,
+      },
+    };
+    gsap.to(textChoi.current, { ...startScroll, x: -1500 });
+    gsap.to(textHee.current, { ...startScroll, x: 1500 });
+    gsap.to(textJeong.current, { ...startScroll, x: -1500 });
+
+    // gsap.to(textChoi.current, {
+    //   scrollTrigger: textChoi.current,
+    //   x: -1500,
+    // });
+
+    // gsap.to(textHee.current, {
+    //   scrollTrigger: textChoi.current,
+    //   x: 1500,
+    // });
+
+    // gsap.to(textJeong.current, {
+    //   scrollTrigger: textChoi.current,
+    //   x: -1500,
+    // });
+  }, []);
+
   return (
     <>
-      <Wrap>
+      <Wrap ref={wrapRef}>
         <Container>
           <SvgWrap>
-            <SText className="choi" data-aos="zoom-in">
+            <SText className="choi" data-aos="zoom-in" ref={textChoi}>
               CH
-              <ImgBox>
+              {/* <ImgBox>
                 <a
                   target="_top"
                   href="https://wjdgus1122.github.io/dyson_project"
@@ -35,13 +73,13 @@ export const Section1 = () => {
 
                   <h1>01</h1>
                 </a>
-              </ImgBox>
+              </ImgBox> */}
               OI
               <span>&copy;</span>
               <SSText className="text"></SSText>
             </SText>
 
-            <SText className="hee" data-aos="zoom-in">
+            <SText className="hee" data-aos="zoom-in" ref={textHee}>
               <Text className="hee">
                 <h3>클릭!</h3>
                 <svg
@@ -91,9 +129,9 @@ export const Section1 = () => {
               HEE
             </SText>
 
-            <SText className="jeong" data-aos="zoom-in">
+            <SText className="jeong" data-aos="zoom-in" ref={textJeong}>
               JEONG
-              <ImgBox>
+              {/* <ImgBox>
                 <a target="_top" href="https://hij00.github.io/Heving_app/">
                   <h1>02</h1>
                   <Box
@@ -105,7 +143,7 @@ export const Section1 = () => {
                     <Cover />
                   </Box>
                 </a>
-              </ImgBox>
+              </ImgBox> */}
               <MenuWrap className="profile">
                 <ScrollWrap>
                   <LineWrap>
@@ -128,6 +166,9 @@ export const Section1 = () => {
 const Wrap = styled.section`
   width: 100%;
   height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 `;
 
 const SvgWrap = styled.div`
@@ -283,40 +324,40 @@ const Line = styled.div`
   }
 `;
 
-const ImgBox = styled.div`
-  h1 {
-    font-size: 18px;
-    font-family: "Nanum Myeongjo", serif;
-    margin-top: 10px;
-    color: ${mainStyle.pointColor};
-  }
-`;
+// const ImgBox = styled.div`
+//   h1 {
+//     font-size: 18px;
+//     font-family: "Nanum Myeongjo", serif;
+//     margin-top: 10px;
+//     color: ${mainStyle.pointColor};
+//   }
+// `;
 
-const Box = styled.div`
-  width: 300px;
-  height: 190px;
-  background-color: gray;
-  margin: 10px 0;
-  position: relative;
-  opacity: 0.8;
-  &.choi {
-    margin-top: 30px;
-  }
-  &.jeong {
-    margin-bottom: 30px;
-  }
-`;
+// const Box = styled.div`
+//   width: 300px;
+//   height: 190px;
+//   background-color: gray;
+//   margin: 10px 0;
+//   position: relative;
+//   opacity: 0.8;
+//   &.choi {
+//     margin-top: 30px;
+//   }
+//   &.jeong {
+//     margin-bottom: 30px;
+//   }
+// `;
 
-const Cover = styled.div`
-  position: absolute;
-  top: 0;
-  width: inherit;
-  height: inherit;
+// const Cover = styled.div`
+//   position: absolute;
+//   top: 0;
+//   width: inherit;
+//   height: inherit;
 
-  backdrop-filter: grayscale(1);
-  transition: 1s;
-  /* background-color: ${mainStyle.mainColor}; */
-  &:hover {
-    backdrop-filter: grayscale(0);
-  }
-`;
+//   backdrop-filter: grayscale(1);
+//   transition: 1s;
+//   /* background-color: ${mainStyle.mainColor}; */
+//   &:hover {
+//     backdrop-filter: grayscale(0);
+//   }
+// `;
