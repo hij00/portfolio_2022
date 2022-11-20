@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
-// import dyson from "../../../img/banner/dyson.png";
-// import movie from "../../../img/banner/movie.png";
 import React, { useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -22,17 +20,7 @@ export const Section1 = () => {
   const textJeong = useRef(null);
 
   useEffect(() => {
-    // const startScroll = {
-    //   scrollTrigger: {
-    //     trigger: wrapRef.current,
-    //     start: "top top",
-    //     toggleAction: "play play play play",
-    //     scrub: 1,
-    //     duration: 1,
-    //   },
-    //   // x: -1500,
-    // };
-    gsap.to(textChoi.current, {
+    const startScroll = {
       scrollTrigger: {
         trigger: wrapRef.current,
         start: "top top",
@@ -40,45 +28,19 @@ export const Section1 = () => {
         scrub: 1,
         duration: 1,
       },
+    };
+    gsap.to(textChoi.current, {
+      ...startScroll,
       x: -1500,
     });
     gsap.to(textHee.current, {
-      scrollTrigger: {
-        trigger: wrapRef.current,
-        start: "top top",
-        toggleAction: "play play play play",
-        scrub: 1,
-        duration: 1,
-      },
+      ...startScroll,
       x: "1500px",
     });
     gsap.to(textJeong.current, {
-      scrollTrigger: {
-        trigger: wrapRef.current,
-        start: "top top",
-        toggleAction: "play play play play",
-        scrub: 1,
-        duration: 1,
-      },
+      ...startScroll,
       x: "-1500px",
     });
-    // gsap.to(textHee.current, { ...startScroll, x: 1500 });
-    // gsap.to(textJeong.current, startScroll);
-
-    // gsap.to(textChoi.current, {
-    //   scrollTrigger: textChoi.current,
-    //   x: -1500,
-    // });
-
-    // gsap.to(textHee.current, {
-    //   scrollTrigger: textChoi.current,
-    //   x: 1500,
-    // });
-
-    // gsap.to(textJeong.current, {
-    //   scrollTrigger: textChoi.current,
-    //   x: -1500,
-    // });
   }, []);
 
   return (
@@ -87,25 +49,7 @@ export const Section1 = () => {
         <Container>
           <SvgWrap>
             <SText className="choi" data-aos="zoom-in" ref={textChoi}>
-              CH
-              {/* <ImgBox>
-                <a
-                  target="_top"
-                  href="https://wjdgus1122.github.io/dyson_project"
-                >
-                  <Box
-                    className="choi"
-                    style={{
-                      background: `url(${dyson}) no-repeat left/cover`,
-                    }}
-                  >
-                    <Cover />
-                  </Box>
-
-                  <h1>01</h1>
-                </a>
-              </ImgBox> */}
-              OI
+              CHOI
               <span>&copy;</span>
               <SSText className="text"></SSText>
             </SText>
@@ -115,7 +59,6 @@ export const Section1 = () => {
                 <h3>클릭!</h3>
                 <svg
                   fill="#607EAA"
-                  // mainStyle.pointColor
                   version="1.1"
                   id="Layer_1"
                   x="0px"
@@ -127,7 +70,6 @@ export const Section1 = () => {
                 >
                   <polygon points="585.782,3.604 577,1.897 577,5 0,5 0,6 577,6 577,8.724 585.782,7.018 594.564,5.311 " />
                 </svg>
-                {/* <Bar/> */}
               </Text>
               <MenuWrap className="site">
                 <Menu>
@@ -162,19 +104,6 @@ export const Section1 = () => {
 
             <SText className="jeong" data-aos="zoom-in" ref={textJeong}>
               JEONG
-              {/* <ImgBox>
-                <a target="_top" href="https://hij00.github.io/Heving_app/">
-                  <h1>02</h1>
-                  <Box
-                    className="jeong"
-                    style={{
-                      background: `url(${movie}) no-repeat center/cover`,
-                    }}
-                  >
-                    <Cover />
-                  </Box>
-                </a>
-              </ImgBox> */}
               <MenuWrap className="profile">
                 <ScrollWrap>
                   <LineWrap>
