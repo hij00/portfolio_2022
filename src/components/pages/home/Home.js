@@ -20,16 +20,22 @@ export const Home = () => {
   window.addEventListener("scroll", handleScroll);
 
   return (
-    <Wrap change={change}>
+    <>
+      <Wrap change={change} />
       <Section1 />
       <Section2 />
       <Section3 />
-    </Wrap>
+    </>
+    // </Wrap>
   );
 };
 
 const Wrap = styled.div`
+  width: 100%;
+  height: 100%;
   background-color: ${(props) => props.change};
   transition: 0.7s;
   position: fixed;
+  top: 0;
+  z-index: -1;
 `;

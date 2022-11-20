@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
 // import dyson from "../../../img/banner/dyson.png";
 // import movie from "../../../img/banner/movie.png";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Container } from "../../../Container";
@@ -22,17 +22,48 @@ export const Section1 = () => {
   const textJeong = useRef(null);
 
   useEffect(() => {
-    const startScroll = {
+    // const startScroll = {
+    //   scrollTrigger: {
+    //     trigger: wrapRef.current,
+    //     start: "top top",
+    //     toggleAction: "play play play play",
+    //     scrub: 1,
+    //     duration: 1,
+    //   },
+    //   // x: -1500,
+    // };
+    gsap.to(textChoi.current, {
       scrollTrigger: {
         trigger: wrapRef.current,
         start: "top top",
         toggleAction: "play play play play",
         scrub: 1,
+        duration: 1,
       },
-    };
-    gsap.to(textChoi.current, { ...startScroll, x: -1500 });
-    gsap.to(textHee.current, { ...startScroll, x: 1500 });
-    gsap.to(textJeong.current, { ...startScroll, x: -1500 });
+      x: -1500,
+    });
+    gsap.to(textHee.current, {
+      scrollTrigger: {
+        trigger: wrapRef.current,
+        start: "top top",
+        toggleAction: "play play play play",
+        scrub: 1,
+        duration: 1,
+      },
+      x: "1500px",
+    });
+    gsap.to(textJeong.current, {
+      scrollTrigger: {
+        trigger: wrapRef.current,
+        start: "top top",
+        toggleAction: "play play play play",
+        scrub: 1,
+        duration: 1,
+      },
+      x: "-1500px",
+    });
+    // gsap.to(textHee.current, { ...startScroll, x: 1500 });
+    // gsap.to(textJeong.current, startScroll);
 
     // gsap.to(textChoi.current, {
     //   scrollTrigger: textChoi.current,
@@ -189,6 +220,7 @@ const SText = styled.div`
   margin-top: -20px;
   margin-bottom: -20px;
   color: ${mainStyle.subColor};
+  transform: scale(1);
   &.choi {
     margin-top: 0;
     justify-content: flex-start;

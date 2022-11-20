@@ -64,6 +64,7 @@ const InWrap = styled.div`
   padding: 50px 100px;
   background-color: ${mainStyle.mainColor};
   border-radius: 50px;
+  /* margin-top: 100vh; */
 `;
 
 const Title = styled.div`

@@ -5,7 +5,6 @@ import { mainStyle } from "../../style/GlobalStyle";
 
 export const Project = ({ a, idx }) => {
   const isEven = (idx + 1) % 2 === 0;
-  // console.log(isEven);
 
   return (
     <Con
