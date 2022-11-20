@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { mainStyle } from "../../style/GlobalStyle";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Container } from "../../../Container";
@@ -14,6 +14,7 @@ export const Section1 = () => {
     AOS.init();
   });
 
+  // scrolltrigger===================
   const wrapRef = useRef(null);
   const textChoi = useRef(null);
   const textHee = useRef(null);
@@ -43,6 +44,20 @@ export const Section1 = () => {
     });
   }, []);
 
+  // scroll opacity===============
+  const [change, setChange] = useState(1);
+
+  const handleScroll = () => {
+    const scr = window.pageYOffset;
+    if (scr > 100) {
+      setChange(0);
+    } else {
+      setChange(1);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
   return (
     <>
       <Wrap ref={wrapRef}>
@@ -55,7 +70,7 @@ export const Section1 = () => {
             </SText>
 
             <SText className="hee" data-aos="zoom-in" ref={textHee}>
-              <Text className="hee">
+              <Text className="hee" change={change}>
                 <h3>클릭!</h3>
                 <svg
                   fill="#607EAA"
@@ -71,7 +86,7 @@ export const Section1 = () => {
                   <polygon points="585.782,3.604 577,1.897 577,5 0,5 0,6 577,6 577,8.724 585.782,7.018 594.564,5.311 " />
                 </svg>
               </Text>
-              <MenuWrap className="site">
+              <MenuWrap className="site" change={change}>
                 <Menu>
                   <a
                     target="_top"
@@ -104,7 +119,7 @@ export const Section1 = () => {
 
             <SText className="jeong" data-aos="zoom-in" ref={textJeong}>
               JEONG
-              <MenuWrap className="profile">
+              <MenuWrap className="profile" change={change}>
                 <ScrollWrap>
                   <LineWrap>
                     <Line />
@@ -180,9 +195,9 @@ const SSText = styled.h1``;
 const MenuWrap = styled.ul`
   font-family: "Source Code Pro", monospace;
   margin-right: 100px;
-
   margin-left: 30px;
-
+  opacity: ${(props) => props.change};
+  transition: 1s;
   &.site {
     text-align: right;
   }
@@ -193,12 +208,6 @@ const MenuWrap = styled.ul`
     margin-right: 0;
   }
 `;
-
-// const Bar  = styled.div`
-// width: 50%;
-// height: 1px;
-// background-color: white;
-// `
 
 const Menu = styled.li`
   font-size: 18px;
@@ -229,6 +238,8 @@ const Text = styled.div`
   font-weight: 500;
   font-family: "Noto Sans KR", sans-serif;
   &.hee {
+    opacity: ${(props) => props.change};
+    transition: 1s;
     display: flex;
     align-items: center;
     padding-bottom: 120px;
