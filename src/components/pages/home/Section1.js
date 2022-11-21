@@ -25,9 +25,9 @@ export const Section1 = () => {
       scrollTrigger: {
         trigger: wrapRef.current,
         start: "top top",
-        toggleAction: "play play play play",
+        toggleAction: "restart pause resume pause",
         scrub: 1,
-        duration: 1,
+        duration: 0.7,
       },
     };
     gsap.to(textChoi.current, {
@@ -144,6 +144,7 @@ const Wrap = styled.section`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: -1;
 `;
 
 const SvgWrap = styled.div`
