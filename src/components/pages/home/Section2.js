@@ -3,23 +3,51 @@ import { mainStyle } from "../../style/GlobalStyle";
 import imgFace from "../../../img/imgFace.png";
 import React from "react";
 import "aos/dist/aos.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe, faLink } from "@fortawesome/free-solid-svg-icons";
 
 export const Section2 = () => {
+  const tool = ["javascript", "html", "css", "react"];
+  // const isEven = (idx + 1) % 2 === 0;
+
   return (
     <>
       <Wrap>
         <InWrap>
-          <Title>JavaScript Html Css React</Title>
           <Profile>
+            <BoxWrap>
+              <Box className="technic">
+                저는...
+                {tool.map((a) => (
+                  <h1 key={a} className={`technic`}>
+                    {a}
+                  </h1>
+                ))}
+                를 다룰 줄 아는 프론트엔드 개발자 입니다.
+              </Box>
+              {/* <Box className="technic">HTML5</Box>
+              <Box className="technic">CSS3</Box>
+              <Box className="technic">React</Box> */}
+            </BoxWrap>
             <Img
               style={{
                 background: `url(${imgFace}) no-repeat center/cover`,
               }}
             />
-            <SiteUrl>
-              <a href="#!">Git Hub</a>
-              <a href="#!">e-mail</a>
-            </SiteUrl>
+            <BoxWrap>
+              <Box className="site">
+                <a href="#!">
+                  Git Hub
+                  <FontAwesomeIcon icon={faLink} />
+                </a>
+              </Box>
+              <Box className="site">
+                <a href="#!">
+                  E-MAIL
+                  <FontAwesomeIcon icon={faGlobe} />
+                </a>
+              </Box>
+            </BoxWrap>
           </Profile>
           <TextWrap>
             <Text>
@@ -54,65 +82,80 @@ const Wrap = styled.section`
 
 const InWrap = styled.div`
   width: 100%;
-  /* height: 80vh; */
+  height: 80vh;
   padding: 50px 100px;
   background-color: ${mainStyle.mainColor};
   border-radius: 50px;
-  /* margin-top: 100vh; */
-`;
-
-const Title = styled.div`
-  font-size: 50px;
-  font-weight: 700;
-  color: ${mainStyle.pointColor3};
-  margin-bottom: 50px;
-  /* svg {
-    fill: none;
-    width: 300px;
-    stroke-width: 11px;
-  }
-  path {
-    stroke: black;
-    stroke-dasharray: 100;
-    stroke-dashoffset: 100;
-    animation: path 1000ms forwards;
-  }
-  @keyframes path {
-    100% {
-      stroke-dashoffset: 0;
-    }
-  } */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const Profile = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 200px;
+  align-items: center;
 `;
 
 const Img = styled.div`
   width: 30%;
-  height: 200px;
+  height: 300px;
 `;
 
-const SiteUrl = styled.div`
-  a {
-    display: block;
-    background-color: ${mainStyle.blackColor};
-    padding: 10px 100px;
-    margin-bottom: 10px;
-    border-radius: 50px;
+const BoxWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Box = styled.div`
+  text-align: center;
+  position: relative;
+  border-radius: 0.4em;
+  margin-bottom: 50px;
+  color: ${mainStyle.subColor};
+  &.technic {
+    background: ${mainStyle.blackColor};
+    padding: 20px 50px;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border: 7px solid transparent;
+      border-left-color: ${mainStyle.blackColor};
+      border-right: 0;
+      margin-top: -7px;
+      margin-right: -7px;
+    }
+  }
+  &.site {
+    background: ${mainStyle.blackColor};
+    padding: 10px 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border: 7px solid transparent;
+      border-right-color: ${mainStyle.blackColor};
+      border-left: 0;
+      margin-top: -7px;
+      margin-left: -7px;
+    }
+  }
+  svg {
+    margin-left: 10px;
   }
 `;
 
 const TextWrap = styled.div``;
 
 const Text = styled.div`
-  /* font-family: "Nanum Myeongjo", serif; */
-  /* font-family: "Do Hyeon", sans-serif; */
-  /* font-family: "IBM Plex Sans KR", sans-serif; */
-  /* font-family: "Noto Sans KR", sans-serif; */
-  /* font-family: "Sunflower", sans-serif; */
   font-family: "Source Code Pro", monospace;
   color: ${mainStyle.blackColor};
   font-weight: 900;
