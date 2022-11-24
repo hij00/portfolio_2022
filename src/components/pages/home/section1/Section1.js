@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { mainStyle } from "../../style/GlobalStyle";
 import React, { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Container } from "../../../Container";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { mainStyle } from "../../../styles/GlobalStyle";
 
 gsap.registerPlugin(ScrollTrigger);
 

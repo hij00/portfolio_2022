@@ -4,7 +4,7 @@ import { Home } from "./components/pages/home/Home";
 import { Landing } from "./components/pages/landing/Landing";
 import { Profile } from "./components/pages/profile/Profile";
 import { Project } from "./components/pages/project/Project";
-import { GlobalStyle } from "./components/style/GlobalStyle";
+import { GlobalStyle } from "./components/styles/GlobalStyle";
 
 function App() {
   return (

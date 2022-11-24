@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mainStyle } from "../../style/GlobalStyle";
+import { mainStyle } from "../../styles/GlobalStyle";
 import imgFace from "../../../img/imgFace.png";
 import React, { useEffect } from "react";
 import AOS from "aos";

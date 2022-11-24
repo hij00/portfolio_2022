@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { mainStyle } from "../../style/GlobalStyle";
-import { Section1 } from "./Section1";
-import { Section2 } from "./Section2";
-import { Section3 } from "./Section3";
+import { mainStyle } from "../../styles/GlobalStyle";
 import { useState } from "react";
+import { Section1 } from "./section1/Section1";
+import { Section3 } from "./section3/Section3";
+import { Section2 } from "./section2/Section2";
 
 export const Home = () => {
   const [change, setChange] = useState(`${mainStyle.backColor}`);

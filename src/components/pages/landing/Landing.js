@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { mainStyle } from "../../style/GlobalStyle";
+import { mainStyle } from "../../styles/GlobalStyle";
 import { useEffect, useState } from "react";
 
 const typing = "신입 개발자 최희정입니다 :)";

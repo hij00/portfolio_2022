@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { textSite, textToy } from "../../../Text";
-import { mainStyle } from "../../style/GlobalStyle";
+import { textSite, textToy } from "../../Text";
+import { mainStyle } from "../../styles/GlobalStyle";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";

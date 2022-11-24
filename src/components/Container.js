@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mainStyle } from "./components/style/GlobalStyle";
+import { mainStyle } from "./styles/GlobalStyle";
 
 export const Container = ({ children }) => {
   return <Wrap>{children}</Wrap>;

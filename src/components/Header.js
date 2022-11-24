@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { mainStyle } from "./style/GlobalStyle";
+import { mainStyle } from "./styles/GlobalStyle";
 
 export const Header = () => {
   const location = useLocation();

@@ -1,7 +1,7 @@
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
-import { mainStyle } from "../../style/GlobalStyle";
+import { mainStyle } from "../../../styles/GlobalStyle";
 
 export const Project = ({ a, idx }) => {
   const isEven = (idx + 1) % 2 === 0;

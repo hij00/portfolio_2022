@@ -1,9 +1,9 @@
-import re_dyson from "./img/banner/re_dyson.png";
-import movie from "./img/banner/re_movie.png";
-import toy_login from "./img/banner/toy_login.png";
-import toy_cart from "./img/banner/toy_cart.png";
+import re_dyson from "./../img/mockup/re_dyson.png";
+import movie from "./../img/mockup/re_movie.png";
+import toy_login from "./../img/mockup/toy_login.png";
+import toy_cart from "./../img/mockup/toy_cart.png";
 
-import re_seoul_garden from "./img/banner/re_seoul.png";
+import re_seoul_garden from "./../img/mockup/re_seoul.png";
 import styled from "styled-components";
 
 const ImgWrap = styled.div`
@@ -385,7 +385,7 @@ export const project = [
       <Text>
         🙋‍♀ 인원 : <h1>1</h1>명
         <br />
-        <br /> ✅리액트 라이브러리를 익히기 위한 작업
+        <br /> ✅리액트 상태관리 라이브러리 중 하나인 Redux를 익히기 위한 작업
         <br /> ✅깃허브 팀 프로젝트 - 브랜치(branch)를 생성해 작업 진행
       </Text>
     ),

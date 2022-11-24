@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { mainStyle } from "../../style/GlobalStyle";
-import imgFace from "../../../img/imgFace.png";
+import { mainStyle } from "../../../styles/GlobalStyle";
+import imgFace from "../../../../img/imgFace.png";
 import React from "react";
 import "aos/dist/aos.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
