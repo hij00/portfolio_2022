@@ -10,8 +10,8 @@ export const Footer = () => {
 };
 
 const Wrap = styled.div`
-  margin-top: 100px;
   border-top: 1px solid ${mainStyle.blackColor};
+  padding: 50px 0;
   display: flex;
   justify-content: center;
   align-items: center;

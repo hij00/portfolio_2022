@@ -37,7 +37,6 @@ export const Project = ({ a, idx }) => {
         <Desc>
           <h3 className={isEven ? "blue_text" : "green_text"}>{a.keyword}</h3>
           <div className={isEven ? "blue_text" : "green_text"}>{a.desc}</div>
-          <p className={isEven ? "blue_text" : "green_text"}>{a.end}</p>
         </Desc>
       </Text>
     </Con>

@@ -21,7 +21,7 @@ export const Section3 = () => {
 
 const Wrap = styled.section`
   width: 100%;
-  padding: 200px 0;
+  padding: 200px 0 100px;
 `;
 
 const ConWrap = styled.div`
