@@ -7,12 +7,11 @@ export const Header = () => {
   const location = useLocation();
   const [show, setShow] = useState("#EAE3D2");
   const [clickE, setClickE] = useState();
-  const [dis, setDis] = useState("flex");
+  const [menu, setMenu] = useState("flex");
 
   useEffect(() => {
     const handleClick = () => {
       const onClick = () => {
-        // console.log(location.pathname);
         if (location.pathname !== "/home") {
           setShow("#576F72");
         } else if (location.pathname === "/home") {
@@ -20,9 +19,9 @@ export const Header = () => {
         }
 
         if (location.pathname === "/") {
-          setDis("none");
+          setMenu("none");
         } else {
-          setDis("flex");
+          setMenu("flex");
         }
       };
       setClickE(onClick);
@@ -32,7 +31,7 @@ export const Header = () => {
 
   return (
     <Wrap>
-      <MenuWrap clickE={clickE} dis={dis}>
+      <MenuWrap clickE={clickE} menu={menu}>
         <Menu show={show}>
           <Link to="/home">홈</Link>
         </Menu>
@@ -56,7 +55,7 @@ const Wrap = styled.div`
   z-index: 999;
 `;
 const MenuWrap = styled.ul`
-  display: ${(props) => props.dis};
+  display: ${(props) => props.menu};
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
@@ -67,7 +66,6 @@ const Menu = styled.li`
   padding-bottom: 5px;
   margin-bottom: 5px;
   a:hover {
-    /* border-bottom: 1px solid ${mainStyle.pointColor}; */
     background-color: ${mainStyle.pointColor};
     color: black;
   }
