@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# 2022 PORTFOLIO👩‍💻
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img alt="Html" src ="https://img.shields.io/badge/원하는 아이콘.svg?&style=for-the-badge&logo=벳지내 글자&logoColor=벳지 글자 색"/>
 
-## Available Scripts
+### Dyson
 
-In the project directory, you can run:
+<a href = "https://wjdgus1122.github.io/dyson_project"> <img alt="Dyson" src ="https://img.shields.io/badge/Dyson-FF1696.svg?&style=for-the-badge"/></a><a href = "https://github.com/wjdgus1122/dyson_project"><img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/>
+</a>
 
-### `npm start`
+### Heving (OTT 사이트)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<a href = "https://hij00.github.io/Heving_app/"> <img alt="Heving" src ="https://img.shields.io/badge/Heving-E40000.svg?&style=for-the-badge"/></a><a href = "https://github.com/hij00/Heving_app"><img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/>
+</a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 서울식물원
 
-### `npm test`
+<a href = "https://hij00.github.io/seoul_garden_renewal/"> <img alt="서울식물원" src ="https://img.shields.io/badge/서울식물원-2B9212.svg?&style=for-the-badge"/></a><a href = "https://github.com/hij00/seoul_garden_renewal"><img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/>
+</a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 장바구니 토이프로젝트
 
-### `npm run build`
+<a href = "https://hij00.github.io/toy_cart/"> <img alt="장바구니" src ="https://img.shields.io/badge/장바구니-white.svg?&style=for-the-badge"/></a><a href = "https://github.com/hij00/toy_cart"><img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/>
+</a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 로그인 토이프로젝트
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href = "https://hij00.github.io/signIn_signUp/"> <img alt="로그인" src ="https://img.shields.io/badge/로그인-22c1c3.svg?&style=for-the-badge"/></a><a href = "https://github.com/hij00/signIn_signUp"><img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/>
+</a>
