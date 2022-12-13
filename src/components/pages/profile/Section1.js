@@ -7,8 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faLink } from "@fortawesome/free-solid-svg-icons";
 
 export const Section1 = () => {
-  const tool = ["Javascript", "HTML5", "CSS3", "React"];
-
   return (
     <>
       <Wrap>
@@ -17,12 +15,26 @@ export const Section1 = () => {
           <Profile>
             <BoxWrap>
               <Box className="question">Technology Stacks..?</Box>
+
               <Box className="answer">
-                {tool.map((a) => (
-                  <h1 key={a} className={`technic`}>
-                    {a}
-                  </h1>
-                ))}
+                <h1>HTML5 / CSS</h1>
+                <div className="answerDiv">
+                  <h3>웹표준을 지키려 노력합니다. </h3>
+                  <h3>styled-component를 활용할 수 있습니다.</h3>
+                  <h3>
+                    keyframe을 활용한 애니메이션 기법을 활용할 수 있습니다.
+                  </h3>
+                  <h3>반응형을 적용할 수 있습니다.</h3>
+                  <h3>오픈 API를 이용해 웹을 구축할 수 있습니다.</h3>
+                </div>
+              </Box>
+              <Box className="answer">
+                <h1>Javascript</h1>
+                <h3>ES6+ 문법에 익숙합니다.</h3>
+              </Box>
+              <Box className="answer">
+                <h1>React</h1>
+                <h3>상태관리 라이브러리(redux) 사용 경험이 있습니다.</h3>
               </Box>
             </BoxWrap>
             <Img
@@ -47,23 +59,6 @@ export const Section1 = () => {
               </Box>
             </BoxWrap>
           </Profile>
-          <TextWrap>
-            <Text>
-              처음부터 천천히, 끈기있게 배우고자 하는 신입 개발자
-              <span>"최희정"</span>입니다.
-              <br />
-              저는 <span>Frontend</span>를 깊이 있게 배우고자 하는 주니어
-              개발자입니다. 나아가서 다른 여러가지 기술에 대한 관심을 가지는 등,
-              분야를 가리지 않고 적극적으로 개발에 대한 관심을 넓히고 싶습니다.
-              <br />
-              <br />
-              여러 협업과 팀 활동에 대한 경험을 쌓았으며, 매번 새로운 활동은
-              저의 성취감에 큰 자극을 주었고 스스로가 발전해 나갈 기회를
-              만들어주었습니다. 이러한 경험을 바탕으로 팀원들과의 소통을
-              중요하게 생각하며 서로에게 도움이 되는 동료가 되고 싶습니다. 그런
-              동료가 될 수 있도록 노력하며 행동하겠습니다.
-            </Text>
-          </TextWrap>
         </InWrap>
       </Wrap>
     </>
@@ -76,17 +71,16 @@ const Wrap = styled.section`
   padding: 0 400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: baseline;
   align-items: center;
 `;
 
 const InWrap = styled.div`
   width: 100%;
   height: 80vh;
-  padding: 50px 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 const Title = styled.div`
@@ -99,6 +93,7 @@ const Title = styled.div`
 `;
 
 const Profile = styled.div`
+  margin-top: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,7 +101,7 @@ const Profile = styled.div`
 
 const Img = styled.div`
   width: 30%;
-  height: 300px;
+  height: 400px;
 `;
 
 const BoxWrap = styled.div`
@@ -126,8 +121,10 @@ const Box = styled.div`
   }
   color: ${mainStyle.subColor};
   &.question {
+    font-size: 18px;
+    font-weight: 500;
     background: ${mainStyle.backColor};
-    padding: 20px 100px;
+    padding: 20px 50px;
     &::after {
       content: "";
       position: absolute;
@@ -144,7 +141,7 @@ const Box = styled.div`
   }
   &.answer {
     background: ${mainStyle.pointColor};
-    padding: 20px 100px;
+    padding: 20px 20px;
     &::after {
       content: "";
       position: absolute;
@@ -158,8 +155,25 @@ const Box = styled.div`
       margin-top: -7px;
       margin-right: -7px;
     }
-    img {
-      display: block;
+    h1 {
+      padding-bottom: 10px;
+      border-bottom: 1px solid ${mainStyle.subColor};
+      font-size: 18px;
+      font-weight: 500;
+    }
+    h3 {
+      color: ${mainStyle.subColor};
+      font-size: 18px;
+      font-weight: 500;
+      align-items: flex-start;
+      padding: 5px;
+      opacity: 0.8;
+    }
+    div.answerDiv {
+      display: flex;
+      flex-direction: column;
+
+      align-items: flex-start;
     }
   }
   h1 {
@@ -199,19 +213,5 @@ const Box = styled.div`
   }
   svg {
     margin-left: 10px;
-  }
-`;
-
-const TextWrap = styled.div``;
-
-const Text = styled.div`
-  font-family: "IBM Plex Sans KR", sans-serif;
-  color: ${mainStyle.blackColor};
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 30px;
-  span {
-    font-size: 30px;
-    color: ${mainStyle.backColor};
   }
 `;
