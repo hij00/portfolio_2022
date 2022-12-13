@@ -262,6 +262,43 @@ export const project = [
   },
   {
     id: 1,
+    textImg: `${toy_login}`,
+    title: "로그인 / 회원가입",
+    date: "08.16 ~ 11.30",
+    toolImg: (
+      <ImgWrap>
+        <img
+          src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"
+          alt="Javascript"
+        />
+        <img
+          src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=black"
+          alt="Node.js"
+        />
+        <img
+          src="https://img.shields.io/badge/XD-FF61F6?style=flat-square&logo=AdobeXD&logoColor=black"
+          alt="AdobeXD"
+        />
+      </ImgWrap>
+    ),
+    siteUrl: "https://hij00.github.io/signIn_signUp/",
+    gitUrl: "https://github.com/hij00/signIn_signUp",
+    keyword: "React Hook Form을 사용해 간편한 작업",
+    desc: (
+      <Text>
+        🙋‍♀ 인원 : <h1>1</h1>명
+        <br />
+        <br /> ✅React Hook Form을 사용해 인풋(input)을 간편하게 작업
+        <br /> ✅React Hook을 사용해 임의로 데이터 생성
+        <br /> ✅Dropdown Navigation(Header)으로 간편한 로그아웃
+        <br /> ✅유효성 검사 가능
+        <br /> ✅인터렉티브한 디자인으로 유저와의 상호작용
+      </Text>
+    ),
+    end: "간편한 코드로도 쉽게 로그인과 회원가입 기능을 할 수 있다는 것과 인터렉티브한 움직임을 의도한 대로 넣는 방법을 알게 되었습니다.",
+  },
+  {
+    id: 2,
     textImg: `${movie}`,
     title: "Heving",
     date: "07.06~ 07.20",
@@ -300,7 +337,41 @@ export const project = [
     end: "다른 곳에서 API를 끌어와 코드에 적용시키는 방법과 리액트의 여러 기능들을 배울 수 있었던 프로젝트였습니다. 오류를 해결하는 것에 뿌듯함을 크게 느꼈습니다.",
   },
   {
-    id: 2,
+    id: 3,
+    textImg: `${toy_cart}`,
+    title: "장바구니",
+    date: "08.23 ~ 10.14",
+    toolImg: (
+      <ImgWrap>
+        <img
+          src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"
+          alt="Javascript"
+        />
+        <img
+          src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=black"
+          alt="Node.js"
+        />
+        <img
+          src="https://img.shields.io/badge/XD-FF61F6?style=flat-square&logo=AdobeXD&logoColor=black"
+          alt="AdobeXD"
+        />
+      </ImgWrap>
+    ),
+    siteUrl: "https://hij00.github.io/toy_cart/",
+    gitUrl: "https://github.com/hij00/toy_cart",
+    keyword: "React Liverary 중 하나인 Redux를 사용",
+    desc: (
+      <Text>
+        🙋‍♀ 인원 : <h1>1</h1>명
+        <br />
+        <br /> ✅리액트 상태관리 라이브러리 중 하나인 Redux를 익히기 위한 작업
+        <br /> ✅store에 대한 개념 정리
+      </Text>
+    ),
+    end: "여러 방법들을 찾던 도중 로그인 프로젝트에 썼던 기능으로 쉽게 장바구니를 구현할 수 있다는 것을 깨달았습니다.",
+  },
+  {
+    id: 4,
     textImg: `${re_seoul_garden}`,
     title: "서울식물원",
     date: "05.09 ~ 06.13",
@@ -336,76 +407,5 @@ export const project = [
       </Text>
     ),
     end: "디자인의 대부분을 저 혼자 진행했기 때문에 막히는 부분이 종종 있었지만 후반 작업에서 다른 사람들에게 피드백을 구하면서 여러 의견의 중요성을 알게 되었습니다. 디자인을 할 때 코드작업은 고려를 하지 못해서 여러모로 아쉬움이 남았던 작업입니다.",
-  },
-  {
-    id: 3,
-    textImg: `${toy_login}`,
-    title: "로그인 / 회원가입",
-    date: "08.16 ~ 11.30",
-    toolImg: (
-      <ImgWrap>
-        <img
-          src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"
-          alt="Javascript"
-        />
-        <img
-          src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=black"
-          alt="Node.js"
-        />
-        <img
-          src="https://img.shields.io/badge/XD-FF61F6?style=flat-square&logo=AdobeXD&logoColor=black"
-          alt="AdobeXD"
-        />
-      </ImgWrap>
-    ),
-    siteUrl: "https://hij00.github.io/signIn_signUp/",
-    gitUrl: "https://github.com/hij00/signIn_signUp",
-    keyword: "React Hook Form을 사용해 간편한 작업",
-    desc: (
-      <Text>
-        🙋‍♀ 인원 : <h1>1</h1>명
-        <br />
-        <br /> ✅React Hook Form을 사용해 인풋(input)을 간편하게 작업
-        <br /> ✅React Hook을 사용해 임의로 데이터 생성
-        <br /> ✅Dropdown Navigation(Header)으로 간편한 로그아웃
-        <br /> ✅유효성 검사 가능
-        <br /> ✅인터렉티브한 디자인으로 유저와의 상호작용
-      </Text>
-    ),
-    end: "간편한 코드로도 쉽게 로그인과 회원가입 기능을 할 수 있다는 것과 인터렉티브한 움직임을 의도한 대로 넣는 방법을 알게 되었습니다.",
-  },
-  {
-    id: 4,
-    textImg: `${toy_cart}`,
-    title: "장바구니",
-    date: "08.23 ~ 10.14",
-    toolImg: (
-      <ImgWrap>
-        <img
-          src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"
-          alt="Javascript"
-        />
-        <img
-          src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=black"
-          alt="Node.js"
-        />
-        <img
-          src="https://img.shields.io/badge/XD-FF61F6?style=flat-square&logo=AdobeXD&logoColor=black"
-          alt="AdobeXD"
-        />
-      </ImgWrap>
-    ),
-    siteUrl: "https://hij00.github.io/toy_cart/",
-    gitUrl: "https://github.com/hij00/toy_cart",
-    keyword: "React Liverary 중 하나인 Redux를 사용",
-    desc: (
-      <Text>
-        🙋‍♀ 인원 : <h1>1</h1>명
-        <br />
-        <br /> ✅리액트 상태관리 라이브러리 중 하나인 Redux를 익히기 위한 작업
-        <br /> ✅store에 대한 개념 정리
-      </Text>
-    ),
-    end: "여러 방법들을 찾던 도중 로그인 프로젝트에 썼던 기능으로 쉽게 장바구니를 구현할 수 있다는 것을 깨달았습니다.",
   },
 ];

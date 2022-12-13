@@ -26,7 +26,6 @@ export const Home = () => {
       <Section2 />
       <Section3 />
     </>
-    // </Wrap>
   );
 };
 

@@ -16,7 +16,7 @@ export const Section2 = () => {
           <Title>Hello, I'm Heejeong</Title>
           <Profile>
             <BoxWrap>
-              <Box className="question">tech stack..?</Box>
+              <Box className="question">Technology Stacks..?</Box>
               <Box className="answer">
                 {tool.map((a) => (
                   <h1 key={a} className={`technic`}>
@@ -31,7 +31,7 @@ export const Section2 = () => {
               }}
             />
             <BoxWrap>
-              <Box className="question">your site..?</Box>
+              <Box className="question">Your site..?</Box>
 
               <Box className="site">
                 <a href="#!">
@@ -53,8 +53,8 @@ export const Section2 = () => {
               <span>"최희정"</span>입니다.
               <br />
               저는 <span>Frontend</span>를 깊이 있게 배우고자 하는 주니어
-              개발자입니다. 나아가서 Backend에도 관심을 가지는 등, 분야를 가리지
-              않고 적극적으로 개발에 대한 관심을 넓히고 싶습니다.
+              개발자입니다. 나아가서 다른 여러가지 기술에 대한 관심을 가지는 등,
+              분야를 가리지 않고 적극적으로 개발에 대한 관심을 넓히고 싶습니다.
               <br />
               <br />
               여러 협업과 팀 활동에 대한 경험을 쌓았으며, 매번 새로운 활동은
@@ -172,11 +172,18 @@ const Box = styled.div`
     background: ${mainStyle.blackColor};
     padding: 20px 100px;
     transition: 0.5s;
+    animation: blink 1s step-end infinite;
+    @keyframes blink {
+      50% {
+        opacity: 0.8;
+      }
+    }
     &:hover {
       background: ${mainStyle.pointColor};
       &::after {
         border-left-color: ${mainStyle.pointColor};
       }
+      animation: none;
     }
     &::after {
       content: "";
