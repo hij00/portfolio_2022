@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/portfolio_2022/static/css/main.7791bcac.css",
+    "main.js": "/portfolio_2022/static/js/main.8c46bdc3.js",
+    "static/media/re_seoul.png": "/portfolio_2022/static/media/re_seoul.80d8c4b3977dc9064c91.png",
+    "static/media/re_movie.png": "/portfolio_2022/static/media/re_movie.f0fef2a5d8b091e6c7d5.png",
+    "static/media/imgFace.png": "/portfolio_2022/static/media/imgFace.48e7241cc3aececf6c79.png",
+    "static/media/re_dyson.png": "/portfolio_2022/static/media/re_dyson.20105aa5adae9ebff2ba.png",
+    "static/media/toy_cart.png": "/portfolio_2022/static/media/toy_cart.9eeec73c8b2518491586.png",
+    "static/media/toy_login.png": "/portfolio_2022/static/media/toy_login.5301db6bb729f5051c76.png",
+    "index.html": "/portfolio_2022/index.html",
+    "main.7791bcac.css.map": "/portfolio_2022/static/css/main.7791bcac.css.map",
+    "main.8c46bdc3.js.map": "/portfolio_2022/static/js/main.8c46bdc3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7791bcac.css",
+    "static/js/main.8c46bdc3.js"
+  ]
+}
