@@ -1,11 +1,14 @@
 # **PORTFOLIO 2022👩‍💻**
 
+<br/>
+
 ## **Dyson**
 
 - 기존 다이슨 사이트 리뉴얼
 - 팀 프로젝트 (4명)
 - 깃허브(Github) 협업
 - React
+- 반응형
 
 <a href = "https://wjdgus1122.github.io/dyson_project"> <img alt="Dyson" src ="https://img.shields.io/badge/Dyson-FF1696.svg?&style=for-the-badge"/></a><a href = "https://github.com/wjdgus1122/dyson_project"><img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge"/>
 </a>
@@ -22,6 +25,7 @@
 - API를 받아옴 - TMDB
 - 개인 프로젝트
 - React
+- 반응형
 
 <a href = "https://hij00.github.io/Heving_app/"> <img alt="Heving" src ="https://img.shields.io/badge/Heving-E40000.svg?&style=for-the-badge"/></a><a href = "https://github.com/hij00/Heving_app"><img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge"/>
 </a>

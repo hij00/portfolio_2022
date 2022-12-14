@@ -17,7 +17,7 @@ export const Section1 = () => {
               <Box className="question">Technology Stacks..?</Box>
 
               <Box className="answer">
-                <h1>HTML5 / CSS</h1>
+                <h1>HTML5 / CSS3</h1>
                 <div className="answerDiv">
                   <h3>웹표준을 지키려 노력합니다. </h3>
                   <h3>styled-component를 활용할 수 있습니다.</h3>
@@ -30,11 +30,15 @@ export const Section1 = () => {
               </Box>
               <Box className="answer">
                 <h1>Javascript</h1>
-                <h3>ES6+ 문법에 익숙합니다.</h3>
+                <div className="answerDiv">
+                  <h3>ES6+ 문법에 익숙합니다.</h3>
+                </div>
               </Box>
               <Box className="answer">
                 <h1>React</h1>
-                <h3>상태관리 라이브러리(redux) 사용 경험이 있습니다.</h3>
+                <div className="answerDiv">
+                  <h3>상태관리 라이브러리(redux) 사용 경험이 있습니다.</h3>
+                </div>
               </Box>
             </BoxWrap>
             <Img
@@ -157,27 +161,24 @@ const Box = styled.div`
     }
     h1 {
       padding-bottom: 10px;
-      border-bottom: 1px solid ${mainStyle.subColor};
+      border-bottom: 1px solid ${mainStyle.backColor};
       font-size: 18px;
       font-weight: 500;
     }
-    h3 {
-      color: ${mainStyle.subColor};
-      font-size: 18px;
-      font-weight: 500;
-      align-items: flex-start;
-      padding: 5px;
-      opacity: 0.8;
-    }
+
     div.answerDiv {
       display: flex;
       flex-direction: column;
-
       align-items: flex-start;
+      h3 {
+        color: ${mainStyle.subColor};
+        font-size: 18px;
+        font-weight: 500;
+        align-items: flex-start;
+        padding: 5px;
+        opacity: 0.8;
+      }
     }
-  }
-  h1 {
-    padding: 2px;
   }
   &.site {
     background: ${mainStyle.blackColor};
