@@ -12,7 +12,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <Routes>
-        <Route path="/home" element={<Home />}></Route>
+        <Route path="/" element={<Home />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
         <Route path="/project" element={<Project />}></Route>
       </Routes>

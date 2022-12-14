@@ -7,21 +7,14 @@ export const Header = () => {
   const location = useLocation();
   const [show, setShow] = useState("#EAE3D2");
   const [clickE, setClickE] = useState();
-  const [menu, setMenu] = useState("flex");
 
   useEffect(() => {
     const handleClick = () => {
       const onClick = () => {
-        if (location.pathname !== "/home") {
+        if (location.pathname !== "/") {
           setShow("#576F72");
-        } else if (location.pathname === "/home") {
+        } else if (location.pathname === "/") {
           setShow("#EAE3D2");
-        }
-
-        if (location.pathname === "/") {
-          setMenu("none");
-        } else {
-          setMenu("flex");
         }
       };
       setClickE(onClick);
@@ -31,9 +24,9 @@ export const Header = () => {
 
   return (
     <Wrap>
-      <MenuWrap clickE={clickE} menu={menu}>
+      <MenuWrap clickE={clickE}>
         <Menu show={show}>
-          <Link to="/home">홈</Link>
+          <Link to="/">홈</Link>
         </Menu>
         <Menu show={show}>
           <Link to="/profile">프로필</Link>
@@ -55,7 +48,7 @@ const Wrap = styled.div`
   z-index: 999;
 `;
 const MenuWrap = styled.ul`
-  display: ${(props) => props.menu};
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
